@@ -32,10 +32,8 @@
       --font-display: 'DM Serif Display', Georgia, serif;
       --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-
     body {
       font-family: var(--font-body);
       background: var(--surface);
@@ -43,413 +41,108 @@
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
     }
-
     .reveal {
       opacity: 0;
       transform: translateY(32px);
       transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
                   transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
+    .reveal.visible { opacity: 1; transform: translateY(0); }
     nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      position: sticky; top: 0; z-index: 100;
       background: rgba(245, 243, 239, 0.85);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid rgba(10, 15, 26, 0.06);
     }
     .nav-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 14px 32px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      max-width: 1100px; margin: 0 auto; padding: 14px 32px;
+      display: flex; justify-content: space-between; align-items: center;
     }
-    .nav-name {
-      font-family: var(--font-display);
-      font-size: 18px;
-      color: var(--ink);
-      text-decoration: none;
-    }
+    .nav-name { font-family: var(--font-display); font-size: 18px; color: var(--ink); text-decoration: none; }
     .nav-links { display: flex; gap: 28px; }
-    .nav-links a {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--ink-muted);
-      text-decoration: none;
-      letter-spacing: 0.02em;
-      transition: color 0.2s;
-    }
+    .nav-links a { font-size: 13px; font-weight: 500; color: var(--ink-muted); text-decoration: none; letter-spacing: 0.02em; transition: color 0.2s; }
     .nav-links a:hover { color: var(--ink); }
-
     .hero {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 80px 32px 100px;
-      display: grid;
-      grid-template-columns: 1fr 280px;
-      gap: 60px;
-      align-items: center;
+      max-width: 1100px; margin: 0 auto; padding: 80px 32px 100px;
+      display: grid; grid-template-columns: 1fr 280px; gap: 60px; align-items: center;
     }
-    .hero-text h1 {
-      font-family: var(--font-display);
-      font-size: clamp(40px, 5.5vw, 64px);
-      line-height: 1.1;
-      color: var(--ink);
-      letter-spacing: -0.02em;
-    }
-    .hero-text h1 span {
-      display: block;
-      font-family: var(--font-body);
-      font-size: clamp(16px, 2vw, 20px);
-      font-weight: 400;
-      color: var(--ink-muted);
-      margin-top: 16px;
-      line-height: 1.5;
-      letter-spacing: 0;
-    }
-    .hero-actions {
-      margin-top: 36px;
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 13px 26px;
-      font-size: 14px;
-      font-weight: 600;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: all 0.25s;
-      border: none;
-      cursor: pointer;
-    }
-    .btn-primary {
-      background: var(--ink);
-      color: var(--surface);
-    }
-    .btn-primary:hover {
-      background: var(--accent);
-      transform: translateY(-1px);
-      box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
-    }
-    .btn-outline {
-      background: transparent;
-      color: var(--ink);
-      border: 1.5px solid rgba(10, 15, 26, 0.15);
-    }
-    .btn-outline:hover {
-      border-color: var(--ink);
-      transform: translateY(-1px);
-    }
-    .hero-photo {
-      width: 280px;
-      height: 340px;
-      border-radius: 20px;
-      overflow: hidden;
-      position: relative;
-    }
-    .hero-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: grayscale(15%);
-      transition: filter 0.4s;
-    }
+    .hero-text h1 { font-family: var(--font-display); font-size: clamp(40px, 5.5vw, 64px); line-height: 1.1; color: var(--ink); letter-spacing: -0.02em; }
+    .hero-text h1 span { display: block; font-family: var(--font-body); font-size: clamp(16px, 2vw, 20px); font-weight: 400; color: var(--ink-muted); margin-top: 16px; line-height: 1.5; letter-spacing: 0; }
+    .hero-actions { margin-top: 36px; display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px; font-size: 14px; font-weight: 600; border-radius: 8px; text-decoration: none; transition: all 0.25s; border: none; cursor: pointer; }
+    .btn-primary { background: var(--ink); color: var(--surface); }
+    .btn-primary:hover { background: var(--accent); transform: translateY(-1px); box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3); }
+    .btn-outline { background: transparent; color: var(--ink); border: 1.5px solid rgba(10, 15, 26, 0.15); }
+    .btn-outline:hover { border-color: var(--ink); transform: translateY(-1px); }
+    .hero-photo { width: 280px; height: 340px; border-radius: 20px; overflow: hidden; position: relative; }
+    .hero-photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(15%); transition: filter 0.4s; }
     .hero-photo:hover img { filter: grayscale(0%); }
-    .hero-photo::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: 20px;
-      border: 1px solid rgba(10, 15, 26, 0.08);
-      pointer-events: none;
-    }
-
-    .section {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 32px;
-    }
-    .section-label {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 12px;
-    }
-    .section-title {
-      font-family: var(--font-display);
-      font-size: clamp(28px, 3.5vw, 40px);
-      color: var(--ink);
-      line-height: 1.15;
-    }
-
-    .flagship {
-      margin-top: 20px;
-      padding: 80px 0;
-    }
-    .flagship-card {
-      max-width: 1100px;
-      margin: 32px auto 0;
-      padding: 0 32px;
-    }
+    .hero-photo::after { content: ''; position: absolute; inset: 0; border-radius: 20px; border: 1px solid rgba(10, 15, 26, 0.08); pointer-events: none; }
+    .section { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+    .section-label { font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    .section-title { font-family: var(--font-display); font-size: clamp(28px, 3.5vw, 40px); color: var(--ink); line-height: 1.15; }
+    .flagship { margin-top: 20px; padding: 80px 0; }
+    .flagship-card { max-width: 1100px; margin: 32px auto 0; padding: 0 32px; }
     .flagship-screenshot {
-      width: 100%;
-      border-radius: 16px;
-      overflow: hidden;
+      width: 100%; border-radius: 16px; overflow: hidden;
       box-shadow: 0 8px 40px rgba(10, 15, 26, 0.12), 0 1px 3px rgba(10, 15, 26, 0.06);
       border: 1px solid rgba(10, 15, 26, 0.06);
       transform: perspective(1200px) rotateX(2deg);
       transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s;
     }
-    .flagship-screenshot:hover {
-      transform: perspective(1200px) rotateX(0deg);
-      box-shadow: 0 16px 64px rgba(10, 15, 26, 0.18);
-    }
-    .flagship-screenshot img {
-      width: 100%;
-      display: block;
-    }
-    .flagship-meta {
-      margin-top: 40px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-    }
-    .flagship-desc {
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--ink-light);
-    }
+    .flagship-screenshot:hover { transform: perspective(1200px) rotateX(0deg); box-shadow: 0 16px 64px rgba(10, 15, 26, 0.18); }
+    .flagship-screenshot img { width: 100%; display: block; }
+    .flagship-meta { margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    .flagship-desc { font-size: 16px; line-height: 1.7; color: var(--ink-light); }
     .flagship-desc p + p { margin-top: 16px; }
-    .flagship-stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-    .stat-card {
-      background: var(--card);
-      border-radius: var(--radius);
-      padding: 24px;
-      border: 1px solid rgba(10, 15, 26, 0.06);
-    }
-    .stat-value {
-      font-family: var(--font-display);
-      font-size: 28px;
-      color: var(--ink);
-    }
-    .stat-label {
-      font-size: 12px;
-      color: var(--ink-muted);
-      margin-top: 4px;
-      letter-spacing: 0.02em;
-    }
-    .flagship-tags {
-      margin-top: 32px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .tag {
-      font-size: 12px;
-      font-weight: 500;
-      padding: 6px 14px;
-      border-radius: 100px;
-      background: var(--surface-warm);
-      color: var(--ink-light);
-    }
-    .flagship-buttons {
-      margin-top: 32px;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .flagship-note {
-      margin-top: 24px;
-      font-size: 13px;
-      color: var(--ink-muted);
-      font-style: italic;
-      padding-left: 16px;
-      border-left: 2px solid var(--accent-soft);
-    }
+    .flagship-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .stat-card { background: var(--card); border-radius: var(--radius); padding: 24px; border: 1px solid rgba(10, 15, 26, 0.06); }
+    .stat-value { font-family: var(--font-display); font-size: 28px; color: var(--ink); }
+    .stat-label { font-size: 12px; color: var(--ink-muted); margin-top: 4px; letter-spacing: 0.02em; }
+    .flagship-tags { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { font-size: 12px; font-weight: 500; padding: 6px 14px; border-radius: 100px; background: var(--surface-warm); color: var(--ink-light); }
+    .flagship-buttons { margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .flagship-note { margin-top: 24px; font-size: 13px; color: var(--ink-muted); font-style: italic; padding-left: 16px; border-left: 2px solid var(--accent-soft); }
     .flagship-rca { margin-top: 48px; }
-    .flagship-rca-label {
-      font-size: 12px;
-      color: var(--ink-muted);
-      margin-bottom: 12px;
-      font-weight: 500;
-    }
-
+    .flagship-rca-label { font-size: 12px; color: var(--ink-muted); margin-bottom: 12px; font-weight: 500; }
     .projects-grid { padding: 80px 0; }
-    .grid {
-      margin-top: 40px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
+    .grid { margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
     .project-card {
-      background: var(--card);
-      border-radius: var(--radius);
-      padding: 32px;
+      background: var(--card); border-radius: var(--radius); padding: 32px;
       border: 1px solid rgba(10, 15, 26, 0.06);
       transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s;
       position: relative;
     }
-    .project-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(10, 15, 26, 0.08);
-    }
-    .project-card .card-accent {
-      width: 32px;
-      height: 3px;
-      border-radius: 2px;
-      background: var(--accent);
-      margin-bottom: 20px;
-    }
-    .project-card h3 {
-      font-family: var(--font-display);
-      font-size: 20px;
-      margin-bottom: 8px;
-    }
-    .project-card .card-sub {
-      font-size: 13px;
-      color: var(--ink-muted);
-      margin-bottom: 16px;
-    }
-    .project-card p {
-      font-size: 14px;
-      line-height: 1.65;
-      color: var(--ink-light);
-    }
-    .project-card .card-tags {
-      margin-top: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-    .project-card .card-tags span {
-      font-size: 11px;
-      font-weight: 500;
-      padding: 4px 10px;
-      border-radius: 100px;
-      background: var(--surface);
-      color: var(--ink-muted);
-    }
+    .project-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(10, 15, 26, 0.08); }
+    .project-card .card-accent { width: 32px; height: 3px; border-radius: 2px; background: var(--accent); margin-bottom: 20px; }
+    .project-card h3 { font-family: var(--font-display); font-size: 20px; margin-bottom: 8px; }
+    .project-card .card-sub { font-size: 13px; color: var(--ink-muted); margin-bottom: 16px; }
+    .project-card p { font-size: 14px; line-height: 1.65; color: var(--ink-light); }
+    .project-card .card-tags { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 6px; }
+    .project-card .card-tags span { font-size: 11px; font-weight: 500; padding: 4px 10px; border-radius: 100px; background: var(--surface); color: var(--ink-muted); }
     .card-wide { grid-column: 1 / -1; }
-
-    .badge-soon {
-      display: inline-block;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 3px 10px;
-      border-radius: 100px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      margin-left: 10px;
-      vertical-align: middle;
-    }
-
-    .about-section {
-      padding: 80px 0;
-      background: var(--ink);
-      color: var(--surface);
-    }
+    .badge-soon { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 100px; background: var(--accent-soft); color: var(--accent); margin-left: 10px; vertical-align: middle; }
+    .about-section { padding: 80px 0; background: var(--ink); color: var(--surface); }
     .about-section .section-label { color: var(--accent-glow); }
     .about-section .section-title { color: var(--surface); }
-    .about-grid {
-      margin-top: 40px;
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 60px;
-    }
-    .about-text {
-      font-size: 16px;
-      line-height: 1.8;
-      color: rgba(245, 243, 239, 0.75);
-    }
+    .about-grid { margin-top: 40px; display: grid; grid-template-columns: 2fr 1fr; gap: 60px; }
+    .about-text { font-size: 16px; line-height: 1.8; color: rgba(245, 243, 239, 0.75); }
     .about-text p + p { margin-top: 20px; }
     .about-text strong { color: var(--surface); font-weight: 600; }
-    .about-sidebar h3 {
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(245, 243, 239, 0.4);
-      margin-bottom: 16px;
-    }
+    .about-sidebar h3 { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245, 243, 239, 0.4); margin-bottom: 16px; }
     .about-sidebar h3 + h3 { margin-top: 32px; }
-    .about-sidebar ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .about-sidebar li {
-      font-size: 12px;
-      font-weight: 500;
-      padding: 6px 14px;
-      border-radius: 100px;
-      border: 1px solid rgba(245, 243, 239, 0.12);
-      color: rgba(245, 243, 239, 0.65);
-    }
+    .about-sidebar ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+    .about-sidebar li { font-size: 12px; font-weight: 500; padding: 6px 14px; border-radius: 100px; border: 1px solid rgba(245, 243, 239, 0.12); color: rgba(245, 243, 239, 0.65); }
     .lang-list { display: flex; gap: 20px; margin-top: 0; }
-    .lang-list li {
-      border: none;
-      padding: 0;
-      font-size: 14px;
-      color: rgba(245, 243, 239, 0.65);
-    }
-
+    .lang-list li { border: none; padding: 0; font-size: 14px; color: rgba(245, 243, 239, 0.65); }
     .contact-section { padding: 80px 0 100px; }
     .contact-inner { max-width: 600px; }
-    .contact-text {
-      margin-top: 16px;
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--ink-light);
-    }
-    .contact-links {
-      margin-top: 32px;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    footer {
-      padding: 32px;
-      text-align: center;
-      font-size: 13px;
-      color: var(--ink-muted);
-      border-top: 1px solid rgba(10, 15, 26, 0.06);
-    }
-
+    .contact-text { margin-top: 16px; font-size: 16px; line-height: 1.7; color: var(--ink-light); }
+    .contact-links { margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap; }
+    footer { padding: 32px; text-align: center; font-size: 13px; color: var(--ink-muted); border-top: 1px solid rgba(10, 15, 26, 0.06); }
     @media (max-width: 768px) {
-      .hero {
-        grid-template-columns: 1fr;
-        padding: 48px 24px 64px;
-        gap: 32px;
-        text-align: center;
-      }
-      .hero-photo {
-        width: 200px;
-        height: 240px;
-        margin: 0 auto;
-        order: -1;
-      }
+      .hero { grid-template-columns: 1fr; padding: 48px 24px 64px; gap: 32px; text-align: center; }
+      .hero-photo { width: 200px; height: 240px; margin: 0 auto; order: -1; }
       .hero-actions { justify-content: center; }
       .section { padding: 0 24px; }
       .flagship-card { padding: 0 24px; }
@@ -543,10 +236,10 @@
       </div>
 
       <div class="flagship-rca reveal">
-        <div class="flagship-rca-label">Root Cause Analysis — Delay category Pareto with computed insights</div>
+        <div class="flagship-rca-label">Scenario Simulator — What-if analysis with regression-backed OTP estimates</div>
         <div class="flagship-screenshot">
-          <img src="screenshots/screencapture-intelligenceops-demo-streamlit-app-Drivers-RCA-2026-03-21-11_49_11.png"
-               alt="IntelligenceOps — Drivers / RCA page">
+          <img src="screenshots/screencapture-intelligenceops-demo-streamlit-app-Scenarios-Levers-2026-03-21-11_49_33.png"
+               alt="IntelligenceOps — Scenarios / Levers page">
         </div>
       </div>
 
@@ -580,91 +273,48 @@
     </div>
     <div class="section">
       <div class="grid">
-
         <div class="project-card reveal">
           <div class="card-accent"></div>
           <h3>FlightOpsDB</h3>
           <div class="card-sub">SQL Server analytical database</div>
-          <p>
-            The data backbone. SQL Server database with ETL pipeline, 58 analytical views,
-            staging/clean architecture, hygiene views, and object governance.
-            212 delay codes mapped. 5 data quality gate types.
-          </p>
-          <div class="card-tags">
-            <span>SQL Server</span><span>T-SQL</span><span>ETL</span><span>PowerShell</span>
-          </div>
+          <p>The data backbone. SQL Server database with ETL pipeline, 58 analytical views, staging/clean architecture, hygiene views, and object governance. 212 delay codes mapped. 5 data quality gate types.</p>
+          <div class="card-tags"><span>SQL Server</span><span>T-SQL</span><span>ETL</span><span>PowerShell</span></div>
         </div>
-
         <div class="project-card reveal">
           <div class="card-accent"></div>
           <h3>Station OTP Diagnostic</h3>
           <div class="card-sub">7-station root cause analysis</div>
-          <p>
-            Comprehensive departure performance diagnostic for the Head of Ground Operations.
-            Evidence chains from delay code to category to station to action.
-            Controllable vs uncontrollable split at code level, not category level.
-          </p>
-          <div class="card-tags">
-            <span>Statistical analysis</span><span>IATA standards</span><span>SQL Server</span>
-          </div>
+          <p>Comprehensive departure performance diagnostic for the Head of Ground Operations. Evidence chains from delay code to category to station to action. Controllable vs uncontrollable split at code level, not category level.</p>
+          <div class="card-tags"><span>Statistical analysis</span><span>IATA standards</span><span>SQL Server</span></div>
         </div>
-
         <div class="project-card reveal">
           <div class="card-accent"></div>
           <h3>KPI Insights Catalog</h3>
           <div class="card-sub">10 validated cause-and-effect relationships</div>
-          <p>
-            TAT amplification mechanism (1.02x good band, 1.77x critical band),
-            connection hold confounding analysis, controllable misattribution mapping.
-            Each insight backed by SQL evidence and a reproducibility matrix.
-          </p>
-          <div class="card-tags">
-            <span>Causal analysis</span><span>Statistical isolation</span><span>SQL</span>
-          </div>
+          <p>TAT amplification mechanism (1.02x good band, 1.77x critical band), connection hold confounding analysis, controllable misattribution mapping. Each insight backed by SQL evidence and a reproducibility matrix.</p>
+          <div class="card-tags"><span>Causal analysis</span><span>Statistical isolation</span><span>SQL</span></div>
         </div>
-
         <div class="project-card reveal">
           <div class="card-accent"></div>
           <h3>Block Time &amp; TAT Analysis</h3>
           <div class="card-sub">Schedule padding and turnaround exception detection</div>
-          <p>
-            Block time analysis reveals where schedule padding masks operational problems.
-            TAT analysis classifies turnarounds into performance bands and detects exceptions
-            where TAT variance predicts a late departure.
-          </p>
-          <div class="card-tags">
-            <span>Correlation analysis</span><span>TAT classification</span><span>SQL</span>
-          </div>
+          <p>Block time analysis reveals where schedule padding masks operational problems. TAT analysis classifies turnarounds into performance bands and detects exceptions where TAT variance predicts a late departure.</p>
+          <div class="card-tags"><span>Correlation analysis</span><span>TAT classification</span><span>SQL</span></div>
         </div>
-
         <div class="project-card reveal">
           <div class="card-accent" style="background: var(--amber);"></div>
           <h3>Power BI Dashboards <span class="badge-soon">Coming Soon</span></h3>
           <div class="card-sub">Operational reporting and KPI visualization</div>
-          <p>
-            Interactive Power BI reports for flight operations analysis.
-            DAX measures, data modeling, and visual design for executive audiences.
-            Anonymised version coming to this portfolio.
-          </p>
-          <div class="card-tags">
-            <span>Power BI</span><span>DAX</span><span>Data Modeling</span>
-          </div>
+          <p>Interactive Power BI reports for flight operations analysis. DAX measures, data modeling, and visual design for executive audiences. Anonymised version coming to this portfolio.</p>
+          <div class="card-tags"><span>Power BI</span><span>DAX</span><span>Data Modeling</span></div>
         </div>
-
         <div class="project-card card-wide reveal">
           <div class="card-accent"></div>
           <h3>Market Intelligence Research</h3>
           <div class="card-sub">20+ vendor landscape — aviation and healthcare ops intelligence</div>
-          <p>
-            Competitive landscape mapping across operational decision intelligence.
-            4-level vendor classification. Public procurement pricing signals ($5M-$29M deal sizes).
-            A-CDM maturity analysis. Cross-industry patterns between aviation and hospital command centres.
-          </p>
-          <div class="card-tags">
-            <span>Competitive analysis</span><span>Public procurement</span><span>Market sizing</span>
-          </div>
+          <p>Competitive landscape mapping across operational decision intelligence. 4-level vendor classification. Public procurement pricing signals ($5M-$29M deal sizes). A-CDM maturity analysis. Cross-industry patterns between aviation and hospital command centres.</p>
+          <div class="card-tags"><span>Competitive analysis</span><span>Public procurement</span><span>Market sizing</span></div>
         </div>
-
       </div>
     </div>
   </section>
@@ -677,57 +327,18 @@
     <div class="section">
       <div class="about-grid reveal">
         <div class="about-text">
-          <p>
-            I manage departure operations at an international airport in Casablanca.
-            Coordinating ground handling, managing delays, briefing crews, making decisions
-            at 5 AM when the turnaround is running long and the next flight is waiting.
-          </p>
-          <p>
-            On my own time, I built everything you see on this site. A SQL Server database
-            with 58 analytical views. A Python ETL pipeline. An 8-page interactive dashboard.
-            Automated PDF executive reports. A CI pipeline that validates every data file before
-            it reaches production. <strong>All of it solo, from scratch.</strong>
-          </p>
-          <p>
-            Most data engineers don't know what IATA delay code 93L means when the turnaround
-            is critical. Most ops managers don't know how to write a weighted regression or
-            design a data contract. I do both. That's the edge.
-          </p>
-          <p>
-            I'm looking for consulting engagements, analytics engineering roles, and collaboration
-            on aviation data projects. If you need someone who understands the operations AND the data,
-            let's talk.
-          </p>
+          <p>I manage departure operations at an international airport in Casablanca. Coordinating ground handling, managing delays, briefing crews, making decisions at 5 AM when the turnaround is running long and the next flight is waiting.</p>
+          <p>On my own time, I built everything you see on this site. A SQL Server database with 58 analytical views. A Python ETL pipeline. An 8-page interactive dashboard. Automated PDF executive reports. A CI pipeline that validates every data file before it reaches production. <strong>All of it solo, from scratch.</strong></p>
+          <p>Most data engineers don't know what IATA delay code 93L means when the turnaround is critical. Most ops managers don't know how to write a weighted regression or design a data contract. I do both. That's the edge.</p>
+          <p>I'm looking for consulting engagements, analytics engineering roles, and collaboration on aviation data projects. If you need someone who understands the operations AND the data, let's talk.</p>
         </div>
         <div class="about-sidebar">
           <h3>Technical</h3>
-          <ul>
-            <li>SQL Server</li>
-            <li>Python</li>
-            <li>Streamlit</li>
-            <li>Plotly</li>
-            <li>Power BI</li>
-            <li>pandas</li>
-            <li>ReportLab</li>
-            <li>Git</li>
-            <li>GitHub Actions</li>
-            <li>PowerShell</li>
-          </ul>
+          <ul><li>SQL Server</li><li>Python</li><li>Streamlit</li><li>Plotly</li><li>Power BI</li><li>pandas</li><li>ReportLab</li><li>Git</li><li>GitHub Actions</li><li>PowerShell</li></ul>
           <h3>Aviation Domain</h3>
-          <ul>
-            <li>IATA delay codes</li>
-            <li>OTP D15</li>
-            <li>AHM 730</li>
-            <li>A-CDM / APOC</li>
-            <li>TAT analysis</li>
-            <li>Turnaround ops</li>
-          </ul>
+          <ul><li>IATA delay codes</li><li>OTP D15</li><li>AHM 730</li><li>A-CDM / APOC</li><li>TAT analysis</li><li>Turnaround ops</li></ul>
           <h3>Languages</h3>
-          <ul class="lang-list">
-            <li>English</li>
-            <li>French</li>
-            <li>Arabic</li>
-          </ul>
+          <ul class="lang-list"><li>English</li><li>French</li><li>Arabic</li></ul>
         </div>
       </div>
     </div>
@@ -738,13 +349,8 @@
       <div class="section-label">Contact</div>
       <div class="section-title">Let's talk</div>
       <div class="contact-inner">
-        <p class="contact-text">
-          I build operational analytics systems for airlines and airport operations teams.
-          If you need someone who understands both the data and the operations — let's work together.
-        </p>
-        <p class="contact-text" style="margin-top: 8px; font-size: 14px; color: var(--ink-muted);">
-          Open to consulting, analytics engineering roles, and aviation data projects.
-        </p>
+        <p class="contact-text">I build operational analytics systems for airlines and airport operations teams. If you need someone who understands both the data and the operations — let's work together.</p>
+        <p class="contact-text" style="margin-top: 8px; font-size: 14px; color: var(--ink-muted);">Open to consulting, analytics engineering roles, and aviation data projects.</p>
         <div class="contact-links">
           <a href="https://www.linkedin.com/in/youssef-hamdaoui-71ba00153/" target="_blank" rel="noopener" class="btn btn-primary">LinkedIn</a>
           <a href="https://github.com/JosephSigma991" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
@@ -754,21 +360,13 @@
     </div>
   </section>
 
-  <footer>
-    Youssef Hamdaoui · Casablanca, Morocco · <span id="year"></span>
-  </footer>
+  <footer>Youssef Hamdaoui · Casablanca, Morocco · <span id="year"></span></footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
 
