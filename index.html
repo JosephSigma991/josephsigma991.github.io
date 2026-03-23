@@ -4,438 +4,772 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Youssef Hamdaoui — Operations Intelligence Engineer</title>
-  <meta name="description" content="Operations Intelligence Engineer specialising in aviation analytics and data systems. SQL pipelines, Streamlit dashboards, CI-validated data contracts, executive reporting.">
+  <meta name="description" content="Operations Intelligence Engineer — aviation analytics, SQL pipelines, Streamlit dashboards, CI-validated data contracts, executive reporting.">
   <meta property="og:title" content="Youssef Hamdaoui — Operations Intelligence Engineer">
-  <meta property="og:description" content="I design and build decision-grade analytics systems for airline operations. Production SQL pipelines, 8-page dashboards, OTP regression models, automated PDF reporting.">
+  <meta property="og:description" content="I build decision-grade analytics systems for airline operations. SQL pipelines, dashboards, OTP regression models, automated PDF reporting.">
   <meta property="og:image" content="screenshots/screencapture-intelligenceops-demo-streamlit-app-2026-03-21-11_47_38.png">
-  <meta property="og:url" content="https://youssefhamdaoui.github.io">
+  <meta property="og:url" content="https://josephsigma991.github.io">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
   <!-- Umami Cloud Analytics -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="6d9425b7-7197-42b0-b723-5f8b6685b2e1"></script>
-</head>
-<body class="bg-slate-50 text-slate-700 antialiased">
+  <style>
+    :root {
+      --ink: #0a0f1a;
+      --ink-light: #3d4663;
+      --ink-muted: #6b7394;
+      --surface: #f5f3ef;
+      --surface-warm: #eae6df;
+      --card: #ffffff;
+      --accent: #2563eb;
+      --accent-glow: #3b82f6;
+      --accent-soft: #dbeafe;
+      --green: #059669;
+      --amber: #d97706;
+      --red: #dc2626;
+      --radius: 12px;
+      --font-display: 'DM Serif Display', Georgia, serif;
+      --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
 
-  <!-- ── NAV ────────────────────────────────────────────────────────────── -->
-  <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
-    <div class="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between">
-      <span class="font-semibold text-slate-800 text-sm tracking-tight">Youssef Hamdaoui</span>
-      <div class="flex gap-5 text-sm text-slate-500">
-        <a href="#projects" class="hover:text-slate-800 transition-colors">Work</a>
-        <a href="#about"    class="hover:text-slate-800 transition-colors">About</a>
-        <a href="#skills"   class="hover:text-slate-800 transition-colors">Skills</a>
-        <a href="#contact"  class="hover:text-slate-800 transition-colors">Contact</a>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--surface);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(245, 243, 239, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(10, 15, 26, 0.06);
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-name {
+      font-family: var(--font-display);
+      font-size: 18px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ink-muted);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--ink); }
+
+    .hero {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 32px 100px;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 60px;
+      align-items: center;
+    }
+    .hero-text h1 {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 5.5vw, 64px);
+      line-height: 1.1;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+    }
+    .hero-text h1 span {
+      display: block;
+      font-family: var(--font-body);
+      font-size: clamp(16px, 2vw, 20px);
+      font-weight: 400;
+      color: var(--ink-muted);
+      margin-top: 16px;
+      line-height: 1.5;
+      letter-spacing: 0;
+    }
+    .hero-actions {
+      margin-top: 36px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 26px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.25s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--ink);
+      color: var(--surface);
+    }
+    .btn-primary:hover {
+      background: var(--accent);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--ink);
+      border: 1.5px solid rgba(10, 15, 26, 0.15);
+    }
+    .btn-outline:hover {
+      border-color: var(--ink);
+      transform: translateY(-1px);
+    }
+    .hero-photo {
+      width: 280px;
+      height: 340px;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(15%);
+      transition: filter 0.4s;
+    }
+    .hero-photo:hover img { filter: grayscale(0%); }
+    .hero-photo::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 20px;
+      border: 1px solid rgba(10, 15, 26, 0.08);
+      pointer-events: none;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 3.5vw, 40px);
+      color: var(--ink);
+      line-height: 1.15;
+    }
+
+    .flagship {
+      margin-top: 20px;
+      padding: 80px 0;
+    }
+    .flagship-card {
+      max-width: 1100px;
+      margin: 32px auto 0;
+      padding: 0 32px;
+    }
+    .flagship-screenshot {
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(10, 15, 26, 0.12), 0 1px 3px rgba(10, 15, 26, 0.06);
+      border: 1px solid rgba(10, 15, 26, 0.06);
+      transform: perspective(1200px) rotateX(2deg);
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s;
+    }
+    .flagship-screenshot:hover {
+      transform: perspective(1200px) rotateX(0deg);
+      box-shadow: 0 16px 64px rgba(10, 15, 26, 0.18);
+    }
+    .flagship-screenshot img {
+      width: 100%;
+      display: block;
+    }
+    .flagship-meta {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    .flagship-desc {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--ink-light);
+    }
+    .flagship-desc p + p { margin-top: 16px; }
+    .flagship-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .stat-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 24px;
+      border: 1px solid rgba(10, 15, 26, 0.06);
+    }
+    .stat-value {
+      font-family: var(--font-display);
+      font-size: 28px;
+      color: var(--ink);
+    }
+    .stat-label {
+      font-size: 12px;
+      color: var(--ink-muted);
+      margin-top: 4px;
+      letter-spacing: 0.02em;
+    }
+    .flagship-tags {
+      margin-top: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tag {
+      font-size: 12px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 100px;
+      background: var(--surface-warm);
+      color: var(--ink-light);
+    }
+    .flagship-buttons {
+      margin-top: 32px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .flagship-note {
+      margin-top: 24px;
+      font-size: 13px;
+      color: var(--ink-muted);
+      font-style: italic;
+      padding-left: 16px;
+      border-left: 2px solid var(--accent-soft);
+    }
+    .flagship-rca { margin-top: 48px; }
+    .flagship-rca-label {
+      font-size: 12px;
+      color: var(--ink-muted);
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    .projects-grid { padding: 80px 0; }
+    .grid {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 32px;
+      border: 1px solid rgba(10, 15, 26, 0.06);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s;
+      position: relative;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(10, 15, 26, 0.08);
+    }
+    .project-card .card-accent {
+      width: 32px;
+      height: 3px;
+      border-radius: 2px;
+      background: var(--accent);
+      margin-bottom: 20px;
+    }
+    .project-card h3 {
+      font-family: var(--font-display);
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+    .project-card .card-sub {
+      font-size: 13px;
+      color: var(--ink-muted);
+      margin-bottom: 16px;
+    }
+    .project-card p {
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--ink-light);
+    }
+    .project-card .card-tags {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .project-card .card-tags span {
+      font-size: 11px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 100px;
+      background: var(--surface);
+      color: var(--ink-muted);
+    }
+    .card-wide { grid-column: 1 / -1; }
+
+    .badge-soon {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 100px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+
+    .about-section {
+      padding: 80px 0;
+      background: var(--ink);
+      color: var(--surface);
+    }
+    .about-section .section-label { color: var(--accent-glow); }
+    .about-section .section-title { color: var(--surface); }
+    .about-grid {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 60px;
+    }
+    .about-text {
+      font-size: 16px;
+      line-height: 1.8;
+      color: rgba(245, 243, 239, 0.75);
+    }
+    .about-text p + p { margin-top: 20px; }
+    .about-text strong { color: var(--surface); font-weight: 600; }
+    .about-sidebar h3 {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(245, 243, 239, 0.4);
+      margin-bottom: 16px;
+    }
+    .about-sidebar h3 + h3 { margin-top: 32px; }
+    .about-sidebar ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .about-sidebar li {
+      font-size: 12px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 100px;
+      border: 1px solid rgba(245, 243, 239, 0.12);
+      color: rgba(245, 243, 239, 0.65);
+    }
+    .lang-list { display: flex; gap: 20px; margin-top: 0; }
+    .lang-list li {
+      border: none;
+      padding: 0;
+      font-size: 14px;
+      color: rgba(245, 243, 239, 0.65);
+    }
+
+    .contact-section { padding: 80px 0 100px; }
+    .contact-inner { max-width: 600px; }
+    .contact-text {
+      margin-top: 16px;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--ink-light);
+    }
+    .contact-links {
+      margin-top: 32px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    footer {
+      padding: 32px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--ink-muted);
+      border-top: 1px solid rgba(10, 15, 26, 0.06);
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 48px 24px 64px;
+        gap: 32px;
+        text-align: center;
+      }
+      .hero-photo {
+        width: 200px;
+        height: 240px;
+        margin: 0 auto;
+        order: -1;
+      }
+      .hero-actions { justify-content: center; }
+      .section { padding: 0 24px; }
+      .flagship-card { padding: 0 24px; }
+      .flagship-meta { grid-template-columns: 1fr; gap: 32px; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .nav-inner { padding: 12px 20px; }
+      .nav-links { gap: 18px; }
+      .nav-links a { font-size: 12px; }
+      .grid { grid-template-columns: 1fr; }
+      .card-wide { grid-column: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-name">Youssef Hamdaoui</a>
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
   </nav>
 
-  <!-- ── HERO ───────────────────────────────────────────────────────────── -->
-  <section class="max-w-5xl mx-auto px-6 pt-20 pb-24 md:pt-32 md:pb-36">
-    <h1 class="text-4xl md:text-6xl font-semibold text-slate-900 leading-tight tracking-tight">
-      Operations Intelligence<br>Engineer
-    </h1>
-    <h2 class="mt-4 text-xl md:text-2xl font-medium text-slate-400">
-      Aviation Analytics &amp; Data Systems
-    </h2>
-    <p class="mt-6 max-w-2xl text-base md:text-lg text-slate-500 leading-relaxed">
-      I design and build decision-grade analytics systems for airline operations.
-      SQL pipelines, interactive dashboards, CI-validated data contracts, automated
-      executive reporting. One person, full stack, production-ready.
-    </p>
-    <div class="mt-8 flex flex-wrap gap-3">
-      <span class="px-3 py-1.5 bg-indigo-50 text-indigo-700 text-sm font-medium rounded-full">Aviation Domain Expert</span>
-      <span class="px-3 py-1.5 bg-indigo-50 text-indigo-700 text-sm font-medium rounded-full">Full-Stack Data Engineering</span>
-      <span class="px-3 py-1.5 bg-indigo-50 text-indigo-700 text-sm font-medium rounded-full">AI-Augmented Development</span>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>
+        Operations Intelligence Engineer
+        <span>I build decision-grade analytics systems for airline operations —<br>turning flight data into actionable delay insights.</span>
+      </h1>
+      <div class="hero-actions">
+        <a href="#work" class="btn btn-primary">See my work</a>
+        <a href="https://intelligenceops-demo.streamlit.app" target="_blank" rel="noopener" class="btn btn-outline">Try the live demo &rarr;</a>
+      </div>
     </div>
-    <div class="mt-3">
-      <span class="px-3 py-1.5 bg-slate-100 text-slate-500 text-sm rounded-full">Casablanca, Morocco · EN / FR / AR</span>
-    </div>
-    <div class="mt-10">
-      <a href="#projects"
-         class="inline-flex items-center px-6 py-3 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition-colors">
-        See My Work
-      </a>
+    <div class="hero-photo">
+      <img src="profile.jpg" alt="Youssef Hamdaoui" loading="eager">
     </div>
   </section>
 
-  <!-- ── PROJECTS ───────────────────────────────────────────────────────── -->
-  <section id="projects" class="max-w-5xl mx-auto px-6 pb-24">
-    <h2 class="text-2xl md:text-3xl font-semibold text-slate-800">Work</h2>
-    <p class="mt-2 text-slate-500 max-w-2xl">
-      Production systems, validated analysis, and research — all built from real operational problems.
-    </p>
-
-    <!-- ── Flagship: IntelligenceOps ──────────────────────────────────── -->
-    <div class="mt-8 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-      <div class="p-8 md:p-10">
-
-        <div>
-          <h3 class="text-2xl font-semibold text-slate-900">IntelligenceOps</h3>
-          <p class="mt-1 text-slate-500">Production analytics platform for departure performance intelligence</p>
-        </div>
-
-        <div class="mt-6 space-y-4 text-slate-600 leading-relaxed">
+  <section id="work" class="flagship">
+    <div class="section reveal">
+      <div class="section-label">Featured Project</div>
+      <div class="section-title">IntelligenceOps</div>
+    </div>
+    <div class="flagship-card">
+      <div class="flagship-screenshot reveal">
+        <img src="screenshots/screencapture-intelligenceops-demo-streamlit-app-2026-03-21-11_47_38.png"
+             alt="IntelligenceOps — Dashboard Homepage">
+      </div>
+      <div class="flagship-meta reveal">
+        <div class="flagship-desc">
           <p>
-            An 8-page interactive dashboard that turns raw flight and delay data into
-            decision-grade intelligence for airline operations management. Built to answer
-            one question in 3 seconds: are we on time, and if not, why?
+            <strong>Problem:</strong> Ops teams cannot quickly identify which stations, delay categories,
+            and codes drive departure delays — or separate what's controllable from what's inherited.
+            Analysis takes too long. Accountability stays vague.
           </p>
           <p>
-            The system runs a two-layer architecture. Layer 1 is a SQL Server ETL pipeline
-            that ingests raw flight exports, cleans data through hygiene views (excluding
-            future dates, Excel artifacts, blank keys), and publishes validated CSV artifacts.
-            Layer 2 is a Streamlit application that consumes those artifacts read-only, with
-            all file paths resolved from a JSON run stamp that serves as the single source
-            of truth.
+            <strong>Solution:</strong> A two-layer system — SQL Server ETL pipeline publishing validated
+            CSV artifacts, consumed by an 8-page Streamlit dashboard. IATA-aligned KPIs, Pareto analysis,
+            what-if scenario simulation with regression-backed OTP estimates, and automated PDF executive reports.
+            A CI pipeline validates a 13-file data contract across 3 time grains on every commit.
           </p>
           <p>
-            Every metric is IATA-aligned. OTP D15 against an 85% target. Average departure
-            delay per flight. Delay minutes normalized to departure impact and attributed to
-            delay categories. A Pareto analysis identifies which 2-3 categories own 70%+ of
-            total delay. A what-if scenario simulator lets managers ask "if we reduce
-            controllable delays by 10%, what happens?" and get a regression-backed estimate
-            with R-squared confidence and extrapolation guardrails.
+            <strong>Result:</strong> Enables rapid identification of top delay drivers by station.
+            Separates controllable vs inherited delays at code level.
+            Surfaces which 2-3 categories own 70%+ of total delay minutes.
+            Supports scenario-based decision-making with confidence bounds.
           </p>
         </div>
-
-        <!-- Anonymisation callout -->
-        <div class="mt-6 pl-4 border-l-4 border-indigo-300 bg-slate-50 rounded-r-lg py-3 pr-4">
-          <p class="text-sm text-slate-600">
-            <span class="font-semibold text-slate-800">Built in production for a regional airline.</span>
-            This public demo uses anonymised data — station codes and figures are synthetic.
-            Architecture, code, and all analytical logic are production-identical.
-          </p>
-        </div>
-
-        <!-- Screenshots -->
-        <div class="mt-8 space-y-6">
-          <p class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Dashboard screenshots</p>
-
-          <div>
-            <p class="text-xs text-slate-400 mb-2">Homepage — KPI cards, delay breakdown, station ranking</p>
-            <img src="screenshots/screencapture-intelligenceops-demo-streamlit-app-2026-03-21-11_47_38.png"
-                 alt="IntelligenceOps — Homepage" class="rounded-lg border border-slate-200 w-full" loading="lazy">
+        <div class="flagship-stats">
+          <div class="stat-card">
+            <div class="stat-value">8</div>
+            <div class="stat-label">Interactive pages</div>
           </div>
-
-          <div>
-            <p class="text-xs text-slate-400 mb-2">Network Overview — KPI trends and OTP time series</p>
-            <img src="screenshots/screencapture-intelligenceops-demo-streamlit-app-Network-Overview-2026-03-21-11_47_57.png"
-                 alt="IntelligenceOps — Network Overview" class="rounded-lg border border-slate-200 w-full" loading="lazy">
+          <div class="stat-card">
+            <div class="stat-value">13-file</div>
+            <div class="stat-label">CI-validated data contract</div>
           </div>
-
-          <div>
-            <p class="text-xs text-slate-400 mb-2">Station Ranking — sortable heatmap and station comparison</p>
-            <img src="screenshots/screencapture-intelligenceops-demo-streamlit-app-Station-Ranking-2026-03-21-11_48_12.png"
-                 alt="IntelligenceOps — Station Ranking" class="rounded-lg border border-slate-200 w-full" loading="lazy">
+          <div class="stat-card">
+            <div class="stat-value">153K+</div>
+            <div class="stat-label">Flights analyzed</div>
           </div>
-
-          <div>
-            <p class="text-xs text-slate-400 mb-2">Drivers / RCA — delay category Pareto, trend, computed insights</p>
-            <img src="screenshots/screencapture-intelligenceops-demo-streamlit-app-Drivers-RCA-2026-03-21-11_49_11.png"
-                 alt="IntelligenceOps — Drivers RCA" class="rounded-lg border border-slate-200 w-full" loading="lazy">
-          </div>
-
-          <div>
-            <p class="text-xs text-slate-400 mb-2">Scenarios / Levers — what-if simulator with OTP regression model</p>
-            <img src="screenshots/screencapture-intelligenceops-demo-streamlit-app-Scenarios-Levers-2026-03-21-11_49_33.png"
-                 alt="IntelligenceOps — Scenarios" class="rounded-lg border border-slate-200 w-full" loading="lazy">
+          <div class="stat-card">
+            <div class="stat-value">R²</div>
+            <div class="stat-label">Guardrailed OTP model</div>
           </div>
         </div>
-
-        <!-- Tech pills -->
-        <div class="mt-6 flex flex-wrap gap-2">
-          <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">Python</span>
-          <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">SQL Server</span>
-          <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">Streamlit</span>
-          <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">Plotly</span>
-          <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">pandas</span>
-          <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">ReportLab</span>
-          <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">GitHub Actions</span>
-          <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">PowerShell</span>
-        </div>
-
-        <!-- Stat cards -->
-        <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3">
-          <div class="bg-slate-50 rounded-xl p-4 text-center">
-            <div class="text-2xl font-semibold text-slate-900">8</div>
-            <div class="text-xs text-slate-400 mt-1">pages</div>
-          </div>
-          <div class="bg-slate-50 rounded-xl p-4 text-center">
-            <div class="text-2xl font-semibold text-slate-900">13-file</div>
-            <div class="text-xs text-slate-400 mt-1">data contract</div>
-          </div>
-          <div class="bg-slate-50 rounded-xl p-4 text-center">
-            <div class="text-2xl font-semibold text-slate-900">153K+</div>
-            <div class="text-xs text-slate-400 mt-1">flights</div>
-          </div>
-          <div class="bg-slate-50 rounded-xl p-4 text-center">
-            <div class="text-2xl font-semibold text-slate-900">R²</div>
-            <div class="text-xs text-slate-400 mt-1">OTP model</div>
-          </div>
-        </div>
-
-        <!-- Buttons -->
-        <div class="mt-8 flex flex-wrap gap-3">
-          <a href="https://intelligenceops-demo.streamlit.app" target="_blank" rel="noopener"
-             class="inline-flex items-center px-5 py-2.5 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition-colors">
-            Try the live demo &rarr;
-          </a>
-          <a href="https://github.com/JosephSigma991/intelligenceops-demo" target="_blank" rel="noopener"
-             class="inline-flex items-center px-5 py-2.5 bg-white border border-slate-300 text-slate-700 text-sm font-semibold rounded-lg hover:bg-slate-50 transition-colors">
-            View on GitHub
-          </a>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- ── Smaller project cards ──────────────────────────────────────── -->
-    <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-
-      <!-- FlightOpsDB -->
-      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
-        <h3 class="text-lg font-semibold text-slate-900">FlightOpsDB</h3>
-        <p class="mt-1 text-sm text-slate-500">SQL Server analytical database with ETL pipeline and object governance</p>
-        <p class="mt-4 text-sm text-slate-600 leading-relaxed">
-          The data backbone behind everything else I build. FlightOpsDB is a SQL Server
-          database designed for airline flight operations analysis, covering 2+ years of
-          operational data across multiple regions and stations.
-        </p>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">SQL Server</span>
-          <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">T-SQL</span>
-          <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">ETL</span>
-          <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">PowerShell</span>
-        </div>
-        <p class="mt-4 text-xs text-slate-400">58 views · 212 delay codes · 5 DQ gate types</p>
       </div>
 
-      <!-- Station OTP Diagnostic -->
-      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
-        <h3 class="text-lg font-semibold text-slate-900">Station OTP Diagnostic</h3>
-        <p class="mt-1 text-sm text-slate-500">7-station root cause analysis for regional operations leadership</p>
-        <p class="mt-4 text-sm text-slate-600 leading-relaxed">
-          A comprehensive departure performance diagnostic covering 7 stations across East
-          Africa and Turkey, produced for the Head of Ground Operations. The goal: identify
-          worst-performing stations, diagnose root causes with evidence chains, and propose
-          actionable improvements for the following year.
-        </p>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">SQL Server</span>
-          <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">Statistical analysis</span>
-          <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">IATA standards</span>
-        </div>
-        <p class="mt-4 text-xs text-slate-400">Methodology shown · operational data redacted</p>
-      </div>
-
-      <!-- KPI Insights Catalog -->
-      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
-        <h3 class="text-lg font-semibold text-slate-900">KPI Insights Catalog</h3>
-        <p class="mt-1 text-sm text-slate-500">10 validated cause-and-effect relationships with SQL evidence</p>
-        <p class="mt-4 text-sm text-slate-600 leading-relaxed">
-          A catalog of proven operational insights — TAT amplification mechanism (1.02x good
-          band, 1.77x critical band), connection hold confounding analysis, controllable
-          misattribution mapping. Each insight includes SQL evidence, validated results, and
-          a reproducibility matrix.
-        </p>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">SQL Server</span>
-          <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">Statistical isolation</span>
-          <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">Causal analysis</span>
+      <div class="flagship-rca reveal">
+        <div class="flagship-rca-label">Root Cause Analysis — Delay category Pareto with computed insights</div>
+        <div class="flagship-screenshot">
+          <img src="screenshots/screencapture-intelligenceops-demo-streamlit-app-Drivers-RCA-2026-03-21-11_49_11.png"
+               alt="IntelligenceOps — Drivers / RCA page">
         </div>
       </div>
 
-      <!-- Block Time & TAT Analysis -->
-      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
-        <h3 class="text-lg font-semibold text-slate-900">Block Time &amp; TAT Analysis</h3>
-        <p class="mt-1 text-sm text-slate-500">Schedule padding analysis and turnaround exception detection</p>
-        <p class="mt-4 text-sm text-slate-600 leading-relaxed">
-          Two related analysis streams that feed into departure performance understanding.
-          Block time analysis examines the gap between scheduled and actual gate-to-gate
-          time, revealing where schedule padding masks operational problems. TAT analysis
-          classifies turnarounds into performance bands and detects exceptions where TAT
-          variance predicts a late departure.
-        </p>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">SQL Server</span>
-          <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">Correlation analysis</span>
-          <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">TAT classification</span>
-        </div>
+      <div class="flagship-tags reveal">
+        <span class="tag">Python</span>
+        <span class="tag">SQL Server</span>
+        <span class="tag">Streamlit</span>
+        <span class="tag">Plotly</span>
+        <span class="tag">pandas</span>
+        <span class="tag">ReportLab</span>
+        <span class="tag">GitHub Actions CI</span>
+        <span class="tag">PowerShell</span>
       </div>
 
-      <!-- Market Intelligence Research — spans full width -->
-      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 md:col-span-2">
-        <h3 class="text-lg font-semibold text-slate-900">Market Intelligence Research</h3>
-        <p class="mt-1 text-sm text-slate-500">20+ vendor landscape for aviation and healthcare ops intelligence</p>
-        <p class="mt-4 text-sm text-slate-600 leading-relaxed">
-          A strategic research project mapping the competitive landscape of operational
-          decision intelligence systems across two sectors: aviation and healthcare.
-        </p>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">Competitive analysis</span>
-          <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">Public procurement</span>
-          <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">Market sizing</span>
-        </div>
-        <p class="mt-4 text-xs text-slate-400">Framework shown · proprietary analysis redacted</p>
+      <div class="flagship-buttons reveal">
+        <a href="https://intelligenceops-demo.streamlit.app" target="_blank" rel="noopener" class="btn btn-primary">Try the live demo &rarr;</a>
+        <a href="https://github.com/JosephSigma991/intelligenceops-demo" target="_blank" rel="noopener" class="btn btn-outline">View on GitHub</a>
       </div>
 
-    </div>
-  </section>
-
-  <!-- ── ABOUT ──────────────────────────────────────────────────────────── -->
-  <section id="about" class="bg-white border-y border-slate-200">
-    <div class="max-w-5xl mx-auto px-6 py-20">
-      <h2 class="text-2xl md:text-3xl font-semibold text-slate-800">About</h2>
-      <div class="mt-6 max-w-2xl space-y-4 text-slate-600 leading-relaxed">
-        <p>
-          I'm an Airport Duty Manager based in Casablanca. My day job is managing departure
-          operations at an international airport: coordinating ground handling, managing
-          delays, briefing crews, running the show when things go wrong at 5 AM.
-          My documentation discipline runs to audit grade — every enhancement tracked,
-          every validation result logged, every executive number traceable to its source query.
-        </p>
-        <p>
-          My other life is data engineering. Over the past year, I've designed and built a
-          complete flight operations analytics platform from scratch: SQL Server database,
-          Python ETL pipeline, 8-page interactive dashboard, automated PDF executive reports,
-          and a CI/CD pipeline that validates every data file before it reaches production.
-          All of it solo, on my own time.
-        </p>
-        <p>
-          The combination matters. Most data engineers don't know what IATA delay code 93L
-          means at 6 AM when the turnaround is running long. Most ops managers don't know
-          how to write a weighted linear regression or design a data contract. I do both.
-        </p>
-        <p>
-          I speak English, French, and Arabic. I work with IATA standards (AHM 730, delay
-          codes, OTP D15), SQL Server, Python, Streamlit, Plotly, Power BI, and Git. I've
-          studied the competitive landscape of aviation and healthcare ops intelligence
-          vendors, mapped 20+ companies and their pricing signals, and designed consulting
-          offer packages based on real procurement data.
-        </p>
-        <p>
-          I'm open to consulting engagements, analytics engineering roles, and collaboration
-          on aviation data projects.
-        </p>
-      </div>
-      <p class="mt-6 text-sm text-slate-400">Casablanca, Morocco · English, French, Arabic</p>
-    </div>
-  </section>
-
-  <!-- ── SKILLS ─────────────────────────────────────────────────────────── -->
-  <section id="skills" class="max-w-5xl mx-auto px-6 py-20">
-    <h2 class="text-2xl md:text-3xl font-semibold text-slate-800">Skills &amp; Tools</h2>
-    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
-      <!-- Data Engineering -->
-      <div>
-        <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-4">Data Engineering</h3>
-        <ul class="space-y-2.5 text-sm text-slate-600">
-          <li>SQL Server (ETL pipelines, stored procedures, views, staging patterns, object governance)</li>
-          <li>Python 3.11 (pandas, NumPy, data processing, automation)</li>
-          <li>PowerShell (pipeline automation, CI scripting)</li>
-          <li>Data contracts and schema validation</li>
-          <li>Git + GitHub Actions CI/CD</li>
-          <li>Database object governance (z_archive schema, Meta_ObjectRegistry, status tagging)</li>
-        </ul>
-      </div>
-
-      <!-- Analytics & Visualization -->
-      <div>
-        <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-4">Analytics &amp; Visualization</h3>
-        <ul class="space-y-2.5 text-sm text-slate-600">
-          <li>Streamlit (multi-page interactive dashboards)</li>
-          <li>Plotly (RAG-colored charts, annotations, custom themes)</li>
-          <li>Power BI (Area_DB, operational reporting)</li>
-          <li>ReportLab + Kaleido (automated PDF generation with embedded charts)</li>
-          <li>Excel / VBA (flight data manipulation)</li>
-        </ul>
-      </div>
-
-      <!-- Aviation Domain -->
-      <div>
-        <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-4">Aviation Domain</h3>
-        <ul class="space-y-2.5 text-sm text-slate-600">
-          <li>IATA delay codes and AHM 730 standards</li>
-          <li>OTP D15 (departure on-time performance)</li>
-          <li>A-CDM, APOC, AOP</li>
-          <li>Turnaround time analysis and TAT exception detection</li>
-          <li>Reactionary delay chain analysis</li>
-          <li>Controllable vs uncontrollable delay frameworks</li>
-          <li>Block time and flight time duration analysis</li>
-          <li>Safety Performance Indicators (SPIs)</li>
-          <li>Ground handling operations and GOPS wash-up reporting</li>
-        </ul>
-      </div>
-
-      <!-- Statistical & Analytical + AI -->
-      <div>
-        <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-4">Statistical &amp; Analytical</h3>
-        <ul class="space-y-2.5 text-sm text-slate-600">
-          <li>Weighted linear regression (OTP modeling with R-squared guardrails)</li>
-          <li>Pareto analysis (delay category concentration)</li>
-          <li>Confounding tests (delay code co-occurrence)</li>
-          <li>TAT amplification mechanism analysis</li>
-          <li>Extreme value detection and outlier classification</li>
-          <li>Correlation analysis (TAT overrun vs departure delay)</li>
-        </ul>
-        <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-widest mt-7 mb-4">AI-Augmented Dev</h3>
-        <ul class="space-y-2.5 text-sm text-slate-600">
-          <li>3-tier AI workflow: Strategic, Planning, Execution</li>
-          <li>Prompt engineering for code review and refactoring</li>
-          <li>AI as development partner — domain decisions are mine</li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ── CONTACT ────────────────────────────────────────────────────────── -->
-  <section id="contact" class="bg-white border-t border-slate-200">
-    <div class="max-w-5xl mx-auto px-6 py-20">
-      <h2 class="text-2xl md:text-3xl font-semibold text-slate-800">Let's Talk</h2>
-      <p class="mt-4 max-w-xl text-slate-600 leading-relaxed">
-        I'm open to consulting engagements, analytics engineering roles, and collaboration
-        on aviation data projects. If you're building operational intelligence systems or
-        need someone who understands both the data and the operations, reach out.
+      <p class="flagship-note reveal">
+        Built in production for a regional airline. This public demo uses synthetic data — station codes
+        and figures are anonymised. Architecture, code, and analytical logic are production-identical.
       </p>
-      <div class="mt-8 flex flex-wrap gap-3">
-        <a href="https://www.linkedin.com/in/youssef-hamdaoui-71ba00153/" target="_blank" rel="noopener"
-           class="inline-flex items-center px-5 py-2.5 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition-colors">
-          LinkedIn
-        </a>
-        <a href="https://github.com/JosephSigma991" target="_blank" rel="noopener"
-           class="inline-flex items-center px-5 py-2.5 bg-white border border-slate-300 text-slate-700 text-sm font-semibold rounded-lg hover:bg-slate-50 transition-colors">
-          GitHub
-        </a>
-        <a href="mailto:Hamdaoui1948@gmail.com"
-           class="inline-flex items-center px-5 py-2.5 bg-white border border-slate-300 text-slate-700 text-sm font-semibold rounded-lg hover:bg-slate-50 transition-colors">
-          Email
-        </a>
-      </div>
-      <!-- UTM pattern for LinkedIn posts:
-           ?utm_source=linkedin&utm_campaign=post1_3second_rule
-           ?utm_source=linkedin&utm_campaign=post3_no_cs_degree
-           etc. Umami captures these automatically. -->
     </div>
   </section>
 
-  <!-- ── FOOTER ─────────────────────────────────────────────────────────── -->
-  <footer class="border-t border-slate-200 bg-slate-50">
-    <div class="max-w-5xl mx-auto px-6 py-8 text-center text-sm text-slate-400">
-      Youssef Hamdaoui &middot; Operations Intelligence Engineer &middot; Casablanca, Morocco
-      &middot; <span id="year"></span>
+  <section class="projects-grid">
+    <div class="section reveal">
+      <div class="section-label">More Work</div>
+      <div class="section-title">Analysis, Systems &amp; Research</div>
     </div>
+    <div class="section">
+      <div class="grid">
+
+        <div class="project-card reveal">
+          <div class="card-accent"></div>
+          <h3>FlightOpsDB</h3>
+          <div class="card-sub">SQL Server analytical database</div>
+          <p>
+            The data backbone. SQL Server database with ETL pipeline, 58 analytical views,
+            staging/clean architecture, hygiene views, and object governance.
+            212 delay codes mapped. 5 data quality gate types.
+          </p>
+          <div class="card-tags">
+            <span>SQL Server</span><span>T-SQL</span><span>ETL</span><span>PowerShell</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="card-accent"></div>
+          <h3>Station OTP Diagnostic</h3>
+          <div class="card-sub">7-station root cause analysis</div>
+          <p>
+            Comprehensive departure performance diagnostic for the Head of Ground Operations.
+            Evidence chains from delay code to category to station to action.
+            Controllable vs uncontrollable split at code level, not category level.
+          </p>
+          <div class="card-tags">
+            <span>Statistical analysis</span><span>IATA standards</span><span>SQL Server</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="card-accent"></div>
+          <h3>KPI Insights Catalog</h3>
+          <div class="card-sub">10 validated cause-and-effect relationships</div>
+          <p>
+            TAT amplification mechanism (1.02x good band, 1.77x critical band),
+            connection hold confounding analysis, controllable misattribution mapping.
+            Each insight backed by SQL evidence and a reproducibility matrix.
+          </p>
+          <div class="card-tags">
+            <span>Causal analysis</span><span>Statistical isolation</span><span>SQL</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="card-accent"></div>
+          <h3>Block Time &amp; TAT Analysis</h3>
+          <div class="card-sub">Schedule padding and turnaround exception detection</div>
+          <p>
+            Block time analysis reveals where schedule padding masks operational problems.
+            TAT analysis classifies turnarounds into performance bands and detects exceptions
+            where TAT variance predicts a late departure.
+          </p>
+          <div class="card-tags">
+            <span>Correlation analysis</span><span>TAT classification</span><span>SQL</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="card-accent" style="background: var(--amber);"></div>
+          <h3>Power BI Dashboards <span class="badge-soon">Coming Soon</span></h3>
+          <div class="card-sub">Operational reporting and KPI visualization</div>
+          <p>
+            Interactive Power BI reports for flight operations analysis.
+            DAX measures, data modeling, and visual design for executive audiences.
+            Anonymised version coming to this portfolio.
+          </p>
+          <div class="card-tags">
+            <span>Power BI</span><span>DAX</span><span>Data Modeling</span>
+          </div>
+        </div>
+
+        <div class="project-card card-wide reveal">
+          <div class="card-accent"></div>
+          <h3>Market Intelligence Research</h3>
+          <div class="card-sub">20+ vendor landscape — aviation and healthcare ops intelligence</div>
+          <p>
+            Competitive landscape mapping across operational decision intelligence.
+            4-level vendor classification. Public procurement pricing signals ($5M-$29M deal sizes).
+            A-CDM maturity analysis. Cross-industry patterns between aviation and hospital command centres.
+          </p>
+          <div class="card-tags">
+            <span>Competitive analysis</span><span>Public procurement</span><span>Market sizing</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <div class="section reveal">
+      <div class="section-label">About</div>
+      <div class="section-title">The short version</div>
+    </div>
+    <div class="section">
+      <div class="about-grid reveal">
+        <div class="about-text">
+          <p>
+            I manage departure operations at an international airport in Casablanca.
+            Coordinating ground handling, managing delays, briefing crews, making decisions
+            at 5 AM when the turnaround is running long and the next flight is waiting.
+          </p>
+          <p>
+            On my own time, I built everything you see on this site. A SQL Server database
+            with 58 analytical views. A Python ETL pipeline. An 8-page interactive dashboard.
+            Automated PDF executive reports. A CI pipeline that validates every data file before
+            it reaches production. <strong>All of it solo, from scratch.</strong>
+          </p>
+          <p>
+            Most data engineers don't know what IATA delay code 93L means when the turnaround
+            is critical. Most ops managers don't know how to write a weighted regression or
+            design a data contract. I do both. That's the edge.
+          </p>
+          <p>
+            I'm looking for consulting engagements, analytics engineering roles, and collaboration
+            on aviation data projects. If you need someone who understands the operations AND the data,
+            let's talk.
+          </p>
+        </div>
+        <div class="about-sidebar">
+          <h3>Technical</h3>
+          <ul>
+            <li>SQL Server</li>
+            <li>Python</li>
+            <li>Streamlit</li>
+            <li>Plotly</li>
+            <li>Power BI</li>
+            <li>pandas</li>
+            <li>ReportLab</li>
+            <li>Git</li>
+            <li>GitHub Actions</li>
+            <li>PowerShell</li>
+          </ul>
+          <h3>Aviation Domain</h3>
+          <ul>
+            <li>IATA delay codes</li>
+            <li>OTP D15</li>
+            <li>AHM 730</li>
+            <li>A-CDM / APOC</li>
+            <li>TAT analysis</li>
+            <li>Turnaround ops</li>
+          </ul>
+          <h3>Languages</h3>
+          <ul class="lang-list">
+            <li>English</li>
+            <li>French</li>
+            <li>Arabic</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="section reveal">
+      <div class="section-label">Contact</div>
+      <div class="section-title">Let's talk</div>
+      <div class="contact-inner">
+        <p class="contact-text">
+          I build operational analytics systems for airlines and airport operations teams.
+          If you need someone who understands both the data and the operations — let's work together.
+        </p>
+        <p class="contact-text" style="margin-top: 8px; font-size: 14px; color: var(--ink-muted);">
+          Open to consulting, analytics engineering roles, and aviation data projects.
+        </p>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/youssef-hamdaoui-71ba00153/" target="_blank" rel="noopener" class="btn btn-primary">LinkedIn</a>
+          <a href="https://github.com/JosephSigma991" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+          <a href="mailto:Hamdaoui1948@gmail.com" class="btn btn-outline">Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Youssef Hamdaoui · Casablanca, Morocco · <span id="year"></span>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
 
 </body>
