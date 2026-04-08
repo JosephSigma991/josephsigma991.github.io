@@ -133,7 +133,7 @@
     <div class="hero-text">
       <h1>
         Operations Intelligence Engineer
-        <span>I build decision-grade analytics systems for airline operations —<br>turning flight data into actionable delay insights.</span>
+        <span>I build decision-grade analytics systems for airline operations.<br>Flight data in. Delay intelligence out. 153K+ flights and counting.</span>
       </h1>
       <div class="hero-actions">
         <a href="#work" class="btn btn-primary">See my work</a>
@@ -156,9 +156,9 @@
       </div>
       <div class="flagship-meta reveal">
         <div class="flagship-desc">
-          <p><strong>Problem:</strong> Ops teams cannot quickly identify which stations, delay categories, and codes drive departure delays — or separate what's controllable from what's inherited. Analysis takes too long. Accountability stays vague.</p>
-          <p><strong>Solution:</strong> A two-layer system — SQL Server ETL pipeline publishing validated CSV artifacts, consumed by an 8-page Streamlit dashboard. IATA-aligned KPIs, Pareto analysis, what-if scenario simulation with regression-backed OTP estimates, and automated PDF executive reports. A CI pipeline validates a 13-file data contract across 3 time grains on every commit.</p>
-          <p><strong>Result:</strong> Enables rapid identification of top delay drivers by station. Separates controllable vs inherited delays at code level. Surfaces which 2-3 categories own 70%+ of total delay minutes. Supports scenario-based decision-making with confidence bounds.</p>
+          <p><strong>Problem:</strong> Ops teams cannot quickly identify which stations, delay categories, and codes drive departure delays. Separating what's controllable from what's inherited takes too long. Accountability stays vague.</p>
+          <p><strong>Solution:</strong> A two-layer system. SQL Server ETL pipeline publishing validated CSV artifacts, consumed by an 8-page Streamlit dashboard. IATA-aligned KPIs, Pareto analysis, what-if scenario simulation with regression-backed OTP estimates, and automated PDF executive reports. A CI pipeline validates a 13-file data contract across 3 time grains on every commit.</p>
+          <p><strong>Result:</strong> Top delay drivers surface by station in seconds. Controllable and inherited delays separate at code level. The 2-3 categories that own 70%+ of total minutes are visible before the morning meeting starts. Scenario simulation gives management data-backed estimates instead of guesses.</p>
         </div>
         <div class="flagship-stats">
           <div class="stat-card">
@@ -175,13 +175,13 @@
           </div>
           <div class="stat-card">
             <div class="stat-value">3 grains</div>
-            <div class="stat-label">Annual, Monthly, Weekly — CI-validated on every commit</div>
+            <div class="stat-label">Annual, Monthly, Weekly. CI-validated on every commit</div>
           </div>
         </div>
       </div>
 
       <div class="flagship-rca reveal">
-        <div class="flagship-rca-label">Scenario Simulator — What-if analysis with regression-backed OTP estimates</div>
+        <div class="flagship-rca-label">Scenario Simulator. What-if analysis with regression-backed OTP estimates</div>
         <div class="flagship-screenshot">
           <img src="screenshots/screencapture-intelligenceops-demo-streamlit-app-Scenarios-Levers-2026-03-21-11_49_33.png" alt="IntelligenceOps — Scenarios / Levers page">
         </div>
@@ -196,9 +196,9 @@
         <a href="https://github.com/JosephSigma991/intelligenceops-demo" target="_blank" rel="noopener" class="btn btn-outline">View on GitHub</a>
       </div>
 
-      <p class="flagship-value reveal">Used to identify delay drivers and support operational decisions in seconds — not hours.</p>
+      <p class="flagship-value reveal">Delay drivers identified and decisions made in seconds. Not hours.</p>
 
-      <p class="flagship-note reveal">Built in production for a regional airline. This public demo uses synthetic data — station codes and figures are anonymised. Architecture, code, and analytical logic are production-identical.</p>
+      <p class="flagship-note reveal">Built in production for a regional airline. This public demo uses synthetic data. Station codes and figures are anonymised. Architecture, code, and analytical logic are production-identical.</p>
     </div>
   </section>
 
@@ -214,7 +214,7 @@
           <h3>FlightOpsDB</h3>
           <div class="card-sub">SQL Server analytical database</div>
           <p>The data backbone. SQL Server database with ETL pipeline, 58 analytical views, staging/clean architecture, hygiene views, and object governance. 212 delay codes mapped. 5 data quality gate types.</p>
-          <p class="card-insight">Key insight: Every metric traces back to a validated source query — no manual spreadsheets in the chain.</p>
+          <p class="card-insight">Key insight: Every metric traces back to a validated source query. No manual spreadsheets in the chain.</p>
           <div class="card-tags"><span>SQL Server</span><span>T-SQL</span><span>ETL</span><span>PowerShell</span></div>
         </div>
         <div class="project-card reveal">
@@ -222,7 +222,7 @@
           <h3>Station OTP Diagnostic</h3>
           <div class="card-sub">7-station root cause analysis</div>
           <p>Comprehensive departure performance diagnostic for the Head of Ground Operations. Evidence chains from delay code to category to station to action. Controllable vs uncontrollable split at code level, not category level.</p>
-          <p class="card-insight">Key insight: Ground Ops accounts for ~57% of controllable minutes — the other 43% requires cross-functional agreements.</p>
+          <p class="card-insight">Key insight: Ground Ops accounts for ~57% of controllable minutes. The other 43% requires cross-functional agreements.</p>
           <div class="card-tags"><span>Statistical analysis</span><span>IATA standards</span><span>SQL Server</span></div>
         </div>
         <div class="project-card reveal">
@@ -230,7 +230,7 @@
           <h3>KPI Insights Catalog</h3>
           <div class="card-sub">10 validated cause-and-effect relationships</div>
           <p>TAT amplification mechanism (1.02x good band, 1.77x critical band), connection hold confounding analysis, controllable misattribution mapping. Each insight backed by SQL evidence and a reproducibility matrix.</p>
-          <p class="card-insight">Key insight: Critical-band turnarounds amplify delays 1.77x — preventing the alarm-to-critical transition is highest-ROI.</p>
+          <p class="card-insight">Key insight: Critical-band turnarounds amplify delays 1.77x. Preventing the alarm-to-critical transition is highest-ROI.</p>
           <div class="card-tags"><span>Causal analysis</span><span>Statistical isolation</span><span>SQL</span></div>
         </div>
         <div class="project-card reveal">
@@ -238,7 +238,7 @@
           <h3>Block Time &amp; TAT Analysis</h3>
           <div class="card-sub">Schedule padding and turnaround exception detection</div>
           <p>Block time analysis reveals where schedule padding masks operational problems. TAT analysis classifies turnarounds into performance bands and detects exceptions where TAT variance predicts a late departure.</p>
-          <p class="card-insight">Key insight: TAT overrun correlates with positive departure delay — turnaround monitoring is a leading indicator, not lagging.</p>
+          <p class="card-insight">Key insight: TAT overrun correlates with positive departure delay. Turnaround monitoring is a leading indicator, not lagging.</p>
           <div class="card-tags"><span>Correlation analysis</span><span>TAT classification</span><span>SQL</span></div>
         </div>
         <div class="project-card card-wide reveal">
@@ -255,9 +255,9 @@
         <div class="project-card card-wide reveal">
           <div class="card-accent"></div>
           <h3>Market Intelligence Research</h3>
-          <div class="card-sub">20+ vendor landscape — aviation and healthcare ops intelligence</div>
+          <div class="card-sub">20+ vendor landscape. Aviation and healthcare ops intelligence</div>
           <p>Competitive landscape mapping across operational decision intelligence. 4-level vendor classification. Public procurement pricing signals ($5M-$29M deal sizes). A-CDM maturity analysis. Cross-industry patterns between aviation and hospital command centres.</p>
-          <p class="card-insight">Key insight: The market buys platforms, but operators need proof — the decision layer between the system and the outcome is underserved.</p>
+          <p class="card-insight">Key insight: The market buys platforms, but operators need proof. The decision layer between the system and the outcome is underserved.</p>
           <div class="card-tags"><span>Competitive analysis</span><span>Public procurement</span><span>Market sizing</span></div>
         </div>
       </div>
@@ -275,7 +275,7 @@
           <p>I oversee departure operations across a 40+ station airline network from Casablanca. Real-time disruption coordination, daily OTP reviews, weekly performance meetings with operations leadership. 20 years in ground operations, from ramp and load control to network-level duty management.</p>
           <p>On my own time, I built everything you see on this site. A SQL Server database with 58 analytical views. A Python ETL pipeline. An 8-page interactive dashboard. Power BI executive reports. Automated PDF decision packs. A CI pipeline that validates every data file before it reaches production. <strong>All of it solo, from scratch.</strong></p>
           <p>Most data engineers don't know what IATA delay code 93L means when the turnaround is critical. Most ops managers don't know how to write a weighted regression or design a data contract. I do both. That's the edge.</p>
-          <p>I'm looking for consulting engagements, analytics engineering roles, and collaboration on aviation data projects. If you need someone who understands the operations AND the data, let's talk.</p>
+          <p>I'm looking for consulting engagements, analytics engineering roles, and collaboration on aviation data projects. If you need someone who understands the operations and the data, let's talk.</p>
         </div>
         <div class="about-sidebar">
           <h3>Technical</h3>
@@ -294,13 +294,13 @@
       <div class="section-label">Contact</div>
       <div class="section-title">Let's talk</div>
       <div class="contact-inner">
-        <p class="contact-text">I build operational analytics systems for airlines and airport operations teams. If you need someone who understands both the data and the operations — let's work together.</p>
+        <p class="contact-text">I build operational analytics systems for airlines and airport operations teams. If you need someone who understands both the data and the operation, I'd like to hear about it.</p>
         <div class="contact-links">
           <a href="https://www.linkedin.com/in/youssef-hamdaoui-71ba00153/" target="_blank" rel="noopener" class="btn btn-primary">LinkedIn</a>
           <a href="https://github.com/JosephSigma991" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
           <a href="mailto:Hamdaoui1948@gmail.com" class="btn btn-outline">Email</a>
         </div>
-        <p class="contact-avail">Available for analytics engineering, aviation ops intelligence, and consulting projects.</p>
+        <p class="contact-avail">Open to analytics engineering roles, aviation ops consulting, and collaboration.</p>
       </div>
     </div>
   </section>
