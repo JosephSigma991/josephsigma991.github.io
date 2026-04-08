@@ -81,8 +81,6 @@
     .project-card .card-tags { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 6px; }
     .project-card .card-tags span { font-size: 11px; font-weight: 500; padding: 4px 10px; border-radius: 100px; background: var(--surface); color: var(--ink-muted); }
     .card-wide { grid-column: 1 / -1; }
-    .pbi-screenshot { margin: 16px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(10, 15, 26, 0.10); border: 1px solid rgba(10, 15, 26, 0.06); }
-    .pbi-screenshot img { width: 100%; display: block; }
     .about-section { padding: 80px 0; background: var(--ink); color: var(--surface); }
     .about-section .section-label { color: var(--accent-glow); }
     .about-section .section-title { color: var(--surface); }
@@ -243,11 +241,11 @@
           <p class="card-insight">Key insight: TAT overrun correlates with positive departure delay — turnaround monitoring is a leading indicator, not lagging.</p>
           <div class="card-tags"><span>Correlation analysis</span><span>TAT classification</span><span>SQL</span></div>
         </div>
-        <div class="project-card reveal">
+        <div class="project-card card-wide reveal">
           <div class="card-accent"></div>
           <h3>Power BI — Departure Performance &amp; Delay Intelligence</h3>
           <div class="card-sub">Network-level executive dashboard</div>
-          <div class="pbi-screenshot">
+          <div class="flagship-screenshot" style="margin: 20px 0;">
             <img src="screenshots/pbi-gops-executive.png" alt="Power BI — Departure Performance Dashboard">
           </div>
           <p>Multi-page Power BI dashboard built on SQL Server analytical views and DAX measures. OTP trends, delay category Pareto with cumulative analysis, controllable vs external split, delay distribution bands, and TAT monitoring. Designed for executive audiences who need network-wide performance in one view.</p>
