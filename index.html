@@ -81,7 +81,8 @@
     .project-card .card-tags { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 6px; }
     .project-card .card-tags span { font-size: 11px; font-weight: 500; padding: 4px 10px; border-radius: 100px; background: var(--surface); color: var(--ink-muted); }
     .card-wide { grid-column: 1 / -1; }
-    .badge-soon { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 100px; background: var(--accent-soft); color: var(--accent); margin-left: 10px; vertical-align: middle; }
+    .pbi-screenshot { margin: 16px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(10, 15, 26, 0.10); border: 1px solid rgba(10, 15, 26, 0.06); }
+    .pbi-screenshot img { width: 100%; display: block; }
     .about-section { padding: 80px 0; background: var(--ink); color: var(--surface); }
     .about-section .section-label { color: var(--accent-glow); }
     .about-section .section-title { color: var(--surface); }
@@ -172,11 +173,11 @@
           </div>
           <div class="stat-card">
             <div class="stat-value">153K+</div>
-            <div class="stat-label">Flights analyzed for operational insights</div>
+            <div class="stat-label">Flights analyzed across 40+ stations since 2022</div>
           </div>
           <div class="stat-card">
-            <div class="stat-value">R²</div>
-            <div class="stat-label">Guardrailed model linking delay reduction to OTP</div>
+            <div class="stat-value">3 grains</div>
+            <div class="stat-label">Annual, Monthly, Weekly — CI-validated on every commit</div>
           </div>
         </div>
       </div>
@@ -243,11 +244,15 @@
           <div class="card-tags"><span>Correlation analysis</span><span>TAT classification</span><span>SQL</span></div>
         </div>
         <div class="project-card reveal">
-          <div class="card-accent" style="background: var(--amber);"></div>
-          <h3>Power BI Dashboards <span class="badge-soon">Coming Soon</span></h3>
-          <div class="card-sub">Operational reporting and KPI visualization</div>
-          <p>Interactive Power BI reports for flight operations analysis. DAX measures, data modeling, and visual design for executive audiences. Anonymised version coming to this portfolio.</p>
-          <div class="card-tags"><span>Power BI</span><span>DAX</span><span>Data Modeling</span></div>
+          <div class="card-accent"></div>
+          <h3>Power BI — Departure Performance &amp; Delay Intelligence</h3>
+          <div class="card-sub">Network-level executive dashboard</div>
+          <div class="pbi-screenshot">
+            <img src="screenshots/pbi-gops-executive.png" alt="Power BI — Departure Performance Dashboard">
+          </div>
+          <p>Multi-page Power BI dashboard built on SQL Server analytical views and DAX measures. OTP trends, delay category Pareto with cumulative analysis, controllable vs external split, delay distribution bands, and TAT monitoring. Designed for executive audiences who need network-wide performance in one view.</p>
+          <p class="card-insight">Key insight: Top 3 delay categories account for 84% of total delay minutes. The Pareto view makes that visible in seconds.</p>
+          <div class="card-tags"><span>Power BI</span><span>DAX</span><span>SQL Server Views</span><span>Data Modeling</span></div>
         </div>
         <div class="project-card card-wide reveal">
           <div class="card-accent"></div>
@@ -269,16 +274,16 @@
     <div class="section">
       <div class="about-grid reveal">
         <div class="about-text">
-          <p>I manage departure operations at an international airport in Casablanca. Coordinating ground handling, managing delays, briefing crews, making decisions at 5 AM when the turnaround is running long and the next flight is waiting.</p>
-          <p>On my own time, I built everything you see on this site. A SQL Server database with 58 analytical views. A Python ETL pipeline. An 8-page interactive dashboard. Automated PDF executive reports. A CI pipeline that validates every data file before it reaches production. <strong>All of it solo, from scratch.</strong></p>
+          <p>I oversee departure operations across a 40+ station airline network from Casablanca. Real-time disruption coordination, daily OTP reviews, weekly performance meetings with operations leadership. 20 years in ground operations, from ramp and load control to network-level duty management.</p>
+          <p>On my own time, I built everything you see on this site. A SQL Server database with 58 analytical views. A Python ETL pipeline. An 8-page interactive dashboard. Power BI executive reports. Automated PDF decision packs. A CI pipeline that validates every data file before it reaches production. <strong>All of it solo, from scratch.</strong></p>
           <p>Most data engineers don't know what IATA delay code 93L means when the turnaround is critical. Most ops managers don't know how to write a weighted regression or design a data contract. I do both. That's the edge.</p>
           <p>I'm looking for consulting engagements, analytics engineering roles, and collaboration on aviation data projects. If you need someone who understands the operations AND the data, let's talk.</p>
         </div>
         <div class="about-sidebar">
           <h3>Technical</h3>
-          <ul><li>SQL Server</li><li>Python</li><li>Streamlit</li><li>Plotly</li><li>Power BI</li><li>pandas</li><li>ReportLab</li><li>Git</li><li>GitHub Actions</li><li>PowerShell</li></ul>
+          <ul><li>SQL Server</li><li>Python</li><li>Streamlit</li><li>Plotly</li><li>Power BI</li><li>DAX</li><li>pandas</li><li>ReportLab</li><li>Git</li><li>GitHub Actions</li><li>PowerShell</li></ul>
           <h3>Aviation Domain</h3>
-          <ul><li>IATA delay codes</li><li>OTP D15</li><li>AHM 730</li><li>A-CDM / APOC</li><li>TAT analysis</li><li>Turnaround ops</li></ul>
+          <ul><li>IATA delay codes</li><li>OTP D15</li><li>AHM 730</li><li>A-CDM / APOC</li><li>TAT analysis</li><li>Turnaround ops</li><li>Disruption coordination</li></ul>
           <h3>Languages</h3>
           <ul class="lang-list"><li>English</li><li>French</li><li>Arabic</li></ul>
         </div>
