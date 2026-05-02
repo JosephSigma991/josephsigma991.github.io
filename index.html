@@ -213,43 +213,43 @@
           <div class="card-accent"></div>
           <h3>FlightOpsDB</h3>
           <div class="card-sub">SQL Server analytical database</div>
-          <p>The data backbone. SQL Server database with ETL pipeline, 58 analytical views, staging/clean architecture, hygiene views, and object governance. 212 delay codes mapped. 5 data quality gate types.</p>
-          <p class="card-insight">Key insight: Every metric traces back to a validated source query. No manual spreadsheets in the chain.</p>
+          <p>The data backbone behind the operations intelligence layer. SQL Server staging, cleaning, analytical views, delay-code mapping, and quality gates designed to keep decision metrics traceable.</p>
+          <p class="card-insight">Key insight: Every metric must trace back to a validated source query before it reaches an executive view.</p>
           <div class="card-tags"><span>SQL Server</span><span>T-SQL</span><span>ETL</span><span>PowerShell</span></div>
         </div>
         <div class="project-card reveal">
           <div class="card-accent"></div>
           <h3>Station OTP Diagnostic</h3>
-          <div class="card-sub">7-station root cause analysis</div>
-          <p>Comprehensive departure performance diagnostic for the Head of Ground Operations. Evidence chains from delay code to category to station to action. Controllable vs uncontrollable split at code level, not category level.</p>
-          <p class="card-insight">Key insight: Ground Ops accounts for ~57% of controllable minutes. The other 43% requires cross-functional agreements.</p>
+          <div class="card-sub">Root-cause analysis for departure performance</div>
+          <p>Operational diagnostic linking delay code, category, station, and action route. Controllable and inherited delays are separated at code level so accountability does not stay trapped inside broad categories.</p>
+          <p class="card-insight">Key insight: Delay ownership only becomes useful when it identifies who acts next.</p>
           <div class="card-tags"><span>Statistical analysis</span><span>IATA standards</span><span>SQL Server</span></div>
         </div>
         <div class="project-card reveal">
           <div class="card-accent"></div>
           <h3>KPI Insights Catalog</h3>
-          <div class="card-sub">10 validated cause-and-effect relationships</div>
-          <p>TAT amplification mechanism (1.02x good band, 1.77x critical band), connection hold confounding analysis, controllable misattribution mapping. Each insight backed by SQL evidence and a reproducibility matrix.</p>
-          <p class="card-insight">Key insight: Critical-band turnarounds amplify delays 1.77x. Preventing the alarm-to-critical transition is highest-ROI.</p>
+          <div class="card-sub">Validated operating patterns</div>
+          <p>Structured catalog of operational mechanisms across turnaround performance, inherited delay, controllability, and attribution. Each insight is tied to reproducible queries and decision use cases.</p>
+          <p class="card-insight">Key insight: KPI governance starts before visualization. Definitions must survive operational pressure.</p>
           <div class="card-tags"><span>Causal analysis</span><span>Statistical isolation</span><span>SQL</span></div>
         </div>
         <div class="project-card reveal">
           <div class="card-accent"></div>
           <h3>Block Time &amp; TAT Analysis</h3>
           <div class="card-sub">Schedule padding and turnaround exception detection</div>
-          <p>Block time analysis reveals where schedule padding masks operational problems. TAT analysis classifies turnarounds into performance bands and detects exceptions where TAT variance predicts a late departure.</p>
-          <p class="card-insight">Key insight: TAT overrun correlates with positive departure delay. Turnaround monitoring is a leading indicator, not lagging.</p>
+          <p>Analysis layer for identifying when schedule padding hides operational issues and when turnaround variance becomes an early warning signal for departure delay.</p>
+          <p class="card-insight">Key insight: Turnaround monitoring is a leading indicator when it is connected to delay ownership.</p>
           <div class="card-tags"><span>Correlation analysis</span><span>TAT classification</span><span>SQL</span></div>
         </div>
         <div class="project-card card-wide reveal">
           <div class="card-accent"></div>
           <h3>Power BI — Departure Performance &amp; Delay Intelligence</h3>
-          <div class="card-sub">Network-level executive dashboard</div>
+          <div class="card-sub">Executive operations dashboard</div>
           <div class="flagship-screenshot" style="margin: 20px 0;">
             <img src="screenshots/pbi-gops-executive.png" alt="Power BI — Departure Performance Dashboard">
           </div>
-          <p>Multi-page Power BI dashboard built on SQL Server analytical views and DAX measures. OTP trends, delay category Pareto with cumulative analysis, controllable vs external split, delay distribution bands, and TAT monitoring. Designed for executive audiences who need network-wide performance in one view.</p>
-          <p class="card-insight">Key insight: Top 3 delay categories account for 84% of total delay minutes. The Pareto view makes that visible in seconds.</p>
+          <p>Multi-page Power BI dashboard built on SQL Server analytical views and DAX measures. OTP trends, delay category Pareto, controllable vs external split, delay distribution bands, and TAT monitoring in one executive view.</p>
+          <p class="card-insight">Key insight: The Pareto view turns scattered delay minutes into a visible action sequence.</p>
           <div class="card-tags"><span>Power BI</span><span>DAX</span><span>SQL Server Views</span><span>Data Modeling</span></div>
         </div>
         <div class="project-card card-wide reveal">
@@ -272,10 +272,10 @@
     <div class="section">
       <div class="about-grid reveal">
         <div class="about-text">
-          <p>I oversee departure operations across a 40+ station airline network from Casablanca. Real-time disruption coordination, daily OTP reviews, weekly performance meetings with operations leadership. 20 years in ground operations, from ramp and load control to network-level duty management.</p>
-          <p>On my own time, I built everything you see on this site. A SQL Server database with 58 analytical views. A Python ETL pipeline. An 8-page interactive dashboard. Power BI executive reports. Automated PDF decision packs. A CI pipeline that validates every data file before it reaches production. <strong>All of it solo, from scratch.</strong></p>
-          <p>Most data engineers don't know what IATA delay code 93L means when the turnaround is critical. Most ops managers don't know how to write a weighted regression or design a data contract. I do both. That's the edge.</p>
-          <p>I'm looking for consulting engagements, analytics engineering roles, and collaboration on aviation data projects. If you need someone who understands the operations and the data, let's talk.</p>
+          <p>I work in airport operations from Casablanca, with 20 years across ground operations, turnaround coordination, disruption handling, and performance review rhythms.</p>
+          <p>On my own time, I built the systems shown here: SQL Server analytical layers, Python ETL, Streamlit dashboards, Power BI executive views, automated PDF decision packs, and CI checks that protect the data contract before analysis reaches users. <strong>Built from operations. Not from theory.</strong></p>
+          <p>Most data teams do not feel the pressure of a live turnaround. Most operations teams do not design data contracts or scenario models. I work in the gap between both.</p>
+          <p>Open to serious aviation operations intelligence roles, selective consulting, and collaboration with teams solving real operational visibility problems.</p>
         </div>
         <div class="about-sidebar">
           <h3>Technical</h3>
@@ -294,13 +294,13 @@
       <div class="section-label">Contact</div>
       <div class="section-title">Let's talk</div>
       <div class="contact-inner">
-        <p class="contact-text">I build operational analytics systems for airlines and airport operations teams. If you need someone who understands both the data and the operation, I'd like to hear about it.</p>
+        <p class="contact-text">I build operational intelligence systems for airlines and airport operations teams. If you need someone who understands both the operation and the data, I would like to hear about the problem you are solving.</p>
         <div class="contact-links">
           <a href="https://www.linkedin.com/in/youssef-hamdaoui-71ba00153/" target="_blank" rel="noopener" class="btn btn-primary">LinkedIn</a>
           <a href="https://github.com/JosephSigma991" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
           <a href="mailto:Hamdaoui1948@gmail.com" class="btn btn-outline">Email</a>
         </div>
-        <p class="contact-avail">Open to analytics engineering roles, aviation ops consulting, and collaboration.</p>
+        <p class="contact-avail">Open to serious aviation operations intelligence roles, selective consulting, and collaboration.</p>
       </div>
     </div>
   </section>
