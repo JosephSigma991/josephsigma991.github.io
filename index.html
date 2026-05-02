@@ -7,7 +7,7 @@
   <meta name="description" content="Operations Intelligence Architect building decision-grade systems for airline operations. SQL Server ETL, Python, Streamlit, Power BI, ReportLab decision packs, and CI-validated data contracts.">
   <meta property="og:title" content="Youssef Hamdaoui | Operations Intelligence Architect">
   <meta property="og:description" content="I build decision-grade systems for airline operations. Flight data in. Operational accountability out.">
-  <meta property="og:image" content="screenshots/screencapture-intelligenceops-demo-streamlit-app-2026-03-21-11_47_38.png">
+  <meta property="og:image" content="screenshots/intelligenceops-decision-pack-executive-summary.png">
   <meta property="og:url" content="https://josephsigma991.github.io">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,6 +55,7 @@
     .flagship-screenshot { width: 100%; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 40px rgba(10, 15, 26, 0.12), 0 1px 3px rgba(10, 15, 26, 0.06); border: 1px solid rgba(10, 15, 26, 0.06); transform: perspective(1200px) rotateX(2deg); transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s; }
     .flagship-screenshot:hover { transform: perspective(1200px) rotateX(0deg); box-shadow: 0 16px 64px rgba(10, 15, 26, 0.18); }
     .flagship-screenshot img { width: 100%; display: block; }
+    .flagship-proof-label { font-size: 12px; color: var(--ink-muted); margin-bottom: 12px; font-weight: 500; }
     .flagship-meta { margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
     .flagship-desc { font-size: 16px; line-height: 1.7; color: var(--ink-light); }
     .flagship-desc p + p { margin-top: 16px; }
@@ -151,8 +152,9 @@
       <div class="section-title">IntelligenceOps</div>
     </div>
     <div class="flagship-card">
+      <div class="flagship-proof-label reveal">Decision Pack. Executive summary, decision impact, and operational routing from demo data</div>
       <div class="flagship-screenshot reveal">
-        <img src="screenshots/screencapture-intelligenceops-demo-streamlit-app-2026-03-21-11_47_38.png" alt="IntelligenceOps — Dashboard Homepage">
+        <img src="screenshots/intelligenceops-decision-pack-executive-summary.png" alt="IntelligenceOps Decision Pack — Executive Summary">
       </div>
       <div class="flagship-meta reveal">
         <div class="flagship-desc">
@@ -181,7 +183,14 @@
       </div>
 
       <div class="flagship-rca reveal">
-        <div class="flagship-rca-label">Scenario Simulator. What-if analysis with regression-backed OTP estimates</div>
+        <div class="flagship-rca-label">Action Lanes. Decision routing before the review meeting starts</div>
+        <div class="flagship-screenshot">
+          <img src="screenshots/intelligenceops-decision-pack-action-lanes.png" alt="IntelligenceOps Decision Pack — Action Lanes">
+        </div>
+      </div>
+
+      <div class="flagship-rca reveal">
+        <div class="flagship-rca-label">Live Demo. Governed KPI views, RCA, and scenario exploration</div>
         <div class="flagship-screenshot">
           <img src="screenshots/screencapture-intelligenceops-demo-streamlit-app-Scenarios-Levers-2026-03-21-11_49_33.png" alt="IntelligenceOps — Scenarios / Levers page">
         </div>
@@ -192,8 +201,9 @@
       </div>
 
       <div class="flagship-buttons reveal">
-        <a href="https://intelligenceops-demo.streamlit.app" target="_blank" rel="noopener" class="btn btn-primary">Try the live demo &rarr;</a>
-        <a href="https://github.com/JosephSigma991/intelligenceops-demo" target="_blank" rel="noopener" class="btn btn-outline">View on GitHub</a>
+        <a href="assets/IntelligenceOps_Synthetic_DecisionPack.pdf" target="_blank" rel="noopener" class="btn btn-primary">View demo decision pack</a>
+        <a href="https://intelligenceops-demo.streamlit.app" target="_blank" rel="noopener" class="btn btn-outline">Try live demo</a>
+        <a href="https://github.com/JosephSigma991/intelligenceops-demo" target="_blank" rel="noopener" class="btn btn-outline">View technical repo</a>
       </div>
 
       <p class="flagship-value reveal">Delay drivers identified and decisions made in seconds. Not hours.</p>
