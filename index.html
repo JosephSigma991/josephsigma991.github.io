@@ -57,8 +57,10 @@
     .flagship-screenshot { width: 100%; border-radius: 18px; overflow: hidden; background: var(--card); box-shadow: 0 20px 60px rgba(7, 17, 31, 0.15), 0 1px 0 rgba(255,255,255,0.7) inset; border: 1px solid var(--metal); transform: perspective(1200px) rotateX(1.5deg); transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s; }
     .flagship-screenshot:hover { transform: perspective(1200px) rotateX(0deg); box-shadow: 0 24px 70px rgba(7, 17, 31, 0.2); }
     .flagship-screenshot img { width: 100%; display: block; }
-    .flagship-buttons { margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap; }
-    .flagship-meta { margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    .pdf-proof { max-height: 620px; background: var(--card); }
+    .pdf-proof img { width: 100%; height: 100%; max-height: 620px; object-fit: contain; object-position: top center; }
+    .flagship-buttons { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .flagship-meta { margin-top: 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
     .flagship-desc { font-size: 16px; line-height: 1.72; color: var(--ink-light); }
     .flagship-desc p + p { margin-top: 16px; }
     .flagship-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -108,6 +110,8 @@
       .section { padding: 0 24px; }
       .flagship-card { padding: 0 24px; }
       .flagship-meta { grid-template-columns: 1fr; gap: 32px; }
+      .pdf-proof { max-height: 520px; }
+      .pdf-proof img { max-height: 520px; }
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
       .nav-inner { padding: 12px 20px; }
       .nav-links { gap: 18px; }
@@ -153,7 +157,7 @@
     </div>
     <div class="flagship-card">
       <div class="flagship-proof-label reveal">Decision Pack. Executive summary, decision impact, and operational routing from demo data</div>
-      <div class="flagship-screenshot reveal">
+      <div class="flagship-screenshot pdf-proof reveal">
         <img src="screenshots/intelligenceops-decision-pack-executive-summary.png" alt="IntelligenceOps Decision Pack: Executive Summary">
       </div>
 
@@ -191,7 +195,7 @@
 
       <div class="flagship-rca reveal">
         <div class="flagship-rca-label">Action Lanes. Decision routing before the review meeting starts</div>
-        <div class="flagship-screenshot">
+        <div class="flagship-screenshot pdf-proof">
           <img src="screenshots/intelligenceops-decision-pack-action-lanes.png" alt="IntelligenceOps Decision Pack: Action Lanes">
         </div>
       </div>
