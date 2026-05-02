@@ -156,26 +156,26 @@
       </div>
       <div class="flagship-meta reveal">
         <div class="flagship-desc">
-          <p><strong>Problem:</strong> Ops teams cannot quickly identify which stations, delay categories, and codes drive departure delays. Separating what's controllable from what's inherited takes too long. Accountability stays vague.</p>
-          <p><strong>Solution:</strong> A two-layer system. SQL Server ETL pipeline publishing validated CSV artifacts, consumed by an 8-page Streamlit dashboard. IATA-aligned KPIs, Pareto analysis, what-if scenario simulation with regression-backed OTP estimates, and automated PDF executive reports. A CI pipeline validates a 13-file data contract across 3 time grains on every commit.</p>
-          <p><strong>Result:</strong> Top delay drivers surface by station in seconds. Controllable and inherited delays separate at code level. The 2-3 categories that own 70%+ of total minutes are visible before the morning meeting starts. Scenario simulation gives management data-backed estimates instead of guesses.</p>
+          <p><strong>Problem:</strong> Airline operations generate decision-relevant data continuously. Most of it reaches decision makers too late, without clear attribution, or after the recovery window has already started closing.</p>
+          <p><strong>Solution:</strong> IntelligenceOps is a flight operations intelligence system built around a frozen data contract, governed KPI logic, and decision-ready outputs. SQL Server ETL publishes validated analytical artifacts, then Python, Streamlit, Power BI, and ReportLab turn them into KPI views, RCA, delay-code intelligence, scenario simulation, and executive decision packs. GitHub Actions validates the contract before outputs are used.</p>
+          <p><strong>Result:</strong> A reproducible workflow that turns operational data into governed, attributable, decision-ready output. Controllable, inherited, and reactionary delays are separated at code level, so accountability is routed before the meeting starts.</p>
         </div>
         <div class="flagship-stats">
           <div class="stat-card">
             <div class="stat-value">8</div>
-            <div class="stat-label">Interactive pages covering KPIs, RCA, scenarios, and reporting</div>
+            <div class="stat-label">Dashboard pages covering KPIs, RCA, scenarios, and reporting</div>
           </div>
           <div class="stat-card">
             <div class="stat-value">13-file</div>
-            <div class="stat-label">Validated pipeline ensuring decision-grade reliability</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value">153K+</div>
-            <div class="stat-label">Flights analyzed across 40+ stations since 2022</div>
+            <div class="stat-label">Frozen data contract validated before use</div>
           </div>
           <div class="stat-card">
             <div class="stat-value">3 grains</div>
-            <div class="stat-label">Annual, Monthly, Weekly. CI-validated on every commit</div>
+            <div class="stat-label">Annual, monthly, and weekly views for decision review</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">212</div>
+            <div class="stat-label">IATA delay-code schema coverage for attribution logic</div>
           </div>
         </div>
       </div>
@@ -198,7 +198,7 @@
 
       <p class="flagship-value reveal">Delay drivers identified and decisions made in seconds. Not hours.</p>
 
-      <p class="flagship-note reveal">Built in production for a regional airline. This public demo uses synthetic data. Station codes and figures are anonymised. Architecture, code, and analytical logic are production-identical.</p>
+      <p class="flagship-note reveal">Built from real airline operations experience. The public demo uses synthetic data. Operational data, station figures, internal context, and company identity are excluded.</p>
     </div>
   </section>
 
