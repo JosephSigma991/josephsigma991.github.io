@@ -56,3 +56,4 @@ jobs:
             git commit -m "Refine portfolio meta and hero positioning"
             git push
           fi
+# trigger: 2026-05-02-task1
