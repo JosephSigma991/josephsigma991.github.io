@@ -60,6 +60,13 @@
     .pdf-proof { max-height: 620px; background: var(--card); }
     .pdf-proof img { width: 100%; height: 100%; max-height: 620px; object-fit: contain; object-position: top center; }
     .flagship-buttons { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .architecture-strip { margin-top: 30px; padding: 24px; background: rgba(255, 255, 255, 0.68); border: 1px solid var(--metal); border-radius: var(--radius); box-shadow: 0 12px 34px rgba(7, 17, 31, 0.06); }
+    .architecture-label { font-size: 11px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); }
+    .architecture-flow { margin-top: 16px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+    .architecture-stage { position: relative; min-height: 76px; padding: 16px 14px; display: flex; flex-direction: column; justify-content: center; background: var(--card); border: 1px solid var(--metal); border-radius: 12px; font-size: 14px; font-weight: 800; color: var(--ink); }
+    .architecture-stage span { display: block; margin-bottom: 6px; font-size: 10px; font-weight: 800; letter-spacing: 0.14em; color: var(--ink-muted); }
+    .architecture-stage:not(:last-child)::after { content: ''; position: absolute; top: 50%; right: -10px; width: 10px; height: 1px; background: var(--accent); }
+    .architecture-note { margin-top: 14px; font-size: 13px; font-weight: 600; color: var(--ink-muted); }
     .flagship-meta { margin-top: 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
     .flagship-desc { font-size: 16px; line-height: 1.72; color: var(--ink-light); }
     .flagship-desc p + p { margin-top: 16px; }
@@ -112,6 +119,8 @@
       .flagship-meta { grid-template-columns: 1fr; gap: 32px; }
       .pdf-proof { max-height: 520px; }
       .pdf-proof img { max-height: 520px; }
+      .architecture-flow { grid-template-columns: 1fr; }
+      .architecture-stage:not(:last-child)::after { display: none; }
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
       .nav-inner { padding: 12px 20px; }
       .nav-links { gap: 18px; }
@@ -165,6 +174,18 @@
         <a href="assets/IntelligenceOps_Synthetic_DecisionPack.pdf" target="_blank" rel="noopener" class="btn btn-primary">View demo decision pack</a>
         <a href="https://intelligenceops-demo.streamlit.app" target="_blank" rel="noopener" class="btn btn-outline">Try live demo</a>
         <a href="https://github.com/JosephSigma991/intelligenceops-demo" target="_blank" rel="noopener" class="btn btn-outline">View technical repo</a>
+      </div>
+
+      <div class="architecture-strip reveal" aria-label="IntelligenceOps system architecture">
+        <div class="architecture-label">System architecture</div>
+        <div class="architecture-flow">
+          <div class="architecture-stage"><span>01</span>Data contract</div>
+          <div class="architecture-stage"><span>02</span>KPI logic</div>
+          <div class="architecture-stage"><span>03</span>RCA</div>
+          <div class="architecture-stage"><span>04</span>Action route</div>
+          <div class="architecture-stage"><span>05</span>Decision pack</div>
+        </div>
+        <p class="architecture-note">How IntelligenceOps turns governed operational data into accountable action</p>
       </div>
 
       <div class="flagship-meta reveal">
