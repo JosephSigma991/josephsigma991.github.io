@@ -1,0 +1,1746 @@
+%PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document (opensource)
+1 0 obj
+<<
+/F1 2 0 R /F2 3 0 R
+>>
+endobj
+2 0 obj
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
+endobj
+3 0 obj
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
+endobj
+4 0 obj
+<<
+/Contents 10 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 9 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+5 0 obj
+<<
+/Contents 11 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 9 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+6 0 obj
+<<
+/Contents 12 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 9 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+7 0 obj
+<<
+/PageMode /UseNone /Pages 9 0 R /Type /Catalog
+>>
+endobj
+8 0 obj
+<<
+/Author (\(anonymous\)) /CreationDate (D:20260502041608+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260502041608+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (\(unspecified\)) /Title (IntelligenceOps Decision Pack) /Trapped /False
+>>
+endobj
+9 0 obj
+<<
+/Count 3 /Kids [ 4 0 R 5 0 R 6 0 R ] /Type /Pages
+>>
+endobj
+10 0 obj
+<<
+/Length 7183
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 34 781.8898 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4 Tm /F2 22 Tf 26 TL 96.81195 0 Td (IntelligenceOps Decision Pack) Tj T* -96.81195 0 Td ET
+Q
+Q
+q
+1 0 0 1 34 767.8898 cm
+Q
+q
+1 0 0 1 34 740.8898 cm
+q
+.117647 .227451 .372549 rg
+BT 1 0 0 1 0 3 Tm /F2 12 Tf 15 TL (Demo Data | Flight Operations Intelligence) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34 726.8898 cm
+Q
+q
+1 0 0 1 34 709.8898 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 9 Tf 11 TL (Scope: Demo Data) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34 692.8898 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 9 Tf 11 TL (Selection: Monthly | 2025-12 | NETWORK) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34 675.8898 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 9 Tf 11 TL (Generated: 2026-05-02 04:16:08) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34 647.8898 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 13 Tm /F1 9 Tf 11 TL (This public pack uses demo data to demonstrate method, governance, and decision routing. It does not contain employer data,) Tj T* (real station figures, internal context, or company identity.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34 635.8898 cm
+Q
+q
+1 0 0 1 34 608.8898 cm
+q
+.043137 .070588 .12549 rg
+BT 1 0 0 1 0 3 Tm /F2 12 Tf 15 TL (Executive Summary) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34 596.8898 cm
+Q
+q
+1 0 0 1 34 448.8898 cm
+q
+.909804 .933333 .968627 rg
+n 0 148 524.7559 -20 re f*
+1 1 1 rg
+n 0 128 524.7559 -18 re f*
+.980392 .980392 .980392 rg
+n 0 110 524.7559 -18 re f*
+1 1 1 rg
+n 0 92 524.7559 -18 re f*
+.980392 .980392 .980392 rg
+n 0 74 524.7559 -18 re f*
+1 1 1 rg
+n 0 56 524.7559 -18 re f*
+.980392 .980392 .980392 rg
+n 0 38 524.7559 -38 re f*
+0 0 0 rg
+BT /F2 9 Tf 12 TL ET
+q
+1 0 0 1 4 132 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Signal) Tj T* ET
+Q
+Q
+q
+1 0 0 1 104.9146 132 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Value) Tj T* ET
+Q
+Q
+q
+1 0 0 1 306.7438 132 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Decision use) Tj T* ET
+Q
+Q
+BT /F1 8 Tf 12 TL ET
+q
+1 0 0 1 4 114 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (OTP D15) Tj T* ET
+Q
+Q
+q
+1 0 0 1 104.9146 114 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (80.1%) Tj T* ET
+Q
+Q
+q
+1 0 0 1 306.7438 114 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (selected scope) Tj T* ET
+Q
+Q
+q
+1 0 0 1 4 96 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (Target) Tj T* ET
+Q
+Q
+q
+1 0 0 1 104.9146 96 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (85.0%) Tj T* ET
+Q
+Q
+q
+1 0 0 1 306.7438 96 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (demo target benchmark) Tj T* ET
+Q
+Q
+q
+1 0 0 1 4 78 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (Target gap) Tj T* ET
+Q
+Q
+q
+1 0 0 1 104.9146 78 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (-4.9 pts) Tj T* ET
+Q
+Q
+q
+1 0 0 1 306.7438 78 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (positive means above target) Tj T* ET
+Q
+Q
+q
+1 0 0 1 4 60 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (Flights operated) Tj T* ET
+Q
+Q
+q
+1 0 0 1 104.9146 60 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (1,130) Tj T* ET
+Q
+Q
+q
+1 0 0 1 306.7438 60 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (materiality context) Tj T* ET
+Q
+Q
+q
+1 0 0 1 4 42 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (Top pain station) Tj T* ET
+Q
+Q
+q
+1 0 0 1 104.9146 42 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (NXC demo station by Ground Ops minutes) Tj T* ET
+Q
+Q
+q
+1 0 0 1 306.7438 42 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (where review starts) Tj T* ET
+Q
+Q
+q
+1 0 0 1 4 24 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (Primary action review) Tj T* ET
+Q
+Q
+q
+1 0 0 1 104.9146 4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 22 Tm /F1 8 Tf 10 TL (Review the highest-impact demo station using) Tj T* (selected-scope Ground Ops and delay-category) Tj T* (evidence.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 306.7438 24 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (public-safe next review path) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.501961 .501961 .501961 RG
+.25 w
+n 0 148 m 524.7559 148 l S
+n 0 0 m 524.7559 0 l S
+n 0 0 m 0 148 l S
+n 524.7559 0 m 524.7559 148 l S
+n 0 128 m 524.7559 128 l S
+n 0 110 m 524.7559 110 l S
+n 0 92 m 524.7559 92 l S
+n 0 74 m 524.7559 74 l S
+n 0 56 m 524.7559 56 l S
+n 0 38 m 524.7559 38 l S
+n 100.9146 0 m 100.9146 148 l S
+n 302.7438 0 m 302.7438 148 l S
+Q
+Q
+Q
+q
+1 0 0 1 34 438.8898 cm
+Q
+q
+1 0 0 1 34 411.8898 cm
+q
+.043137 .070588 .12549 rg
+BT 1 0 0 1 0 3 Tm /F2 12 Tf 15 TL (Decision Impact) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34 399.8898 cm
+Q
+q
+1 0 0 1 34 295.8898 cm
+q
+.964706 .972549 .984314 rg
+n 0 104 524.7559 -104 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 87 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Top controllable bucket) Tj T* ET
+Q
+Q
+q
+1 0 0 1 163.4268 89 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (Ground Ops controllable delay | Start where controllable exposure is largest.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 65 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Top station) Tj T* ET
+Q
+Q
+q
+1 0 0 1 163.4268 57 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 12 Tm /F1 8 Tf 10 TL (NXC demo station | 1,158 Ground Ops minutes | Use station evidence before escalating network) Tj T* (action.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 35 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Minutes exposed) Tj T* ET
+Q
+Q
+q
+1 0 0 1 163.4268 37 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (3,864 | Magnitude of selected-scope controllable exposure.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 13 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (15% minutes-only scenario) Tj T* ET
+Q
+Q
+q
+1 0 0 1 163.4268 5 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 12 Tm /F1 8 Tf 10 TL (A 15% reduction in the top Ground Ops driver would remove 174 minutes from the selected scope. |) Tj T* (No OTP lift is claimed without scenario-model validation.) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.721569 .780392 .854902 RG
+.75 w
+n 0 104 m 524.7559 104 l S
+n 0 0 m 524.7559 0 l S
+n 0 0 m 0 104 l S
+n 524.7559 0 m 524.7559 104 l S
+.835294 .862745 .909804 RG
+.25 w
+n 0 82 m 524.7559 82 l S
+n 0 52 m 524.7559 52 l S
+n 0 30 m 524.7559 30 l S
+n 157.4268 0 m 157.4268 104 l S
+Q
+Q
+Q
+q
+1 0 0 1 34 283.8898 cm
+Q
+q
+1 0 0 1 34 256.8898 cm
+q
+.043137 .070588 .12549 rg
+BT 1 0 0 1 0 3 Tm /F2 12 Tf 15 TL (Leadership Framing) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34 246.8898 cm
+Q
+q
+1 0 0 1 34 229.8898 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 9 Tf 11 TL (- Decision context: convert operational evidence into a review sequence.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34 227.8898 cm
+Q
+q
+1 0 0 1 34 210.8898 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 9 Tf 11 TL (- OTP vs target and gap: -4.9 points vs 85.0% target.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34 208.8898 cm
+Q
+q
+1 0 0 1 34 180.8898 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 13 Tm /F1 9 Tf 11 TL (- Headline operational pain: NXC demo station has the highest average delay in the selected scope; Inherited / reactionary is the) Tj T* (largest delay context bucket at 8,571 minutes.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34 178.8898 cm
+Q
+q
+1 0 0 1 34 161.8898 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 9 Tf 11 TL (- Action focus: Review the highest-impact demo station using selected-scope Ground Ops and delay-category evidence.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34 159.8898 cm
+Q
+q
+1 0 0 1 34 142.8898 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 9 Tf 11 TL (- Data note: figures are from the public demo dataset.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34 140.8898 cm
+Q
+q
+1 0 0 1 34 132.8898 cm
+Q
+q
+1 0 0 1 34 105.8898 cm
+q
+.043137 .070588 .12549 rg
+BT 1 0 0 1 0 3 Tm /F2 12 Tf 15 TL (Action Lanes) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34 93.88976 cm
+Q
+ 
+endstream
+endobj
+11 0 obj
+<<
+/Length 13025
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 34 785.8898 cm
+q
+.909804 .933333 .968627 rg
+n 0 22 524.7559 -22 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 5 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Ground Ops controllable delay) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.788235 .831373 .898039 RG
+.6 w
+n 0 22 m 524.7559 22 l S
+n 0 0 m 524.7559 0 l S
+n 0 0 m 0 22 l S
+n 524.7559 0 m 524.7559 22 l S
+Q
+Q
+Q
+q
+1 0 0 1 34 705.8898 cm
+q
+1 1 1 rg
+n 0 80 524.7559 -80 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 5 64 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Reason) Tj T* ET
+Q
+Q
+q
+1 0 0 1 120.4463 66 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (boarding closure, ramp coordination, baggage delivery, load control readiness) Tj T* ET
+Q
+Q
+q
+1 0 0 1 5 44 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Action route) Tj T* ET
+Q
+Q
+q
+1 0 0 1 120.4463 46 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (Station Manager / GHA with Area Manager follow-up) Tj T* ET
+Q
+Q
+q
+1 0 0 1 5 24 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Evidence) Tj T* ET
+Q
+Q
+q
+1 0 0 1 120.4463 26 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (NXC demo station 1,158 min; NXF demo station 1,032 min) Tj T* ET
+Q
+Q
+q
+1 0 0 1 5 4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Decision) Tj T* ET
+Q
+Q
+q
+1 0 0 1 120.4463 6 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (Start with local turnaround readiness review using Ground Ops code 89, not network-level escalation.) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.788235 .831373 .898039 RG
+.6 w
+n 0 80 m 524.7559 80 l S
+n 0 0 m 524.7559 0 l S
+n 0 0 m 0 80 l S
+n 524.7559 0 m 524.7559 80 l S
+.898039 .905882 .921569 RG
+.25 w
+n 0 60 m 524.7559 60 l S
+n 0 40 m 524.7559 40 l S
+n 0 20 m 524.7559 20 l S
+n 115.4463 0 m 115.4463 80 l S
+Q
+Q
+Q
+q
+1 0 0 1 34 697.8898 cm
+Q
+q
+1 0 0 1 34 675.8898 cm
+q
+.909804 .933333 .968627 rg
+n 0 22 524.7559 -22 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 5 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Reactionary / inherited delay protection) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.788235 .831373 .898039 RG
+.6 w
+n 0 22 m 524.7559 22 l S
+n 0 0 m 524.7559 0 l S
+n 0 0 m 0 22 l S
+n 524.7559 0 m 524.7559 22 l S
+Q
+Q
+Q
+q
+1 0 0 1 34 595.8898 cm
+q
+1 1 1 rg
+n 0 80 524.7559 -80 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 5 64 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Reason) Tj T* ET
+Q
+Q
+q
+1 0 0 1 120.4463 66 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (aircraft rotation protection and knock-on delay containment) Tj T* ET
+Q
+Q
+q
+1 0 0 1 5 44 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Action route) Tj T* ET
+Q
+Q
+q
+1 0 0 1 120.4463 46 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (OCC / Network Control with cross-functional governance review) Tj T* ET
+Q
+Q
+q
+1 0 0 1 5 24 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Evidence) Tj T* ET
+Q
+Q
+q
+1 0 0 1 120.4463 26 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (Inherited / reactionary 8,571 min; largest bucket Inherited / reactionary; start with reactionary code 93.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 5 4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Decision) Tj T* ET
+Q
+Q
+q
+1 0 0 1 120.4463 6 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (Governance review before assigning Ground Ops action.) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.788235 .831373 .898039 RG
+.6 w
+n 0 80 m 524.7559 80 l S
+n 0 0 m 524.7559 0 l S
+n 0 0 m 0 80 l S
+n 524.7559 0 m 524.7559 80 l S
+.898039 .905882 .921569 RG
+.25 w
+n 0 60 m 524.7559 60 l S
+n 0 40 m 524.7559 40 l S
+n 0 20 m 524.7559 20 l S
+n 115.4463 0 m 115.4463 80 l S
+Q
+Q
+Q
+q
+1 0 0 1 34 587.8898 cm
+Q
+q
+1 0 0 1 34 565.8898 cm
+q
+.909804 .933333 .968627 rg
+n 0 22 524.7559 -22 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 5 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Station follow-up / local drilldown) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.788235 .831373 .898039 RG
+.6 w
+n 0 22 m 524.7559 22 l S
+n 0 0 m 524.7559 0 l S
+n 0 0 m 0 22 l S
+n 524.7559 0 m 524.7559 22 l S
+Q
+Q
+Q
+q
+1 0 0 1 34 485.8898 cm
+q
+1 1 1 rg
+n 0 80 524.7559 -80 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 5 64 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Reason) Tj T* ET
+Q
+Q
+q
+1 0 0 1 120.4463 66 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (local review required before assigning accountability) Tj T* ET
+Q
+Q
+q
+1 0 0 1 5 44 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Action route) Tj T* ET
+Q
+Q
+q
+1 0 0 1 120.4463 46 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (Cross-functional governance review) Tj T* ET
+Q
+Q
+q
+1 0 0 1 5 24 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Evidence) Tj T* ET
+Q
+Q
+q
+1 0 0 1 120.4463 26 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (NXC demo station | flights 233 | avg delay 24.03 min | sufficient demo volume for review.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 5 4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Decision) Tj T* ET
+Q
+Q
+q
+1 0 0 1 120.4463 6 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (Use local drilldown on the highest-priority demo station; avoid over-reading low-volume averages.) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.788235 .831373 .898039 RG
+.6 w
+n 0 80 m 524.7559 80 l S
+n 0 0 m 524.7559 0 l S
+n 0 0 m 0 80 l S
+n 524.7559 0 m 524.7559 80 l S
+.898039 .905882 .921569 RG
+.25 w
+n 0 60 m 524.7559 60 l S
+n 0 40 m 524.7559 40 l S
+n 0 20 m 524.7559 20 l S
+n 115.4463 0 m 115.4463 80 l S
+Q
+Q
+Q
+q
+1 0 0 1 34 477.8898 cm
+Q
+q
+1 0 0 1 34 450.8898 cm
+q
+.043137 .070588 .12549 rg
+BT 1 0 0 1 0 3 Tm /F2 12 Tf 15 TL (Ground Ops Impact Stations) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34 438.8898 cm
+Q
+q
+1 0 0 1 34 226.8898 cm
+q
+.909804 .933333 .968627 rg
+n 0 212 524.7559 -32 re f*
+1 1 1 rg
+n 0 180 524.7559 -38 re f*
+.980392 .980392 .980392 rg
+n 0 142 524.7559 -28 re f*
+1 1 1 rg
+n 0 114 524.7559 -38 re f*
+.980392 .980392 .980392 rg
+n 0 76 524.7559 -38 re f*
+1 1 1 rg
+n 0 38 524.7559 -38 re f*
+0 0 0 rg
+BT /F2 9 Tf 12 TL ET
+q
+1 0 0 1 4 196 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Station) Tj T* ET
+Q
+Q
+q
+1 0 0 1 76.88276 196 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Flights) Tj T* ET
+Q
+Q
+q
+1 0 0 1 149.7655 196 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (OTP D15) Tj T* ET
+Q
+Q
+q
+1 0 0 1 222.6483 196 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (GOPS min) Tj T* ET
+Q
+Q
+q
+1 0 0 1 295.5311 184 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL (GOPS share) Tj T* (\(%\)) Tj T* ET
+Q
+Q
+q
+1 0 0 1 368.4138 196 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Action / caveat) Tj T* ET
+Q
+Q
+BT /F1 8 Tf 12 TL ET
+q
+1 0 0 1 4 166 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL -0.014618 Tw (NXC demo station) Tj T* 0 Tw ET
+Q
+Q
+q
+1 0 0 1 76.88276 166 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (233) Tj T* ET
+Q
+Q
+q
+1 0 0 1 149.7655 166 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (68.6%) Tj T* ET
+Q
+Q
+q
+1 0 0 1 222.6483 166 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (1,158) Tj T* ET
+Q
+Q
+q
+1 0 0 1 295.5311 166 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (20.7%) Tj T* ET
+Q
+Q
+q
+1 0 0 1 368.4138 146 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 22 Tm /F1 8 Tf 10 TL (Review turnaround readiness pattern:) Tj T* (boarding closure, ramp coordination,) Tj T* (baggage delivery, load control readiness.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 4 128 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (NXF demo station) Tj T* ET
+Q
+Q
+q
+1 0 0 1 76.88276 128 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (376) Tj T* ET
+Q
+Q
+q
+1 0 0 1 149.7655 128 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (85.8%) Tj T* ET
+Q
+Q
+q
+1 0 0 1 222.6483 128 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (1,032) Tj T* ET
+Q
+Q
+q
+1 0 0 1 295.5311 128 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (23.0%) Tj T* ET
+Q
+Q
+q
+1 0 0 1 368.4138 118 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 12 Tm /F1 8 Tf 10 TL (Monitor local process consistency; delay) Tj T* (exposure exists despite acceptable OTP.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 4 100 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (NXA demo station) Tj T* ET
+Q
+Q
+q
+1 0 0 1 76.88276 100 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (131) Tj T* ET
+Q
+Q
+q
+1 0 0 1 149.7655 100 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (75.0%) Tj T* ET
+Q
+Q
+q
+1 0 0 1 222.6483 100 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (598) Tj T* ET
+Q
+Q
+q
+1 0 0 1 295.5311 100 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (22.5%) Tj T* ET
+Q
+Q
+q
+1 0 0 1 368.4138 80 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 22 Tm /F1 8 Tf 10 TL (Review turnaround readiness pattern:) Tj T* (boarding closure, ramp coordination,) Tj T* (baggage delivery, load control readiness.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 4 62 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (NXB demo station) Tj T* ET
+Q
+Q
+q
+1 0 0 1 76.88276 62 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (129) Tj T* ET
+Q
+Q
+q
+1 0 0 1 149.7655 62 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (76.4%) Tj T* ET
+Q
+Q
+q
+1 0 0 1 222.6483 62 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (491) Tj T* ET
+Q
+Q
+q
+1 0 0 1 295.5311 62 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (23.2%) Tj T* ET
+Q
+Q
+q
+1 0 0 1 368.4138 42 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 22 Tm /F1 8 Tf 10 TL (Review turnaround readiness pattern:) Tj T* (boarding closure, ramp coordination,) Tj T* (baggage delivery, load control readiness.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 4 24 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (NXE demo station) Tj T* ET
+Q
+Q
+q
+1 0 0 1 76.88276 24 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (118) Tj T* ET
+Q
+Q
+q
+1 0 0 1 149.7655 24 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (84.8%) Tj T* ET
+Q
+Q
+q
+1 0 0 1 222.6483 24 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (309) Tj T* ET
+Q
+Q
+q
+1 0 0 1 295.5311 24 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (25.6%) Tj T* ET
+Q
+Q
+q
+1 0 0 1 368.4138 4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 22 Tm /F1 8 Tf 10 TL (Review turnaround readiness pattern:) Tj T* (boarding closure, ramp coordination,) Tj T* (baggage delivery, load control readiness.) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.501961 .501961 .501961 RG
+.25 w
+n 0 212 m 524.7559 212 l S
+n 0 0 m 524.7559 0 l S
+n 0 0 m 0 212 l S
+n 524.7559 0 m 524.7559 212 l S
+n 0 180 m 524.7559 180 l S
+n 0 142 m 524.7559 142 l S
+n 0 114 m 524.7559 114 l S
+n 0 76 m 524.7559 76 l S
+n 0 38 m 524.7559 38 l S
+n 72.88276 0 m 72.88276 212 l S
+n 145.7655 0 m 145.7655 212 l S
+n 218.6483 0 m 218.6483 212 l S
+n 291.5311 0 m 291.5311 212 l S
+n 364.4138 0 m 364.4138 212 l S
+Q
+Q
+Q
+q
+1 0 0 1 34 216.8898 cm
+Q
+q
+1 0 0 1 34 189.8898 cm
+q
+.043137 .070588 .12549 rg
+BT 1 0 0 1 0 3 Tm /F2 12 Tf 15 TL (Delay Context Indicators) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34 177.8898 cm
+Q
+q
+1 0 0 1 34 45.88976 cm
+q
+.909804 .933333 .968627 rg
+n 0 132 524.7559 -20 re f*
+1 1 1 rg
+n 0 112 524.7559 -28 re f*
+.980392 .980392 .980392 rg
+n 0 84 524.7559 -28 re f*
+1 1 1 rg
+n 0 56 524.7559 -28 re f*
+.980392 .980392 .980392 rg
+n 0 28 524.7559 -28 re f*
+0 0 0 rg
+BT /F2 9 Tf 12 TL ET
+q
+1 0 0 1 4 116 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Indicator) Tj T* ET
+Q
+Q
+q
+1 0 0 1 104.9146 116 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Minutes) Tj T* ET
+Q
+Q
+q
+1 0 0 1 205.8292 116 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Share) Tj T* ET
+Q
+Q
+q
+1 0 0 1 306.7438 116 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Basis) Tj T* ET
+Q
+Q
+BT /F1 8 Tf 12 TL ET
+q
+1 0 0 1 4 88 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 12 Tm /F1 8 Tf 10 TL (Controllable Ground Ops) Tj T* (minutes) Tj T* ET
+Q
+Q
+q
+1 0 0 1 104.9146 98 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (3,864) Tj T* ET
+Q
+Q
+q
+1 0 0 1 205.8292 98 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (22.0%) Tj T* ET
+Q
+Q
+q
+1 0 0 1 306.7438 98 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (selected-scope evidence from demo data) Tj T* ET
+Q
+Q
+q
+1 0 0 1 4 60 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 12 Tm /F1 8 Tf 10 TL (Controllable Other) Tj T* (categories minutes) Tj T* ET
+Q
+Q
+q
+1 0 0 1 104.9146 70 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (2,440) Tj T* ET
+Q
+Q
+q
+1 0 0 1 205.8292 70 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (13.9%) Tj T* ET
+Q
+Q
+q
+1 0 0 1 306.7438 70 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (selected-scope evidence from demo data) Tj T* ET
+Q
+Q
+q
+1 0 0 1 4 32 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 12 Tm /F1 8 Tf 10 TL (Inherited / reactionary) Tj T* (minutes) Tj T* ET
+Q
+Q
+q
+1 0 0 1 104.9146 42 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (8,571) Tj T* ET
+Q
+Q
+q
+1 0 0 1 205.8292 42 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (48.9%) Tj T* ET
+Q
+Q
+q
+1 0 0 1 306.7438 42 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (selected-scope evidence from demo data) Tj T* ET
+Q
+Q
+q
+1 0 0 1 4 4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 12 Tm /F1 8 Tf 10 TL (Other / not classified) Tj T* (minutes) Tj T* ET
+Q
+Q
+q
+1 0 0 1 104.9146 14 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (2,670) Tj T* ET
+Q
+Q
+q
+1 0 0 1 205.8292 14 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (15.2%) Tj T* ET
+Q
+Q
+q
+1 0 0 1 306.7438 14 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (selected-scope evidence from demo data) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.501961 .501961 .501961 RG
+.25 w
+n 0 132 m 524.7559 132 l S
+n 0 0 m 524.7559 0 l S
+n 0 0 m 0 132 l S
+n 524.7559 0 m 524.7559 132 l S
+n 0 112 m 524.7559 112 l S
+n 0 84 m 524.7559 84 l S
+n 0 56 m 524.7559 56 l S
+n 0 28 m 524.7559 28 l S
+n 100.9146 0 m 100.9146 132 l S
+n 201.8292 0 m 201.8292 132 l S
+n 302.7438 0 m 302.7438 132 l S
+Q
+Q
+Q
+q
+1 0 0 1 34 35.88976 cm
+Q
+ 
+endstream
+endobj
+12 0 obj
+<<
+/Length 6234
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 34 792.8898 cm
+q
+.043137 .070588 .12549 rg
+BT 1 0 0 1 0 3 Tm /F2 12 Tf 15 TL (Network KPI Summary) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34 780.8898 cm
+Q
+q
+1 0 0 1 34 650.8898 cm
+q
+.909804 .933333 .968627 rg
+n 0 130 524.7559 -20 re f*
+1 1 1 rg
+n 0 110 524.7559 -18 re f*
+.980392 .980392 .980392 rg
+n 0 92 524.7559 -18 re f*
+1 1 1 rg
+n 0 74 524.7559 -18 re f*
+.980392 .980392 .980392 rg
+n 0 56 524.7559 -28 re f*
+1 1 1 rg
+n 0 28 524.7559 -28 re f*
+0 0 0 rg
+BT /F2 9 Tf 12 TL ET
+q
+1 0 0 1 4 114 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Metric) Tj T* ET
+Q
+Q
+q
+1 0 0 1 104.9146 114 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Value) Tj T* ET
+Q
+Q
+q
+1 0 0 1 306.7438 114 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Note) Tj T* ET
+Q
+Q
+BT /F1 8 Tf 12 TL ET
+q
+1 0 0 1 4 96 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (Flights operated) Tj T* ET
+Q
+Q
+q
+1 0 0 1 104.9146 96 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (1,130) Tj T* ET
+Q
+Q
+q
+1 0 0 1 306.7438 96 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (selected scope) Tj T* ET
+Q
+Q
+q
+1 0 0 1 4 78 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (Avg DEP Delay per Flight) Tj T* ET
+Q
+Q
+q
+1 0 0 1 104.9146 78 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (15.53) Tj T* ET
+Q
+Q
+q
+1 0 0 1 306.7438 78 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (computed \(total/flights\)) Tj T* ET
+Q
+Q
+q
+1 0 0 1 4 60 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (DEP OTP D15) Tj T* ET
+Q
+Q
+q
+1 0 0 1 104.9146 60 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (80.1%) Tj T* ET
+Q
+Q
+q
+1 0 0 1 306.7438 60 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (target benchmark 85.0%) Tj T* ET
+Q
+Q
+q
+1 0 0 1 4 32 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 12 Tm /F1 8 Tf 10 TL (Top station by Avg DEP) Tj T* (Delay per Flight) Tj T* ET
+Q
+Q
+q
+1 0 0 1 104.9146 42 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (NXC demo station | 24.03 min) Tj T* ET
+Q
+Q
+q
+1 0 0 1 306.7438 42 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (sufficient demo volume for review) Tj T* ET
+Q
+Q
+q
+1 0 0 1 4 4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 12 Tm /F1 8 Tf 10 TL -0.004468 Tw (Benchmark station by Avg) Tj T* 0 Tw (DEP Delay per Flight) Tj T* ET
+Q
+Q
+q
+1 0 0 1 104.9146 14 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (NXD demo station | 10.19 min) Tj T* ET
+Q
+Q
+q
+1 0 0 1 306.7438 14 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (sufficient demo volume for review) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.501961 .501961 .501961 RG
+.25 w
+n 0 130 m 524.7559 130 l S
+n 0 0 m 524.7559 0 l S
+n 0 0 m 0 130 l S
+n 524.7559 0 m 524.7559 130 l S
+n 0 110 m 524.7559 110 l S
+n 0 92 m 524.7559 92 l S
+n 0 74 m 524.7559 74 l S
+n 0 56 m 524.7559 56 l S
+n 0 28 m 524.7559 28 l S
+n 100.9146 0 m 100.9146 130 l S
+n 302.7438 0 m 302.7438 130 l S
+Q
+Q
+Q
+q
+1 0 0 1 34 640.8898 cm
+Q
+q
+1 0 0 1 34 613.8898 cm
+q
+.043137 .070588 .12549 rg
+BT 1 0 0 1 0 3 Tm /F2 12 Tf 15 TL (Station Ranking Snapshot) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34 601.8898 cm
+Q
+q
+1 0 0 1 34 525.8898 cm
+q
+.909804 .933333 .968627 rg
+n 0 76 524.7559 -20 re f*
+1 1 1 rg
+n 0 56 524.7559 -28 re f*
+.980392 .980392 .980392 rg
+n 0 28 524.7559 -28 re f*
+0 0 0 rg
+BT /F2 9 Tf 12 TL ET
+q
+1 0 0 1 4 60 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (View) Tj T* ET
+Q
+Q
+q
+1 0 0 1 88.63805 60 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Station) Tj T* ET
+Q
+Q
+q
+1 0 0 1 173.2761 60 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Avg delay) Tj T* ET
+Q
+Q
+q
+1 0 0 1 257.9141 60 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Flights) Tj T* ET
+Q
+Q
+q
+1 0 0 1 342.5522 60 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Materiality note) Tj T* ET
+Q
+Q
+BT /F1 8 Tf 12 TL ET
+q
+1 0 0 1 4 32 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 12 Tm /F1 8 Tf 10 TL (Top station by Avg) Tj T* (Delay) Tj T* ET
+Q
+Q
+q
+1 0 0 1 88.63805 42 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (NXC demo station) Tj T* ET
+Q
+Q
+q
+1 0 0 1 173.2761 42 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (24.03) Tj T* ET
+Q
+Q
+q
+1 0 0 1 257.9141 42 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (233) Tj T* ET
+Q
+Q
+q
+1 0 0 1 342.5522 42 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (sufficient demo volume for review) Tj T* ET
+Q
+Q
+q
+1 0 0 1 4 4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 12 Tm /F1 8 Tf 10 TL (Benchmark station) Tj T* (by Avg Delay) Tj T* ET
+Q
+Q
+q
+1 0 0 1 88.63805 14 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (NXD demo station) Tj T* ET
+Q
+Q
+q
+1 0 0 1 173.2761 14 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (10.19) Tj T* ET
+Q
+Q
+q
+1 0 0 1 257.9141 14 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (143) Tj T* ET
+Q
+Q
+q
+1 0 0 1 342.5522 14 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 8 Tf 10 TL (sufficient demo volume for review) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.501961 .501961 .501961 RG
+.25 w
+n 0 76 m 524.7559 76 l S
+n 0 0 m 524.7559 0 l S
+n 0 0 m 0 76 l S
+n 524.7559 0 m 524.7559 76 l S
+n 0 56 m 524.7559 56 l S
+n 0 28 m 524.7559 28 l S
+n 84.63805 0 m 84.63805 76 l S
+n 169.2761 0 m 169.2761 76 l S
+n 253.9141 0 m 253.9141 76 l S
+n 338.5522 0 m 338.5522 76 l S
+Q
+Q
+Q
+q
+1 0 0 1 34 515.8898 cm
+Q
+q
+1 0 0 1 34 488.8898 cm
+q
+.043137 .070588 .12549 rg
+BT 1 0 0 1 0 3 Tm /F2 12 Tf 15 TL (Confidence / Caveats) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34 478.8898 cm
+Q
+q
+1 0 0 1 34 461.8898 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 9 Tf 11 TL (- Evidence basis: selected-scope evidence from demo data.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34 459.8898 cm
+Q
+q
+1 0 0 1 34 431.8898 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 13 Tm /F1 9 Tf 11 TL (- This public decision pack uses demo data. It demonstrates method, governance, and decision routing. It does not contain) Tj T* (employer data, real station figures, internal context, or company identity.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34 429.8898 cm
+Q
+q
+1 0 0 1 34 412.8898 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 9 Tf 11 TL (- Delay Category / Owner basis: DelayCategory.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34 410.8898 cm
+Q
+q
+1 0 0 1 34 382.8898 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 13 Tm /F1 9 Tf 11 TL (- TAT layer caveat: TAT layer is not included in this public demo. In the full methodology, TAT is used as a turnaround execution) Tj T* (risk layer.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34 380.8898 cm
+Q
+q
+1 0 0 1 34 363.8898 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 9 Tf 11 TL (- Technical appendix is available only when enabled.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34 361.8898 cm
+Q
+q
+1 0 0 1 34 353.8898 cm
+Q
+ 
+endstream
+endobj
+xref
+0 13
+0000000000 65535 f 
+0000000061 00000 n 
+0000000102 00000 n 
+0000000209 00000 n 
+0000000321 00000 n 
+0000000525 00000 n 
+0000000729 00000 n 
+0000000933 00000 n 
+0000001001 00000 n 
+0000001297 00000 n 
+0000001368 00000 n 
+0000008603 00000 n 
+0000021681 00000 n 
+trailer
+<<
+/ID 
+[<23e7766d7ec3f2d71d898e9fd14e0051><23e7766d7ec3f2d71d898e9fd14e0051>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 8 0 R
+/Root 7 0 R
+/Size 13
+>>
+startxref
+27967
+%%EOF
