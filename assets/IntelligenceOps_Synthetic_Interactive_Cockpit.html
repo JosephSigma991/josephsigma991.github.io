@@ -151,6 +151,7 @@ td:last-child { border-right:1px solid var(--line); border-radius:0 8px 8px 0; }
 .decision-summary-card.watch { background:#fff7ed; border-left-color:#f97316; }
 .decision-summary-card.monitor { background:#ecfdf5; border-left-color:var(--green); }
 .decision-frame { margin:0 0 12px; color:#334155; font-weight:760; }
+.empty-state { border:1px dashed #cbd5e1; background:#f8fafc; color:#475569; border-radius:8px; padding:18px; font-weight:850; }
 .action-plan-table { table-layout:fixed; min-width:1120px; }
 .action-plan-table col.lane-col { width:15%; }
 .action-plan-table col.signal-col { width:23%; }
@@ -561,6 +562,9 @@ function momTrendSignal(row) {
   if ((+row.absDelta || 0) >= 70) return 'Recurring pattern';
   return 'Watch only';
 }
+function emptyEvidenceState() {
+  return '<div class="empty-state">No filtered evidence lanes for this scope.</div>';
+}
 function renderPatterns() {
   const rows=filterRows(DATA.drilldown).sort((a,b)=>b.delayMinutes-a.delayMinutes);
   const guardrails=[
@@ -569,11 +573,13 @@ function renderPatterns() {
     ['External constraint boundary','Airport flow, security, border-control, weather, and ATC remain coordination/context until execution evidence is separated.'],
     ['Escalation trigger','Escalate only when the pattern repeats after local corrective action or when authority/supplier coordination is required.'],
   ];
-  byId('context-panel').innerHTML = `<div class="two-col"><section class="panel"><h2>Recurring Pattern Evidence</h2><p class="section-note">Patterns are shown only for selected stations and are used to route review, not to assign ownership by themselves.</p><div class="table-wrap"><table class="pattern-table"><colgroup><col class="station-col"><col class="pattern-col"><col class="window-col"><col class="evidence-col"><col class="action-col"></colgroup><thead><tr><th>Station</th><th>Pattern</th><th>Window</th><th>Evidence</th><th>Action use</th></tr></thead><tbody>${rows.map((r,i)=>`<tr class="${String(r.materialityFlag).toLowerCase()}"><td class="station-cell"><strong>${esc(r.station)}</strong><span>${esc(r.country)}</span></td><td>${esc(r.patternLabel)}</td><td>${esc(patternWindow(r,i))}</td><td>${fmtMin(r.delayMinutes)} across ${fmtNum(r.flightsAffected)} flights</td><td class="pattern-action">${esc(sentenceCase(r.actionUse))}</td></tr>`).join('')}</tbody></table></div></section><section class="panel"><h2>Patterns & Guardrails</h2><p>Inherited late arrival, weather, ATC, crew duty, and airport flow are retained as context. Ground Ops ownership appears only after local execution is separated from external constraints.</p><div class="guardrail">TAT is timing-risk exposure. It supports prioritization, but ownership is assigned only after inherited pressure, local execution, and external constraints are separated.</div><div class="guardrail-grid">${guardrails.map(g=>`<div class="guardrail-card"><b>${esc(g[0])}</b><p>${esc(g[1])}</p></div>`).join('')}</div></section></div>`;
+  const patternBody = rows.length ? `<div class="table-wrap"><table class="pattern-table"><colgroup><col class="station-col"><col class="pattern-col"><col class="window-col"><col class="evidence-col"><col class="action-col"></colgroup><thead><tr><th>Station</th><th>Pattern</th><th>Window</th><th>Evidence</th><th>Action use</th></tr></thead><tbody>${rows.map((r,i)=>`<tr class="${String(r.materialityFlag).toLowerCase()}"><td class="station-cell"><strong>${esc(r.station)}</strong><span>${esc(r.country)}</span></td><td>${esc(r.patternLabel)}</td><td>${esc(patternWindow(r,i))}</td><td>${fmtMin(r.delayMinutes)} across ${fmtNum(r.flightsAffected)} flights</td><td class="pattern-action">${esc(sentenceCase(r.actionUse))}</td></tr>`).join('')}</tbody></table></div>` : emptyEvidenceState();
+  byId('context-panel').innerHTML = `<div class="two-col"><section class="panel"><h2>Recurring Pattern Evidence</h2><p class="section-note">Patterns are shown only for selected stations and are used to route review, not to assign ownership by themselves.</p>${patternBody}</section><section class="panel"><h2>Patterns & Guardrails</h2><p>Inherited late arrival, weather, ATC, crew duty, and airport flow are retained as context. Ground Ops ownership appears only after local execution is separated from external constraints.</p><div class="guardrail">TAT is timing-risk exposure. It supports prioritization, but ownership is assigned only after inherited pressure, local execution, and external constraints are separated.</div><div class="guardrail-grid">${guardrails.map(g=>`<div class="guardrail-card"><b>${esc(g[0])}</b><p>${esc(g[1])}</p></div>`).join('')}</div></section></div>`;
 }
 function renderMom() {
   const rows=filterRows(DATA.mom).sort((a,b)=>b.absDelta-a.absDelta).slice(0,10);
-  byId('mom-section').innerHTML = `<section class="panel"><h2>MoM Movement</h2><div class="table-wrap"><table class="mom-table"><colgroup><col class="station-col"><col class="driver-col"><col class="category-col"><col class="month-col"><col class="month-col"><col class="movement-col"><col class="signal-col"></colgroup><thead><tr><th>Station</th><th>Driver</th><th>Category</th><th>April 2025</th><th>May 2025</th><th>Movement</th><th>Trend Signal</th></tr></thead><tbody>${rows.map(r=>`<tr class="${r.direction==='worsening'?'watch':'monitor'}"><td>${esc(r.station)}</td><td>${esc(r.driverKey)}</td><td>${esc(momDisplayCategory(r))}</td><td>${fmtMin(r.minutesPrev)}</td><td>${fmtMin(r.minutesCurrent)}</td><td>${r.direction==='worsening'?'+':''}${fmtMin(r.delta)}</td><td class="trend-signal">${esc(momTrendSignal(r))}</td></tr>`).join('')}</tbody></table></div></section>`;
+  const momBody = rows.length ? `<div class="table-wrap"><table class="mom-table"><colgroup><col class="station-col"><col class="driver-col"><col class="category-col"><col class="month-col"><col class="month-col"><col class="movement-col"><col class="signal-col"></colgroup><thead><tr><th>Station</th><th>Driver</th><th>Category</th><th>April 2025</th><th>May 2025</th><th>Movement</th><th>Trend Signal</th></tr></thead><tbody>${rows.map(r=>`<tr class="${r.direction==='worsening'?'watch':'monitor'}"><td>${esc(r.station)}</td><td>${esc(r.driverKey)}</td><td>${esc(momDisplayCategory(r))}</td><td>${fmtMin(r.minutesPrev)}</td><td>${fmtMin(r.minutesCurrent)}</td><td>${r.direction==='worsening'?'+':''}${fmtMin(r.delta)}</td><td class="trend-signal">${esc(momTrendSignal(r))}</td></tr>`).join('')}</tbody></table></div>` : emptyEvidenceState();
+  byId('mom-section').innerHTML = `<section class="panel"><h2>MoM Movement</h2>${momBody}</section>`;
 }
 function actionPlanTatLens(row) {
   return sentenceCase(row.tatLens);
@@ -581,15 +587,28 @@ function actionPlanTatLens(row) {
 function actionPlanRoute(row) {
   return sentenceCase(row.route);
 }
+function actionSummaryText(kind, count) {
+  if (kind === 'approve') return count === 1 ? '1 route ready' : `${fmtNum(count)} routes`;
+  if (kind === 'validate') return count === 1 ? '1 handoff open' : `${fmtNum(count)} handoffs`;
+  if (kind === 'watch') return count === 1 ? '1 lane' : count > 1 ? `${fmtNum(count)} lanes under review` : '0 lanes';
+  if (kind === 'monitor') return count === 1 ? '1 stable lane' : `${fmtNum(count)} stable lanes`;
+  return fmtNum(count);
+}
 function renderRecommendations() {
   const rows=DATA.decisionEvidence.filter(r=>stationSet().has(r.station));
+  const laneCounts = rows.reduce((acc,row) => {
+    const key=String(row.class || row.lane || '').toLowerCase();
+    acc[key]=(acc[key] || 0) + 1;
+    return acc;
+  }, {});
   const cards=[
-    ['approve','Approve','1 route ready'],
-    ['validate','Validate','1 handoff open'],
-    ['watch','Watch','3 lanes under review'],
-    ['monitor','Monitor','1 stable lane'],
+    ['approve','Approve',actionSummaryText('approve', laneCounts.approve || 0)],
+    ['validate','Validate',actionSummaryText('validate', laneCounts.validate || 0)],
+    ['watch','Watch',actionSummaryText('watch', laneCounts.watch || 0)],
+    ['monitor','Monitor',actionSummaryText('monitor', laneCounts.monitor || 0)],
   ];
-  byId('recommendations').innerHTML = `<div class="decision-summary">${cards.map(c=>`<div class="decision-summary-card ${c[0]}"><span>${esc(c[1])}</span><strong>${esc(c[2])}</strong></div>`).join('')}</div><p class="decision-frame">Decision register converts evidence into approval, validation, watch, and monitor lanes.</p><div class="table-wrap"><table class="action-plan-table"><colgroup><col class="lane-col"><col class="signal-col"><col class="tat-col"><col class="route-col"><col class="success-col"></colgroup><thead><tr><th>Lane</th><th>Evidence Signal</th><th>TAT Lens</th><th>Decision / Authority / Action Route</th><th>Success Check</th></tr></thead><tbody>${rows.map(r=>`<tr class="${r.class}"><td>${esc(r.lane)}<br>${esc(r.label)}</td><td>${esc(r.driver)}<br>${esc(r.pattern)}</td><td>${esc(actionPlanTatLens(r))}</td><td>${esc(actionPlanRoute(r))}</td><td>${esc(sentenceCase(r.success))}</td></tr>`).join('')}</tbody></table></div><div class="guardrail">TAT is timing-risk exposure. It supports prioritization, but ownership is assigned only after inherited pressure, local execution, and external constraints are separated.</div>`;
+  const registerBody = rows.length ? `<div class="table-wrap"><table class="action-plan-table"><colgroup><col class="lane-col"><col class="signal-col"><col class="tat-col"><col class="route-col"><col class="success-col"></colgroup><thead><tr><th>Lane</th><th>Evidence Signal</th><th>TAT Lens</th><th>Decision / Authority / Action Route</th><th>Success Check</th></tr></thead><tbody>${rows.map(r=>`<tr class="${r.class}"><td>${esc(r.lane)}<br>${esc(r.label)}</td><td>${esc(r.driver)}<br>${esc(r.pattern)}</td><td>${esc(actionPlanTatLens(r))}</td><td>${esc(actionPlanRoute(r))}</td><td>${esc(sentenceCase(r.success))}</td></tr>`).join('')}</tbody></table></div>` : emptyEvidenceState();
+  byId('recommendations').innerHTML = `<div class="decision-summary">${cards.map(c=>`<div class="decision-summary-card ${c[0]}"><span>${esc(c[1])}</span><strong>${esc(c[2])}</strong></div>`).join('')}</div><p class="decision-frame">Decision register converts evidence into approval, validation, watch, and monitor lanes.</p>${registerBody}<div class="guardrail">TAT is timing-risk exposure. It supports prioritization, but ownership is assigned only after inherited pressure, local execution, and external constraints are separated.</div>`;
 }
 function initTabs() {
   const tabs=[...document.querySelectorAll('.gops-tab')], sections=[...document.querySelectorAll('[data-gops-tab-section]')];
