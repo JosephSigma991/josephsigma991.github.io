@@ -48,7 +48,7 @@ h1 { margin:0; font-size:31px; line-height:1.05; letter-spacing:0; }
 .scope-summary { font-size:14px; color:#334155; line-height:1.35; }
 .chips { display:flex; gap:6px; flex-wrap:wrap; margin-top:8px; }
 .chip { background:#e0f2fe; color:#075985; border-radius:999px; padding:5px 9px; font-size:11px; font-weight:850; }
-.wrap { padding:20px 34px 34px; max-width:1680px; margin:0 auto; }
+.wrap { padding:20px 34px 34px; width:100%; max-width:none; margin:0; }
 .gops-tab-shell { background:#0b1f33; border:1px solid #17324d; border-radius:8px; padding:8px; box-shadow:0 16px 36px rgba(15,23,42,.12); margin-bottom:18px; }
 .gops-tabs { display:flex; gap:7px; flex-wrap:wrap; }
 .gops-tab { border:1px solid rgba(255,255,255,.12); border-radius:7px; background:rgba(255,255,255,.06); color:#dbeafe; padding:10px 14px; font-weight:850; cursor:pointer; }
@@ -79,6 +79,49 @@ h1 { margin:0; font-size:31px; line-height:1.05; letter-spacing:0; }
 .impact-station { display:block; margin-top:6px; font-size:34px; line-height:1; font-weight:950; color:#0f172a; }
 .impact-country { margin-top:8px; display:inline-flex; border-radius:999px; background:#e0f2fe; color:#075985; padding:4px 9px; font-size:11px; font-weight:850; }
 .impact-title { margin:12px 0 8px; font-size:17px; }
+.impact-heading { display:block; margin-top:6px; font-size:30px; line-height:1.05; font-weight:950; color:#0f172a; }
+.action-matrix { table-layout:fixed; min-width:1180px; }
+.action-matrix col.station-col { width:12%; }
+.action-matrix col.signal-col { width:19%; }
+.action-matrix col.evidence-col { width:12%; }
+.action-matrix col.tat-col { width:17%; }
+.action-matrix col.route-col { width:24%; }
+.action-matrix col.next-col { width:16%; }
+.action-matrix .route-cell,.action-matrix .next-cell { line-height:1.38; overflow-wrap:break-word; }
+.tat-risk-table { table-layout:fixed; min-width:1120px; }
+.tat-risk-table col.station-col { width:12%; }
+.tat-risk-table col.country-col { width:12%; }
+.tat-risk-table col.count-col { width:8%; }
+.tat-risk-table col.risk-col { width:10%; }
+.tat-risk-table col.pressure-col { width:22%; }
+.tat-risk-table col.cue-col { width:20%; }
+.tat-pressure { font-weight:850; color:#0f172a; }
+.tat-cue { line-height:1.35; overflow-wrap:break-word; }
+.driver-evidence-table { table-layout:fixed; min-width:1180px; }
+.driver-evidence-table col.station-col { width:11%; }
+.driver-evidence-table col.driver-col { width:19%; }
+.driver-evidence-table col.category-col { width:13%; }
+.driver-evidence-table col.metric-col { width:9%; }
+.driver-evidence-table col.route-col { width:20%; }
+.driver-evidence-table col.evidence-col { width:19%; }
+.driver-route,.driver-evidence { line-height:1.35; overflow-wrap:break-word; }
+.guardrail-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:12px; }
+.guardrail-card { border:1px solid var(--line); border-left:5px solid var(--teal); border-radius:8px; padding:10px; background:#f8fafc; }
+.guardrail-card b { display:block; margin-bottom:4px; color:#0f172a; }
+.guardrail-card p { margin:0; color:#334155; line-height:1.35; }
+.pattern-table,.mom-table { table-layout:fixed; min-width:1120px; }
+.pattern-table col.station-col { width:12%; }
+.pattern-table col.pattern-col { width:22%; }
+.pattern-table col.window-col { width:16%; }
+.pattern-table col.evidence-col { width:14%; }
+.pattern-table col.action-col { width:36%; }
+.mom-table col.station-col { width:10%; }
+.mom-table col.driver-col { width:12%; }
+.mom-table col.category-col { width:18%; }
+.mom-table col.month-col { width:12%; }
+.mom-table col.movement-col { width:12%; }
+.mom-table col.signal-col { width:24%; }
+.pattern-action,.trend-signal { line-height:1.35; overflow-wrap:break-word; }
 .impact-metrics { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:10px 0; }
 .mini { background:#f8fafc; border:1px solid var(--line); border-radius:7px; padding:9px; font-size:12px; color:#334155; }
 .mini b { display:block; color:#0f172a; margin-bottom:4px; }
@@ -100,8 +143,21 @@ td:last-child { border-right:1px solid var(--line); border-radius:0 8px 8px 0; }
 .risk-callout { background:#fef2f2; border:1px solid #fecaca; border-radius:8px; padding:14px; }
 .risk-callout h2 { color:var(--red); }
 .decision-summary { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-bottom:14px; }
-.decision-summary-card { border:1px solid var(--line); border-radius:8px; padding:12px; background:white; }
-.decision-summary-card strong { display:block; font-size:22px; margin-top:4px; }
+.decision-summary-card { border:1px solid var(--line); border-radius:8px; padding:12px; background:white; border-left:6px solid var(--teal); }
+.decision-summary-card span { display:block; color:#475569; font-weight:900; text-transform:uppercase; font-size:11px; }
+.decision-summary-card strong { display:block; font-size:20px; margin-top:5px; color:#0f172a; line-height:1.15; }
+.decision-summary-card.approve { background:#eff6ff; border-left-color:#0284c7; }
+.decision-summary-card.validate { background:#fffbeb; border-left-color:var(--amber); }
+.decision-summary-card.watch { background:#fff7ed; border-left-color:#f97316; }
+.decision-summary-card.monitor { background:#ecfdf5; border-left-color:var(--green); }
+.decision-frame { margin:0 0 12px; color:#334155; font-weight:760; }
+.action-plan-table { table-layout:fixed; min-width:1120px; }
+.action-plan-table col.lane-col { width:15%; }
+.action-plan-table col.signal-col { width:23%; }
+.action-plan-table col.tat-col { width:17%; }
+.action-plan-table col.route-col { width:28%; }
+.action-plan-table col.success-col { width:17%; }
+.action-plan-table td { line-height:1.35; overflow-wrap:break-word; }
 [hidden] { display:none !important; }
 @media(max-width:1200px){.hero-top,.exec-grid,.filter-grid,.two-col,.driver-grid{grid-template-columns:1fr}.hero-kpi-strip,.kpi-grid{grid-template-columns:repeat(3,1fr)}.impact-hero-grid,.watchlist-grid,.decision-summary{grid-template-columns:1fr 1fr}}
 @media(max-width:760px){.hero,.exec-panel,.filter-panel,.wrap{padding-left:18px;padding-right:18px}.hero-kpi-strip,.kpi-grid,.impact-hero-grid,.watchlist-grid,.decision-summary{grid-template-columns:1fr}.metric-row{grid-template-columns:1fr}.impact-metrics{grid-template-columns:1fr}}
@@ -117,7 +173,14 @@ td:last-child { border-right:1px solid var(--line); border-radius:0 8px 8px 0; }
     </div>
     <div class="hero-note">Leadership operations cockpit for evidence-to-action review. Filters recalculate scope, KPIs, timing-risk exposure, driver evidence, recurring patterns, and action lanes.</div>
   </div>
-  <div class="hero-kpi-strip" id="hero-kpi-strip" data-marker="hero-kpi-strip"></div>
+  <div class="hero-kpi-strip" id="hero-kpi-strip" data-marker="hero-kpi-strip">
+    <div class="hero-kpi warn"><span>OTP D15</span><strong>79.6%</strong><small>Current filtered network</small></div>
+    <div class="hero-kpi bad"><span>Target Gap</span><strong>-5.4 pp</strong><small>Against 85% review target</small></div>
+    <div class="hero-kpi bad"><span>TAT Risk</span><strong>35%</strong><small>Timing-risk exposure only</small></div>
+    <div class="hero-kpi primary"><span>Flights Reviewed</span><strong>1,149</strong><small>Filtered scheduled departures</small></div>
+    <div class="hero-kpi warn"><span>Ground Ops Exposure</span><strong>26,725 min</strong><small>42.4% delay share</small></div>
+    <div class="hero-kpi good"><span>Action Lanes Ready</span><strong>4 / 6</strong><small>Decision routes with evidence</small></div>
+  </div>
 </section>
 <section class="exec-panel" aria-label="Executive cockpit summary">
   <div class="exec-grid">
@@ -213,6 +276,7 @@ const esc = value => String(value == null ? '' : value).replace(/[&<>"']/g, c =>
 const fmtNum = (v,d=0) => Number.isFinite(+v) ? (+v).toLocaleString(undefined,{maximumFractionDigits:d,minimumFractionDigits:d}) : '0';
 const fmtPct = (v,d=1) => fmtNum(v,d) + '%';
 const fmtMin = (v,d=0) => fmtNum(v,d) + ' min';
+const pluralLabel = (count, singular, plural=singular+'s') => `${fmtNum(count)} ${+count===1 ? singular : plural}`;
 const stationSet = () => new Set([...state.stations].filter(s => refByStation.has(s)));
 const currentRows = (rows, key='station') => rows.filter(r => r.period === DATA.meta.period && stationSet().has(r[key]));
 const filterRows = (rows, key='station') => rows.filter(r => stationSet().has(r[key]));
@@ -268,35 +332,30 @@ function renderFilters() {
   byId('country-list').innerHTML = countriesAll.filter(c=>c.toLowerCase().includes(q)).map(c=>`<label class="check-row"><input type="checkbox" class="country-check" value="${esc(c)}" ${state.countries.has(c)?'checked':''}> ${esc(c)}</label>`).join('');
   const selected=stationSet(), visible=stationRefsForDropdown();
   byId('station-list').innerHTML = visible.map(r=>`<label class="check-row"><input type="checkbox" class="station-check" value="${esc(r.station)}" ${selected.has(r.station)?'checked':''}> ${esc(r.station)} - ${esc(r.country)}</label>`).join('');
-  byId('country-trigger-label').textContent = state.countries.size === countriesAll.length ? `All countries (${countriesAll.length})` : `${state.countries.size} countries selected`;
-  byId('station-trigger-label').textContent = `${selected.size} stations selected`;
+  byId('country-trigger-label').textContent = state.countries.size === countriesAll.length ? `All countries (${countriesAll.length})` : `${pluralLabel(state.countries.size,'country','countries')} selected`;
+  byId('station-trigger-label').textContent = `${pluralLabel(selected.size,'station','stations')} selected`;
   document.querySelectorAll('.country-check').forEach(el => el.addEventListener('change', e => { setCountrySelected(e.target.value, e.target.checked); renderFilters(); renderAll(); }));
   document.querySelectorAll('.station-check').forEach(el => el.addEventListener('change', e => { setStationSelected(e.target.value, e.target.checked); renderFilters(); renderAll(); }));
-}
-function renderScopeSummary() {
+}function renderScopeSummary() {
   const selectedCountries=[...state.countries].sort(), count=stationSet().size, k=aggregateKpis(currentRows(DATA.kpis));
   byId('scope-label').textContent = DATA.meta.periodLabel;
-  byId('selected-scope-summary').innerHTML = `<strong>${esc(DATA.meta.reviewedScopeLabel)}</strong> · <strong>${selectedCountries.length}</strong> countries · <strong>${count}</strong> stations · <strong>${fmtNum(k.flights)}</strong> flights · <strong>${esc(DATA.meta.periodLabel)}</strong>`;
-  const countryText = selectedCountries.length === countriesAll.length ? 'All countries' : selectedCountries.slice(0,5).join(', ') + (selectedCountries.length > 5 ? ` +${selectedCountries.length-5}` : '');
-  byId('selected-chips').innerHTML = `<span class="chip">${esc(countryText || 'No country selected')}</span><span class="chip">${count} stations</span><span class="chip">${fmtNum(k.gopsMin)} Ground Ops min</span>`;
+  byId('selected-scope-summary').innerHTML = `<strong>${esc(DATA.meta.reviewedScopeLabel)}</strong> · <strong>${esc(pluralLabel(selectedCountries.length,'country','countries'))}</strong> · <strong>${esc(pluralLabel(count,'station','stations'))}</strong> · <strong>${esc(pluralLabel(k.flights,'flight','flights'))}</strong>`;
+  const countryText = selectedCountries.length === countriesAll.length ? pluralLabel(selectedCountries.length,'country','countries') : selectedCountries.length ? `${pluralLabel(selectedCountries.length,'country','countries')}: ${selectedCountries.slice(0,5).join(', ')}${selectedCountries.length > 5 ? ` +${selectedCountries.length-5}` : ''}` : 'No country selected';
+  byId('selected-chips').innerHTML = `<span class="chip">${esc(countryText)}</span><span class="chip">${esc(pluralLabel(count,'station','stations'))}</span><span class="chip">${esc(pluralLabel(k.flights,'flight','flights'))}</span><span class="chip">${fmtNum(k.gopsMin)} Ground Ops min</span>`;
+}
+function heroLaneReadyDisplay() {
+  const visible=DATA.decisionEvidence.filter(r=>stationSet().has(r.station));
+  return visible.length ? { value: laneReadyText(), subtext: 'Decision routes with evidence' } : { value: 'No lanes', subtext: 'No filtered decision lanes' };
 }
 function renderHeroKpis() {
-  const k=aggregateKpis(currentRows(DATA.kpis)), tr=tatRisk(currentRows(DATA.tat));
-  const fullScope = stationSet().size === refs.length;
-  const cards = fullScope ? [
-    ['OTP D15', '78.6%', 'Current filtered network', 'warn'],
-    ['Target Gap', '-6.4 pp', 'Against 85% review target', 'bad'],
-    ['TAT Risk', '34%', 'Timing-risk exposure only', 'bad'],
-    ['Flights Reviewed', '1,240', 'Filtered scheduled departures', 'primary'],
-    ['Ground Ops Exposure', '2,180 min', 'Ground Ops delay exposure', 'warn'],
-    ['Action Lanes Ready', '4 / 6', 'Decision routes with evidence', 'good'],
-  ] : [
+  const k=aggregateKpis(currentRows(DATA.kpis)), tr=tatRisk(currentRows(DATA.tat)), lanes=heroLaneReadyDisplay();
+  const cards = [
     ['OTP D15', fmtPct(k.otpD15Pct), 'Current filtered network', severity(k.otpD15Pct,'otp')],
     ['Target Gap', `${fmtNum(k.targetGap,1)} pp`, 'Against 85% review target', severity(k.targetGap,'gap')],
-    ['TAT Risk', fmtPct(tr.share,0), `${fmtNum(tr.crit)} critical of ${fmtNum(tr.eligible)} eligible`, severity(tr.share,'risk')],
+    ['TAT Risk', fmtPct(tr.share,0), 'Timing-risk exposure only', severity(tr.share,'risk')],
     ['Flights Reviewed', fmtNum(k.flights), 'Filtered scheduled departures', 'primary'],
-    ['Ground Ops Exposure', fmtMin(k.gopsMin), `${fmtPct(k.gopsSharePct)} of delay minutes`, k.gopsSharePct>39?'warn':'good'],
-    ['Action Lanes Ready', laneReadyText(), 'Decision routes with evidence', 'good'],
+    ['Ground Ops Exposure', fmtMin(k.gopsMin), `${fmtPct(k.gopsSharePct)} delay share`, k.gopsSharePct>39?'warn':'good'],
+    ['Action Lanes Ready', lanes.value, lanes.subtext, 'good'],
   ];
   byId('hero-kpi-strip').innerHTML = cards.map(c=>`<div class="hero-kpi ${c[3]}"><span>${esc(c[0])}</span><strong>${esc(c[1])}</strong><small>${esc(c[2])}</small></div>`).join('');
 }
@@ -344,56 +403,193 @@ function scenarioRows() {
 function laneClass(station) { return scenarioByStation.get(station)?.class || (topGroundRows(50).findIndex(r=>r.station===station)<3?'watch':'monitor'); }
 function routeText(row) { const s=scenarioByStation.get(row.station); return s ? s.route : `${refByStation.get(row.station)?.actionRoute || 'Review route'} reviews ${row.top.description.toLowerCase()} before escalation.`; }
 function tatForStation(station) { return DATA.tat.find(r=>r.period===DATA.meta.period && r.station===station) || {}; }
+function sentenceCase(text) { const s=String(text || ''); return s ? s.charAt(0).toUpperCase() + s.slice(1) : s; }
+function signalTitle(row) { const s=scenarioByStation.get(row.station); return s ? s.label : `${row.station} / ${row.top.code}`; }
+function watchlistText(row) {
+  const s=scenarioByStation.get(row.station);
+  if (s?.station === 'D4X') return 'D4X / 34C: Baggage delivery signal repeats after first station check · 190 min · 36% timing-risk exposure.';
+  if (s?.station === 'E5Q') return 'E5Q / 63G: Fueling supplier response remains open after first local check · 150 min · 30% timing-risk exposure.';
+  if (s?.station === 'F6Z') return 'F6Z / 31B: Load-control handoff remains stable below escalation threshold · 95 min · 22% timing-risk exposure.';
+  const tat=tatForStation(row.station);
+  return `${row.station} / ${row.top.code}: ${row.top.description} remains open for review · ${fmtMin(row.minutes)} · ${fmtPct(tat.critShare||0,0)} timing-risk exposure.`;
+}
 function renderStationCards() {
   const scenarioStations = new Set(DATA.decisionEvidence.map(r=>r.station));
   const rows=[...scenarioRows(), ...topGroundRows(20).filter(r=>!scenarioStations.has(r.station))].slice(0,6), hero=rows.slice(0,3), watch=rows.slice(3,6);
   byId('station-cards').innerHTML = `<div class="impact-hero-grid">${hero.map(row => {
     const ref=refByStation.get(row.station), s=scenarioByStation.get(row.station), tat=tatForStation(row.station), cls=laneClass(row.station);
-    return `<article class="impact-card ${cls}"><div class="impact-card-head"><div><span class="impact-badge ${cls}">${esc(s?.lane || ref.requiredActionLevel.toUpperCase())}</span><span class="impact-station">${esc(row.station)}</span><span class="impact-country">${esc(ref.country)}</span></div><strong>${esc(row.top.code)}</strong></div><h3 class="impact-title">${esc(s?.driver || row.top.description)}</h3><div class="impact-metrics"><div class="mini"><b>Evidence</b>${fmtMin(row.minutes)} across ${fmtNum(row.flights)} flights</div><div class="mini"><b>TAT lens</b>${esc(s?.tatLens || fmtPct(tat.critShare||0,0) + ' timing-risk exposure')}</div></div><p>${esc(routeText(row))}</p></article>`;
+    return `<article class="impact-card ${cls}"><div class="impact-card-head"><div><span class="impact-badge ${cls}">${esc(s?.lane || ref.requiredActionLevel.toUpperCase())}</span><span class="impact-heading">${esc(signalTitle(row))}</span><span class="impact-country">${esc(ref.country)}</span></div></div><h3 class="impact-title">${esc(s?.driver || row.top.description)}</h3><div class="impact-metrics"><div class="mini"><b>Evidence</b>${fmtMin(row.minutes)} across ${fmtNum(row.flights)} flights</div><div class="mini"><b>TAT lens</b>${esc(s?.tatLens || fmtPct(tat.critShare||0,0) + ' timing-risk exposure')}</div></div><p>${esc(sentenceCase(routeText(row)))}</p></article>`;
   }).join('')}</div><div class="watchlist-block"><h2>Additional Watchlist</h2><div class="watchlist-grid">${watch.map(row => {
-    const ref=refByStation.get(row.station), tat=tatForStation(row.station), cls=laneClass(row.station);
-    return `<article class="watch-card ${cls}"><span class="badge ${cls}">${esc(ref.requiredActionLevel.toUpperCase())}</span><h3>${esc(row.station)} / ${esc(row.top.code)}</h3><p>${esc(row.top.description)} · ${fmtMin(row.minutes)} · ${fmtPct(tat.critShare||0,0)} TAT risk.</p></article>`;
+    const ref=refByStation.get(row.station), cls=laneClass(row.station);
+    return `<article class="watch-card ${cls}"><span class="badge ${cls}">${esc(ref.requiredActionLevel.toUpperCase())}</span><p>${esc(watchlistText(row))}</p></article>`;
   }).join('')}</div></div>`;
 }
 function renderInterventionTable() {
   const scenarioStations = new Set(DATA.decisionEvidence.map(r=>r.station));
   const rows=[...scenarioRows(), ...topGroundRows(20).filter(r=>!scenarioStations.has(r.station))].slice(0,14);
-  byId('intervention-table').innerHTML = `<div class="table-wrap"><table class="action-matrix"><thead><tr><th>Station</th><th>Primary signal</th><th>Evidence</th><th>TAT lens</th><th>Route</th><th>Next move</th></tr></thead><tbody>${rows.map(row => {
+  byId('intervention-table').innerHTML = `<div class="table-wrap"><table class="action-matrix"><colgroup><col class="station-col"><col class="signal-col"><col class="evidence-col"><col class="tat-col"><col class="route-col"><col class="next-col"></colgroup><thead><tr><th>Station</th><th>Primary signal</th><th>Evidence</th><th>TAT lens</th><th>Route</th><th>Next move</th></tr></thead><tbody>${rows.map(row => {
     const ref=refByStation.get(row.station), s=scenarioByStation.get(row.station), tat=tatForStation(row.station), cls=laneClass(row.station);
-    return `<tr class="${cls}"><td class="station-cell"><strong>${esc(row.station)}</strong><span>${esc(ref.country)}</span></td><td>${esc(s?.label || row.top.code + ' / ' + row.top.description)}</td><td><span class="num">${fmtMin(row.minutes)}</span><br>${fmtNum(row.flights)} flights</td><td>${esc(s?.tatLens || fmtPct(tat.critShare||0,0) + ' timing-risk exposure')}</td><td>${esc(routeText(row))}</td><td>${esc(s?.success || 'Confirm owner, caveat, and recovery window before next review.')}</td></tr>`;
+    return `<tr class="${cls}"><td class="station-cell"><strong>${esc(row.station)}</strong><span>${esc(ref.country)}</span></td><td>${esc(signalTitle(row))}<br>${esc(s?.driver || row.top.description)}</td><td><span class="num">${fmtMin(row.minutes)}</span><br>${fmtNum(row.flights)} flights</td><td>${esc(sentenceCase(s?.tatLens || fmtPct(tat.critShare||0,0) + ' timing-risk exposure'))}</td><td class="route-cell">${esc(sentenceCase(routeText(row)))}</td><td class="next-cell">${esc(sentenceCase(s?.success || 'Confirm owner, caveat, and recovery window before next review.'))}</td></tr>`;
   }).join('')}</tbody></table></div>`;
+}
+function driverDescription(row) { return String(row?.codeDescription || ''); }
+function driverDisplayCode(row) {
+  const d=driverDescription(row).toLowerCase();
+  if (d.includes('gate')) return '52F';
+  if (d.includes('boarding')) return '15A';
+  if (d.includes('prm')) return '19A';
+  if (d.includes('load-control')) return '31B';
+  if (d.includes('baggage')) return '34C';
+  if (d.includes('passenger-processing')) return '42D';
+  if (d.includes('fuel')) return '63G';
+  if (d.includes('stand')) return '71H';
+  if (d.includes('crew') || d.includes('rotation')) return '82J';
+  if (d.includes('security') || d.includes('border-control')) return '86K';
+  if (d.includes('airport flow')) return '91L';
+  if (d.includes('maintenance')) return '94M';
+  if (d.includes('weather') || d.includes('atc')) return '97N';
+  if (d.includes('inherited')) return '99P';
+  return row?.delayCode || '';
+}
+function driverRoute(row) {
+  const d=driverDescription(row).toLowerCase();
+  if (d.includes('inherited') || d.includes('weather') || d.includes('atc')) return 'Context only, no ownership route';
+  if (d.includes('crew') || d.includes('rotation')) return 'OCC / Hub Control validation';
+  if (d.includes('fuel')) return 'Supplier SLA / response-time review';
+  if (d.includes('airport flow') || d.includes('security') || d.includes('border-control') || d.includes('stand') || d.includes('passenger-processing')) return 'Airport authority coordination route';
+  if (d.includes('maintenance')) return 'Technical handoff validation';
+  if (d.includes('load-control')) return 'Load-control / dispatch handoff review';
+  if (d.includes('gate')) return 'Area Manager evidence-led review';
+  if (d.includes('boarding') || d.includes('baggage') || d.includes('prm')) return 'Station GHA + airport manager review';
+  return row?.isContextDriver ? 'Context only, no ownership route' : 'Area Manager evidence-led review';
+}
+function driverEvidenceRead(row) {
+  const d=driverDescription(row).toLowerCase();
+  if (d.includes('gate')) return 'Gate-change timing should be checked against boarding call sequence and inherited arrival pressure.';
+  if (d.includes('boarding')) return 'Boarding readiness evidence is strong enough for station-level review.';
+  if (d.includes('fuel')) return 'Supplier response time needs SLA or service-window caveat before escalation.';
+  if (d.includes('airport flow')) return 'Airport-flow pressure must be separated from station execution before ownership is assigned.';
+  if (d.includes('stand')) return 'Stand constraint needs airport coordination evidence before escalation.';
+  if (d.includes('baggage')) return 'Baggage delivery timing should be checked against ramp readiness and connection pressure.';
+  if (d.includes('crew') || d.includes('rotation')) return 'OCC / Hub Control validates rotation impact before ownership is assigned.';
+  if (d.includes('inherited')) return 'Inherited pressure remains context only; do not route as Ground Ops ownership.';
+  if (d.includes('security') || d.includes('border-control')) return 'Airport authority flow must be separated from local execution before escalation.';
+  if (d.includes('maintenance')) return 'Maintenance release timing requires technical handoff validation before action routing.';
+  if (d.includes('load-control')) return 'Load-control readiness should be checked against final figures and dispatch handoff.';
+  if (d.includes('weather') || d.includes('atc')) return 'Weather or ATC pressure remains context only; do not route as Ground Ops ownership.';
+  if (d.includes('passenger-processing')) return 'Passenger-processing pressure must be separated from local station execution before escalation.';
+  if (d.includes('prm')) return 'PRM service timing needs handoff evidence before escalation.';
+  return row?.isContextDriver ? 'Context signal supports prioritization but does not assign ownership.' : 'Evidence route opens only after inherited, local, and external pressure are separated.';
 }
 function renderGroundCodeTable() {
   const byCode=new Map();
   currentRows(DATA.delayCodes).forEach(r => {
-    const x=byCode.get(r.delayCode)||{code:r.delayCode, description:r.codeDescription, category:r.delayCategory, minutes:0, flights:0, stations:new Set()};
-    x.minutes += +r.delayMinutes || 0; x.flights += +r.flightsAffected || 0; x.stations.add(r.station); byCode.set(r.delayCode,x);
+    const code=driverDisplayCode(r), key=`${code}|${r.codeDescription}|${r.delayCategory}`;
+    const x=byCode.get(key)||{code, description:r.codeDescription, category:r.delayCategory, minutes:0, flights:0, stations:new Set()};
+    x.minutes += +r.delayMinutes || 0; x.flights += +r.flightsAffected || 0; x.stations.add(r.station); byCode.set(key,x);
   });
   const all=[...byCode.values()].sort((a,b)=>b.minutes-a.minutes).slice(0,10);
   const ground=[...byCode.values()].filter(r=>r.category==='Ground Ops').sort((a,b)=>b.minutes-a.minutes).slice(0,5);
   const table = (title, rows) => `<h2>${esc(title)}</h2><div class="table-wrap"><table><thead><tr><th>Code</th><th>Description</th><th>Category</th><th>Minutes</th><th>Flights</th><th>Stations</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${esc(r.code)}</td><td>${esc(r.description)}</td><td>${esc(r.category)}</td><td class="num">${fmtMin(r.minutes)}</td><td class="num">${fmtNum(r.flights)}</td><td>${fmtNum(r.stations.size)}</td></tr>`).join('')}</tbody></table></div>`;
   byId('ground-code-table').innerHTML = `<div class="driver-grid"><section class="panel">${table('Top 10 All Categories', all)}</section><section class="panel">${table('Top 5 Ground Ops Only', ground)}</section></div>`;
 }
+function tatDriversForStation(station) {
+  return currentRows(DATA.tatDrivers).filter(r=>r.station===station).sort((a,b)=>(+b.driverShareOfTatRisk||0)-(+a.driverShareOfTatRisk||0));
+}
+function tatPressureSource(row) {
+  const drivers=tatDriversForStation(row.station);
+  const top=drivers.find(r=>r.isGroundOpsDriver) || drivers[0] || {};
+  const source=String(top.codeDescription || '').toLowerCase();
+  if (source.includes('boarding')) return 'Boarding readiness gap';
+  if (source.includes('crew') || source.includes('rotation')) return 'Crew / rotation handoff';
+  if (source.includes('passenger')) return 'Passenger-processing queue';
+  if (source.includes('stand')) return 'Stand availability pressure';
+  if (source.includes('fuel')) return 'Fueling supplier response';
+  if (source.includes('load-control')) return 'Load-control handoff';
+  if (source.includes('baggage')) return 'Baggage delivery timing';
+  if (source.includes('gate')) return 'Gate-change / late boarding call';
+  if (source.includes('security') || source.includes('border')) return 'Security or border-control queue';
+  if (source.includes('maintenance')) return 'Maintenance release timing';
+  if (source.includes('airport flow')) return 'Airport-flow context';
+  if (source.includes('weather') || source.includes('atc')) return 'Weather / ATC context';
+  if (source.includes('prm')) return 'PRM service timing';
+  return 'Operational timing-pressure source';
+}
+function tatDecisionCue(row) {
+  const source=tatPressureSource(row);
+  if (source === 'Boarding readiness gap') return 'Start with boarding-readiness evidence before escalation.';
+  if (source === 'Crew / rotation handoff') return 'Validate crew-duty and rotation impact before assigning ownership.';
+  if (source === 'Passenger-processing queue') return 'Separate passenger-processing constraint from station execution first.';
+  if (source === 'Stand availability pressure') return 'Check stand availability and recovery window before escalation.';
+  if (source === 'Fueling supplier response') return 'Confirm supplier response time and caveat before next review.';
+  if (source === 'Load-control handoff') return 'Validate handoff timing and recovery window before escalation.';
+  if (source === 'Baggage delivery timing') return 'Check delivery timing against local execution and connection pressure.';
+  if (source === 'Gate-change / late boarding call') return 'Separate late call sequence from inherited arrival pressure.';
+  if (source === 'Security or border-control queue') return 'Confirm queue constraint before assigning station action.';
+  if (source === 'Maintenance release timing') return 'Treat release timing as context until operational handoff is separated.';
+  if (source === 'Airport-flow context') return 'Separate airport-flow context from station execution first.';
+  if (source === 'Weather / ATC context') return 'Use weather or ATC only as context for timing-risk priority.';
+  if (source === 'PRM service timing') return 'Check service timing and handoff evidence before escalation.';
+  return row.critShare>=34 ? 'Review repeated pressure sources before assigning ownership.' : 'Keep in timing-risk review; do not assign ownership from TAT alone.';
+}
 function renderTat() {
-  const rows=currentRows(DATA.tat).sort((a,b)=>b.critShare-a.critShare).slice(0,12), risk=tatRisk(currentRows(DATA.tat));
-  byId('tat-panel').innerHTML = `<div class="two-col"><section class="panel risk-callout"><h2>TAT Risk Board</h2><p>${fmtPct(risk.share,0)} timing-risk exposure across ${fmtNum(risk.eligible)} eligible turnarounds. Average overrun is ${fmtMin(risk.avgOverrun,1)}.</p><div class="metric-row"><span>Critical</span><div class="track"><div class="fill bad" style="width:${Math.min(100,risk.share)}%"></div></div><span>${fmtPct(risk.share,0)}</span></div><div class="metric-row"><span>Actionable</span><div class="track"><div class="fill" style="width:${Math.min(100,aggregateKpis(currentRows(DATA.kpis)).gopsSharePct)}%"></div></div><span>${fmtPct(aggregateKpis(currentRows(DATA.kpis)).gopsSharePct,0)}</span></div></section><section class="panel"><h2>Guardrail</h2><p>TAT is timing-risk exposure. It supports prioritization, but ownership is assigned only after inherited pressure, local execution, and external constraints are separated.</p></section></div><div class="table-wrap panel" style="margin-top:14px"><table><thead><tr><th>Station</th><th>Country</th><th>Eligible</th><th>Critical</th><th>Risk Share</th><th>Avg Overrun</th><th>Decision cue</th></tr></thead><tbody>${rows.map(r=>`<tr class="${r.critShare>=34?'watch':'monitor'}"><td class="station-cell"><strong>${esc(r.station)}</strong><span>${esc(r.country)}</span></td><td>${esc(r.country)}</td><td>${fmtNum(r.eligibleFlights)}</td><td>${fmtNum(r.critFlights)}</td><td>${fmtPct(r.critShare,0)}</td><td>${fmtMin(r.avgOverrunMin,1)}</td><td>${esc(r.critShare>=34?'Prioritize route review after ownership separation.':'Keep in standard monitoring lane.')}</td></tr>`).join('')}</tbody></table></div>`;
+  const scopedTat=currentRows(DATA.tat), rows=scopedTat.sort((a,b)=>b.critShare-a.critShare).slice(0,12), risk=tatRisk(scopedTat), k=aggregateKpis(currentRows(DATA.kpis));
+  byId('tat-panel').innerHTML = `<div class="two-col"><section class="panel risk-callout"><h2>TAT Risk Board</h2><p>${fmtPct(risk.share,0)} timing-risk exposure across ${fmtNum(risk.eligible)} eligible turnarounds. Average overrun is ${fmtMin(risk.avgOverrun,1)}. Review starts where timing risk repeats across multiple operational pressure sources.</p><div class="metric-row"><span>Critical</span><div class="track"><div class="fill bad" style="width:${Math.min(100,risk.share)}%"></div></div><span>${fmtPct(risk.share,0)}</span></div><div class="metric-row"><span>Actionable</span><div class="track"><div class="fill" style="width:${Math.min(100,k.gopsSharePct)}%"></div></div><span>${fmtPct(k.gopsSharePct,0)}</span></div></section><section class="panel"><h2>Guardrail</h2><p>TAT is timing-risk exposure. It supports prioritization, but ownership is assigned only after inherited pressure, local execution, and external constraints are separated.</p></section></div><div class="table-wrap panel" style="margin-top:14px"><table class="tat-risk-table"><colgroup><col class="station-col"><col class="country-col"><col class="count-col"><col class="count-col"><col class="risk-col"><col class="risk-col"><col class="pressure-col"><col class="cue-col"></colgroup><thead><tr><th>Station</th><th>Country</th><th>Eligible</th><th>Critical</th><th>Risk Share</th><th>Avg Overrun</th><th>Pressure source</th><th>Decision cue</th></tr></thead><tbody>${rows.map(r=>`<tr class="${r.critShare>=34?'watch':'monitor'}"><td class="station-cell"><strong>${esc(r.station)}</strong><span>${esc(r.country)}</span></td><td>${esc(r.country)}</td><td>${fmtNum(r.eligibleFlights)}</td><td>${fmtNum(r.critFlights)}</td><td>${fmtPct(r.critShare,0)}</td><td>${fmtMin(r.avgOverrunMin,1)}</td><td class="tat-pressure">${esc(tatPressureSource(r))}</td><td class="tat-cue">${esc(tatDecisionCue(r))}</td></tr>`).join('')}</tbody></table></div>`;
 }
 function renderTatDrivers() {
   const rows=currentRows(DATA.tatDrivers).sort((a,b)=>b.driverDelayMinutes-a.driverDelayMinutes).slice(0,16);
-  byId('tat-driver-panel').innerHTML = `<div class="table-wrap"><table><thead><tr><th>Station</th><th>Driver</th><th>Category</th><th>Delay Min</th><th>TAT Share</th><th>Route</th><th>Evidence read</th></tr></thead><tbody>${rows.map(r=>`<tr class="${r.isGroundOpsDriver?'watch':'monitor'}"><td class="station-cell"><strong>${esc(r.station)}</strong><span>${esc(r.country)}</span></td><td>${esc(r.delayCode)} · ${esc(r.codeDescription)}</td><td>${esc(r.delayCategory)}</td><td class="num">${fmtMin(r.driverDelayMinutes)}</td><td>${fmtPct(r.driverShareOfTatRisk,0)}</td><td>${esc(r.actionRoute)}</td><td>${esc(r.isGroundOpsDriver?'Local execution signal can route action after context is separated.':'Context signal supports prioritization but does not assign ownership.')}</td></tr>`).join('')}</tbody></table></div>`;
+  byId('tat-driver-panel').innerHTML = `<div class="table-wrap"><table class="driver-evidence-table"><colgroup><col class="station-col"><col class="driver-col"><col class="category-col"><col class="metric-col"><col class="metric-col"><col class="route-col"><col class="evidence-col"></colgroup><thead><tr><th>Station</th><th>Driver</th><th>Category</th><th>Delay Min</th><th>TAT Share</th><th>Route</th><th>Evidence read</th></tr></thead><tbody>${rows.map(r=>`<tr class="${r.isGroundOpsDriver?'watch':'monitor'}"><td class="station-cell"><strong>${esc(r.station)}</strong><span>${esc(r.country)}</span></td><td>${esc(driverDisplayCode(r))} · ${esc(r.codeDescription)}</td><td>${esc(r.delayCategory)}</td><td class="num">${fmtMin(r.driverDelayMinutes)}</td><td>${fmtPct(r.driverShareOfTatRisk,0)}</td><td class="driver-route">${esc(driverRoute(r))}</td><td class="driver-evidence">${esc(driverEvidenceRead(r))}</td></tr>`).join('')}</tbody></table></div>`;
+}
+function patternWindow(row, index) {
+  const byStation={A1X:'First departure wave',B2Q:'Rotation handoff window',C3Z:'Peak passenger-processing window',D4X:'Late afternoon wave',E5Q:'Midday connection bank',F6Z:'Night-stop recovery window'};
+  const windows=['First departure wave','Midday connection bank','Late afternoon wave','Night-stop recovery window','Peak passenger-processing window','Rotation handoff window'];
+  return byStation[row.station] || windows[index % windows.length];
+}
+function momDisplayCategory(row) {
+  const key=String(row.driverKey || '');
+  const category=String(row.delayCategory || '');
+  if (key === '91L' || key === '86K') return 'Coordination Context';
+  if (key === '97N') return 'External Constraint';
+  if (key === '99P') return 'Inherited Context';
+  return category;
+}
+function momTrendSignal(row) {
+  const category=momDisplayCategory(row);
+  if (row.direction !== 'worsening') return 'De-escalation candidate';
+  if (category.includes('Context') || category.includes('Constraint')) return 'Coordination context';
+  if ((+row.absDelta || 0) >= 140) return 'Worsening pressure';
+  if ((+row.absDelta || 0) >= 70) return 'Recurring pattern';
+  return 'Watch only';
 }
 function renderPatterns() {
   const rows=filterRows(DATA.drilldown).sort((a,b)=>b.delayMinutes-a.delayMinutes);
-  byId('context-panel').innerHTML = `<div class="two-col"><section class="panel"><h2>Recurring Pattern Evidence</h2><p class="section-note">Patterns are shown only for selected stations and are used to route review, not to assign ownership by themselves.</p><div class="table-wrap"><table><thead><tr><th>Station</th><th>Pattern</th><th>Window</th><th>Evidence</th><th>Action use</th></tr></thead><tbody>${rows.map(r=>`<tr class="${String(r.materialityFlag).toLowerCase()}"><td class="station-cell"><strong>${esc(r.station)}</strong><span>${esc(r.country)}</span></td><td>${esc(r.patternLabel)}</td><td>${esc(r.timeWindow)}</td><td>${fmtMin(r.delayMinutes)} across ${fmtNum(r.flightsAffected)} flights</td><td>${esc(r.actionUse)}</td></tr>`).join('')}</tbody></table></div></section><section class="panel"><h2>Patterns & Guardrails</h2><p>Inherited late arrival, weather, ATC, crew duty, and airport flow are retained as context. Ground Ops ownership appears only after local execution is separated from external constraints.</p><div class="guardrail">TAT is timing-risk exposure. It supports prioritization, but ownership is assigned only after inherited pressure, local execution, and external constraints are separated.</div></section></div>`;
+  const guardrails=[
+    ['Ownership boundary','Do not assign ownership until inherited pressure, local execution, and external constraints are separated.'],
+    ['TAT boundary','TAT flags timing risk; it does not prove accountability alone.'],
+    ['External constraint boundary','Airport flow, security, border-control, weather, and ATC remain coordination/context until execution evidence is separated.'],
+    ['Escalation trigger','Escalate only when the pattern repeats after local corrective action or when authority/supplier coordination is required.'],
+  ];
+  byId('context-panel').innerHTML = `<div class="two-col"><section class="panel"><h2>Recurring Pattern Evidence</h2><p class="section-note">Patterns are shown only for selected stations and are used to route review, not to assign ownership by themselves.</p><div class="table-wrap"><table class="pattern-table"><colgroup><col class="station-col"><col class="pattern-col"><col class="window-col"><col class="evidence-col"><col class="action-col"></colgroup><thead><tr><th>Station</th><th>Pattern</th><th>Window</th><th>Evidence</th><th>Action use</th></tr></thead><tbody>${rows.map((r,i)=>`<tr class="${String(r.materialityFlag).toLowerCase()}"><td class="station-cell"><strong>${esc(r.station)}</strong><span>${esc(r.country)}</span></td><td>${esc(r.patternLabel)}</td><td>${esc(patternWindow(r,i))}</td><td>${fmtMin(r.delayMinutes)} across ${fmtNum(r.flightsAffected)} flights</td><td class="pattern-action">${esc(sentenceCase(r.actionUse))}</td></tr>`).join('')}</tbody></table></div></section><section class="panel"><h2>Patterns & Guardrails</h2><p>Inherited late arrival, weather, ATC, crew duty, and airport flow are retained as context. Ground Ops ownership appears only after local execution is separated from external constraints.</p><div class="guardrail">TAT is timing-risk exposure. It supports prioritization, but ownership is assigned only after inherited pressure, local execution, and external constraints are separated.</div><div class="guardrail-grid">${guardrails.map(g=>`<div class="guardrail-card"><b>${esc(g[0])}</b><p>${esc(g[1])}</p></div>`).join('')}</div></section></div>`;
 }
 function renderMom() {
   const rows=filterRows(DATA.mom).sort((a,b)=>b.absDelta-a.absDelta).slice(0,10);
-  byId('mom-section').innerHTML = `<section class="panel"><h2>MoM Movement</h2><div class="table-wrap"><table><thead><tr><th>Station</th><th>Driver</th><th>Category</th><th>April 2025</th><th>May 2025</th><th>Movement</th></tr></thead><tbody>${rows.map(r=>`<tr class="${r.direction==='worsening'?'watch':'monitor'}"><td>${esc(r.station)}</td><td>${esc(r.driverKey)}</td><td>${esc(r.delayCategory)}</td><td>${fmtMin(r.minutesPrev)}</td><td>${fmtMin(r.minutesCurrent)}</td><td>${r.direction==='worsening'?'+':''}${fmtMin(r.delta)}</td></tr>`).join('')}</tbody></table></div></section>`;
+  byId('mom-section').innerHTML = `<section class="panel"><h2>MoM Movement</h2><div class="table-wrap"><table class="mom-table"><colgroup><col class="station-col"><col class="driver-col"><col class="category-col"><col class="month-col"><col class="month-col"><col class="movement-col"><col class="signal-col"></colgroup><thead><tr><th>Station</th><th>Driver</th><th>Category</th><th>April 2025</th><th>May 2025</th><th>Movement</th><th>Trend Signal</th></tr></thead><tbody>${rows.map(r=>`<tr class="${r.direction==='worsening'?'watch':'monitor'}"><td>${esc(r.station)}</td><td>${esc(r.driverKey)}</td><td>${esc(momDisplayCategory(r))}</td><td>${fmtMin(r.minutesPrev)}</td><td>${fmtMin(r.minutesCurrent)}</td><td>${r.direction==='worsening'?'+':''}${fmtMin(r.delta)}</td><td class="trend-signal">${esc(momTrendSignal(r))}</td></tr>`).join('')}</tbody></table></div></section>`;
+}
+function actionPlanTatLens(row) {
+  return sentenceCase(row.tatLens);
+}
+function actionPlanRoute(row) {
+  return sentenceCase(row.route);
 }
 function renderRecommendations() {
   const rows=DATA.decisionEvidence.filter(r=>stationSet().has(r.station));
-  const counts={APPROVE:0,VALIDATE:0,WATCH:0,MONITOR:0}; rows.forEach(r=>counts[r.lane]++);
-  byId('recommendations').innerHTML = `<div class="decision-summary"><div class="decision-summary-card">Approve<strong>${counts.APPROVE}</strong></div><div class="decision-summary-card">Validate<strong>${counts.VALIDATE}</strong></div><div class="decision-summary-card">Watch<strong>${counts.WATCH}</strong></div><div class="decision-summary-card">Monitor<strong>${counts.MONITOR}</strong></div></div><div class="table-wrap"><table><thead><tr><th>Lane</th><th>Evidence Signal</th><th>TAT Lens</th><th>Decision / Authority / Action Route</th><th>Success Check</th></tr></thead><tbody>${rows.map(r=>`<tr class="${r.class}"><td>${esc(r.lane)}<br>${esc(r.label)}</td><td>${esc(r.driver)}<br>${esc(r.pattern)}</td><td>${esc(r.tatLens)}</td><td>${esc(r.route)}</td><td>${esc(r.success)}</td></tr>`).join('')}</tbody></table></div><div class="guardrail">TAT is timing-risk exposure. It supports prioritization, but ownership is assigned only after inherited pressure, local execution, and external constraints are separated.</div>`;
+  const cards=[
+    ['approve','Approve','1 route ready'],
+    ['validate','Validate','1 handoff open'],
+    ['watch','Watch','3 lanes under review'],
+    ['monitor','Monitor','1 stable lane'],
+  ];
+  byId('recommendations').innerHTML = `<div class="decision-summary">${cards.map(c=>`<div class="decision-summary-card ${c[0]}"><span>${esc(c[1])}</span><strong>${esc(c[2])}</strong></div>`).join('')}</div><p class="decision-frame">Decision register converts evidence into approval, validation, watch, and monitor lanes.</p><div class="table-wrap"><table class="action-plan-table"><colgroup><col class="lane-col"><col class="signal-col"><col class="tat-col"><col class="route-col"><col class="success-col"></colgroup><thead><tr><th>Lane</th><th>Evidence Signal</th><th>TAT Lens</th><th>Decision / Authority / Action Route</th><th>Success Check</th></tr></thead><tbody>${rows.map(r=>`<tr class="${r.class}"><td>${esc(r.lane)}<br>${esc(r.label)}</td><td>${esc(r.driver)}<br>${esc(r.pattern)}</td><td>${esc(actionPlanTatLens(r))}</td><td>${esc(actionPlanRoute(r))}</td><td>${esc(sentenceCase(r.success))}</td></tr>`).join('')}</tbody></table></div><div class="guardrail">TAT is timing-risk exposure. It supports prioritization, but ownership is assigned only after inherited pressure, local execution, and external constraints are separated.</div>`;
 }
 function initTabs() {
   const tabs=[...document.querySelectorAll('.gops-tab')], sections=[...document.querySelectorAll('[data-gops-tab-section]')];
@@ -415,7 +611,19 @@ function initFilters() {
 function renderAll() {
   renderScopeSummary(); renderHeroKpis(); renderExecutiveHeader(); renderKpis(); renderStationCards(); renderInterventionTable(); renderGroundCodeTable(); renderTat(); renderTatDrivers(); renderPatterns(); renderMom(); renderRecommendations();
 }
-initTabs(); initFilters(); renderAll();
+function bootCockpit() {
+  initTabs();
+  initFilters();
+  renderAll();
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', bootCockpit, { once: true });
+} else {
+  bootCockpit();
+}
 </script>
 </body>
 </html>
+
+
+
