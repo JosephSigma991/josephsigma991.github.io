@@ -235,7 +235,7 @@ td:last-child { border-right:1px solid var(--line); border-radius:0 8px 8px 0; }
     <section class="gops-tab-section overview-section" data-gops-tab-section="executive" data-marker="network-performance-overview">
       <div class="overview-head"><div><h2 class="overview-title">Network Performance Overview</h2><div class="overview-subtitle">Executive signal, KPI rollup, and filtered action pressure</div></div></div>
       <div class="kpi-grid" id="kpi-grid"></div>
-      <div class="two-col"><article class="panel"><h2>Leadership Ask</h2><p>Approve one action route, validate one handoff lane, watch three operational risk lanes, and monitor one stable lane. Timing risk supports prioritization; ownership is assigned after pressure sources are separated.</p><div class="metric-row"><span>Approval</span><div class="track"><div class="fill" style="width:82%"></div></div><span>ready</span></div><div class="metric-row"><span>Validation</span><div class="track"><div class="fill warn" style="width:68%"></div></div><span>open</span></div><div class="metric-row"><span>Monitor</span><div class="track"><div class="fill good" style="width:74%"></div></div><span>stable</span></div></article><article class="panel"><h2>Decision Ownership Lens</h2><p>TAT is timing-risk exposure. TAT supports prioritization and validation; it does not assign ownership by itself. Ownership is assigned only after inherited pressure, local execution, and external constraints are separated.</p></article></div>
+      <div class="two-col"><article class="panel" id="leadership-ask-card"></article><article class="panel"><h2>Decision Ownership Lens</h2><p>TAT is timing-risk exposure. TAT supports prioritization and validation; it does not assign ownership by itself. Ownership is assigned only after inherited pressure, local execution, and external constraints are separated.</p></article></div>
     </section>
     <section class="gops-tab-section section section-impact" data-gops-tab-section="action-board" data-marker="section3-ground-ops-impact" hidden>
       <div class="overview-head"><div><h2 class="overview-title">Ground Ops Decision Routes</h2><div class="overview-subtitle">Filtered evidence behind selected action lanes</div></div></div>
@@ -383,9 +383,57 @@ function formatDecisionRegisterLine(rows=filteredDecisionRows()) {
   }).filter(Boolean);
   return `Decision register: ${grouped.join(' · ')}`;
 }
+function laneCounts(rows=filteredDecisionRows()) {
+  return rows.reduce((acc,row) => {
+    const lane=String(row.lane || '').toUpperCase();
+    acc[lane]=(acc[lane] || 0) + 1;
+    return acc;
+  }, {});
+}
+function activeLaneLabels(counts=laneCounts()) {
+  const labels=[];
+  if (counts.APPROVE) labels.push(`${pluralLabel(counts.APPROVE,'approval route','approval routes')}`);
+  if (counts.VALIDATE) labels.push(`${pluralLabel(counts.VALIDATE,'validation lane','validation lanes')}`);
+  if (counts.WATCH) labels.push(`${pluralLabel(counts.WATCH,'watch lane','watch lanes')}`);
+  if (counts.MONITOR) labels.push(`${pluralLabel(counts.MONITOR,'monitor lane','monitor lanes')}`);
+  return labels;
+}
+function joinPhrase(items) {
+  if (!items.length) return '';
+  if (items.length === 1) return items[0];
+  if (items.length === 2) return `${items[0]} and ${items[1]}`;
+  return `${items.slice(0,-1).join(', ')}, and ${items[items.length-1]}`;
+}
+function executiveSignalText(rows=filteredDecisionRows()) {
+  if (!rows.length) return 'No selected decision routes in current scope. Review supporting evidence before escalating action.';
+  const labels=joinPhrase(activeLaneLabels(laneCounts(rows)));
+  return `Filtered scope contains ${labels}. The decision is not only where delay exists, but which route can change the outcome.`;
+}
+function leadershipAskText(rows=filteredDecisionRows()) {
+  if (!rows.length) return 'No selected approval, validation, watch, or monitor route in current scope. Continue evidence review only.';
+  const counts=laneCounts(rows);
+  const asks=[];
+  if (counts.APPROVE) asks.push(`${counts.APPROVE === 1 ? 'approve' : 'approve'} ${pluralLabel(counts.APPROVE,'action route','action routes')}`);
+  if (counts.VALIDATE) asks.push(`${counts.VALIDATE === 1 ? 'validate' : 'validate'} ${pluralLabel(counts.VALIDATE,'handoff lane','handoff lanes')}`);
+  if (counts.WATCH) asks.push(`${counts.WATCH === 1 ? 'watch' : 'watch'} ${pluralLabel(counts.WATCH,'operational risk lane','operational risk lanes')}`);
+  if (counts.MONITOR) asks.push(`${counts.MONITOR === 1 ? 'monitor' : 'monitor'} ${pluralLabel(counts.MONITOR,'stable lane','stable lanes')}`);
+  return `${sentenceCase(joinPhrase(asks))}. Timing risk supports prioritization; ownership is assigned after pressure sources are separated.`;
+}
+function leadershipProgressRows(rows=filteredDecisionRows()) {
+  const counts=laneCounts(rows);
+  const items=[
+    ['APPROVE','Approval','ready','',82],
+    ['VALIDATE','Validation','open','warn',68],
+    ['WATCH','Watch','under review','warn',58],
+    ['MONITOR','Monitor','stable','good',74],
+  ];
+  return items.filter(item=>counts[item[0]]).map(item=>`<div class="metric-row"><span>${esc(item[1])}</span><div class="track"><div class="fill ${item[3]}" style="width:${item[4]}%"></div></div><span>${esc(item[2])}</span></div>`).join('');
+}
 function renderExecutiveHeader() {
-  byId('executive-verdict-card').innerHTML = `<h2>Executive Signal</h2><p>Operational pressure is concentrated in a small number of action lanes. The decision is not only where delay exists, but which route can change the outcome.</p>`;
+  const rows=filteredDecisionRows();
+  byId('executive-verdict-card').innerHTML = `<h2>Executive Signal</h2><p>${esc(executiveSignalText(rows))}</p>`;
   byId('decision-register-line').textContent = formatDecisionRegisterLine();
+  byId('leadership-ask-card').innerHTML = `<h2>Leadership Ask</h2><p>${esc(leadershipAskText(rows))}</p>${leadershipProgressRows(rows)}`;
 }
 function renderKpis() {
   const rows=currentRows(DATA.kpis), k=aggregateKpis(rows), tr=tatRisk(currentRows(DATA.tat));
@@ -661,4 +709,3 @@ if (document.readyState === 'loading') {
 </script>
 </body>
 </html>
-
