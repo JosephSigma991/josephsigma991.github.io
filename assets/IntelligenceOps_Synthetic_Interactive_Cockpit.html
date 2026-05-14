@@ -345,7 +345,7 @@ function renderFilters() {
   byId('selected-chips').innerHTML = `<span class="chip">${esc(countryText)}</span><span class="chip">${esc(pluralLabel(count,'station','stations'))}</span><span class="chip">${esc(pluralLabel(k.flights,'flight','flights'))}</span><span class="chip">${fmtNum(k.gopsMin)} Ground Ops min</span>`;
 }
 function heroLaneReadyDisplay() {
-  const visible=DATA.decisionEvidence.filter(r=>stationSet().has(r.station));
+  const visible=filteredDecisionRows();
   return visible.length ? { value: laneReadyText(), subtext: 'Decision routes with evidence' } : { value: 'No lanes', subtext: 'No filtered decision lanes' };
 }
 function renderHeroKpis() {
@@ -361,13 +361,31 @@ function renderHeroKpis() {
   byId('hero-kpi-strip').innerHTML = cards.map(c=>`<div class="hero-kpi ${c[3]}"><span>${esc(c[0])}</span><strong>${esc(c[1])}</strong><small>${esc(c[2])}</small></div>`).join('');
 }
 function laneReadyText() {
-  const visible=DATA.decisionEvidence.filter(r=>stationSet().has(r.station));
+  const visible=filteredDecisionRows();
   const ready=visible.filter(r=>r.lane==='APPROVE'||r.lane==='VALIDATE'||r.lane==='MONITOR'||r.station==='D4X').length;
   return `${ready} / ${visible.length || 0}`;
 }
+function filteredDecisionRows() {
+  return DATA.decisionEvidence.filter(r=>stationSet().has(r.station));
+}
+function formatDecisionRegisterLine(rows=filteredDecisionRows()) {
+  if (!rows.length) return 'Decision register: No selected decision routes in current scope.';
+  const laneOrder=['APPROVE','VALIDATE','WATCH','MONITOR'];
+  const laneNames={APPROVE:'Approve',VALIDATE:'Validate',WATCH:'Watch',MONITOR:'Monitor'};
+  const grouped=laneOrder.map(lane => {
+    const laneRows=rows.filter(r=>String(r.lane).toUpperCase()===lane);
+    if (!laneRows.length) return '';
+    const labels=laneRows.map(r => {
+      if (lane === 'WATCH' || lane === 'MONITOR') return r.station;
+      return r.label;
+    }).join(', ');
+    return `${laneNames[lane]} ${labels}`;
+  }).filter(Boolean);
+  return `Decision register: ${grouped.join(' · ')}`;
+}
 function renderExecutiveHeader() {
   byId('executive-verdict-card').innerHTML = `<h2>Executive Signal</h2><p>Operational pressure is concentrated in a small number of action lanes. The decision is not only where delay exists, but which route can change the outcome.</p>`;
-  byId('decision-register-line').textContent = 'Decision register: Approve A1X / 15A · Validate B2Q / Rotation handoff · Watch C3Z, D4X, E5Q · Monitor F6Z';
+  byId('decision-register-line').textContent = formatDecisionRegisterLine();
 }
 function renderKpis() {
   const rows=currentRows(DATA.kpis), k=aggregateKpis(rows), tr=tatRisk(currentRows(DATA.tat));
@@ -393,7 +411,7 @@ function topGroundRows(limit=8) {
   return [...byStation.values()].map(r=>({...r, top:[...r.codes.values()].sort((a,b)=>b.minutes-a.minutes)[0]})).sort((a,b)=>b.minutes-a.minutes).slice(0,limit);
 }
 function scenarioRows() {
-  return DATA.decisionEvidence.filter(r => stationSet().has(r.station)).map(r => ({
+  return filteredDecisionRows().map(r => ({
     station: r.station,
     minutes: r.minutes,
     flights: r.flights,
@@ -595,7 +613,7 @@ function actionSummaryText(kind, count) {
   return fmtNum(count);
 }
 function renderRecommendations() {
-  const rows=DATA.decisionEvidence.filter(r=>stationSet().has(r.station));
+  const rows=filteredDecisionRows();
   const laneCounts = rows.reduce((acc,row) => {
     const key=String(row.class || row.lane || '').toLowerCase();
     acc[key]=(acc[key] || 0) + 1;
@@ -643,6 +661,4 @@ if (document.readyState === 'loading') {
 </script>
 </body>
 </html>
-
-
 
