@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Youssef Hamdaoui | Operations Intelligence Architect</title>
-  <meta name="description" content="Operations Intelligence Architect designing governed decision-intelligence systems for airline operations. Public examples are sanitized.">
+  <meta name="description" content="Operations Intelligence Architect. Airport operations practitioner building decision-intelligence systems from operational pressure.">
   <meta property="og:title" content="Youssef Hamdaoui | Operations Intelligence Architect">
-  <meta property="og:description" content="I design governed decision-intelligence systems for airline operations. Public examples are sanitized.">
+  <meta property="og:description" content="Airport operations practitioner building decision-intelligence systems from operational pressure.">
   <meta property="og:image" content="screenshots/intelligenceops-decision-pack-executive-summary.png">
   <meta property="og:url" content="https://josephsigma991.github.io">
   <meta property="og:type" content="website">
@@ -16,8 +16,8 @@
   <style>
     :root {
       --ink: #07111F; --ink-light: #2F3D4D; --ink-muted: #607083;
-      --surface: #F4EFE6; --surface-warm: #E9E0D2; --card: #FFFDF8;
-      --accent: #2857B8; --accent-glow: #7EA6FF; --accent-soft: #E6EEFF;
+      --surface: #F6F8FB; --surface-warm: #E7ECF3; --card: #FFFFFF;
+      --accent: #1F4E79; --accent-glow: #8EB8E5; --accent-soft: #EAF2FA;
       --metal: #C8D0DA; --runway: #071827; --runway-2: #0B2236;
       --green: #047857; --amber: #B45309; --red: #B91C1C;
       --radius: 14px;
@@ -30,25 +30,26 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body { font-family: var(--font-body); background:
-      radial-gradient(circle at 78% 6%, rgba(40,87,184,.08), transparent 28%),
-      linear-gradient(180deg, #F8F4ED 0%, var(--surface) 34%, #EFE7DB 100%);
+      radial-gradient(circle at 78% 6%, rgba(31,78,121,.08), transparent 28%),
+      linear-gradient(180deg, #FFFFFF 0%, var(--surface) 38%, #EEF3F8 100%);
       color: var(--ink); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
     .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
     .reveal.visible { opacity: 1; transform: translateY(0); }
-    nav { position: sticky; top: 0; z-index: 100; background: rgba(244, 239, 230, 0.94); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--hairline); box-shadow: 0 1px 0 rgba(255,255,255,.55) inset; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(246, 248, 251, 0.94); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--hairline); box-shadow: 0 1px 0 rgba(255,255,255,.55) inset; }
     .nav-inner { max-width: 1100px; margin: 0 auto; padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; }
     .nav-name { font-family: var(--font-display); font-size: 18px; color: var(--ink); text-decoration: none; }
     .nav-links { display: flex; gap: 28px; }
     .nav-links a { font-size: 13px; font-weight: 600; color: var(--ink-muted); text-decoration: none; letter-spacing: 0.02em; transition: color 0.2s; }
     .nav-links a:hover { color: var(--ink); }
-    .hero { max-width: 1120px; margin: 0 auto; padding: 92px 32px 112px; display: grid; grid-template-columns: 1fr 280px; gap: 72px; align-items: center; position: relative; isolation: isolate; }
+    .hero { max-width: 1120px; margin: 0 auto; padding: 72px 32px 86px; display: grid; grid-template-columns: 1fr 280px; gap: 72px; align-items: center; position: relative; isolation: isolate; }
     .hero::before { content: ''; position: absolute; z-index: -1; inset: -48px -110px -26px; pointer-events: none; background:
-      radial-gradient(ellipse at 76% 22%, rgba(40,87,184,.12), transparent 45%),
+      radial-gradient(ellipse at 76% 22%, rgba(31,78,121,.12), transparent 45%),
       radial-gradient(ellipse at 18% 18%, rgba(255,255,255,.58), transparent 52%),
-      radial-gradient(ellipse at 50% 92%, rgba(233,224,210,.44), transparent 58%); }
-    .hero-text h1 { font-family: var(--font-display); font-size: 64px; line-height: 1.05; color: var(--ink); letter-spacing: 0; }
+      radial-gradient(ellipse at 50% 92%, rgba(231,236,243,.54), transparent 58%); }
+    .hero-text h1 { font-family: var(--font-display); font-size: 60px; line-height: 1.04; color: var(--ink); letter-spacing: 0; }
     .hero-text h1 span { display: block; font-family: var(--font-body); font-size: 19px; font-weight: 500; color: var(--ink-light); margin-top: 18px; line-height: 1.55; letter-spacing: 0; }
-    .hero-actions { margin-top: 36px; display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-support { max-width: 720px; margin-top: 18px; font-size: 16px; line-height: 1.7; color: var(--ink-muted); }
+    .hero-actions { margin-top: 32px; display: flex; gap: 14px; flex-wrap: wrap; }
     .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px; font-size: 14px; font-weight: 700; border-radius: 8px; text-decoration: none; transition: all 0.25s; cursor: pointer; }
     .btn-primary { background: linear-gradient(180deg, #0B2033, var(--runway)); color: var(--surface); border: 1px solid #06131F; box-shadow: 0 1px 0 rgba(255,255,255,.12) inset; }
     .btn-primary:hover { background: var(--accent); border-color: var(--accent); transform: translateY(-1px); box-shadow: 0 10px 24px rgba(40, 87, 184, 0.18); }
@@ -63,25 +64,25 @@
     .section-title { font-family: var(--font-display); font-size: 40px; color: var(--ink); line-height: 1.12; overflow-wrap: break-word; }
     .pressure-section { padding: 0 0 84px; border-top: 1px solid rgba(115,132,153,.18); }
     .pressure-grid { margin-top: 34px; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 22px; align-items: stretch; }
-    .pressure-card, .capability-shell, .proof-banner { background: linear-gradient(180deg, rgba(255,253,248,0.92), rgba(249,245,237,0.84)); border: 1px solid var(--hairline); border-radius: 16px; box-shadow: var(--shadow-tight), inset 0 1px 0 rgba(255,255,255,.72); }
+    .pressure-card, .capability-shell, .proof-banner { background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(247,250,252,0.9)); border: 1px solid var(--hairline); border-radius: 16px; box-shadow: var(--shadow-tight), inset 0 1px 0 rgba(255,255,255,.72); }
     .pressure-card { padding: 30px; }
     .pressure-card h3 { font-family: var(--font-display); font-size: 25px; margin-bottom: 14px; }
     .pressure-card p { font-size: 15px; line-height: 1.72; color: var(--ink-light); }
     .pressure-list { list-style: none; display: grid; gap: 12px; }
     .pressure-list li { padding: 14px 16px; border-left: 3px solid var(--accent); background: rgba(255,255,255,0.58); border-radius: 9px; color: var(--ink-light); font-size: 14px; line-height: 1.55; box-shadow: inset 0 0 0 1px rgba(200,208,218,.22); }
-    .capability-section { padding: 76px 0 92px; background: linear-gradient(180deg, rgba(233,224,210,.48), rgba(244,239,230,.24)); border-top: 1px solid rgba(115,132,153,.16); border-bottom: 1px solid rgba(115,132,153,.16); }
+    .capability-section { padding: 76px 0 92px; background: linear-gradient(180deg, rgba(231,236,243,.52), rgba(246,248,251,.24)); border-top: 1px solid rgba(115,132,153,.16); border-bottom: 1px solid rgba(115,132,153,.16); }
     .capability-shell { margin-top: 32px; padding: 26px; }
-    .capability-tabs { display: flex; flex-wrap: wrap; gap: 8px; padding: 8px; margin-bottom: 18px; border: 1px solid rgba(115,132,153,.22); border-radius: 12px; background: rgba(233,224,210,.50); }
-    .capability-tab { appearance: none; border: 1px solid rgba(115,132,153,.34); background: rgba(255,253,248,0.74); color: var(--ink-light); border-radius: 8px; padding: 10px 14px; font: 800 13px var(--font-body); cursor: pointer; transition: all .2s; white-space: normal; box-shadow: inset 0 1px 0 rgba(255,255,255,.62); }
-    .capability-tab:hover { border-color: rgba(40,87,184,.48); color: var(--ink); }
+    .capability-tabs { display: flex; flex-wrap: wrap; gap: 8px; padding: 8px; margin-bottom: 18px; border: 1px solid rgba(115,132,153,.22); border-radius: 12px; background: rgba(231,236,243,.58); }
+    .capability-tab { appearance: none; border: 1px solid rgba(115,132,153,.34); background: rgba(255,255,255,0.86); color: var(--ink-light); border-radius: 8px; padding: 10px 14px; font: 800 13px var(--font-body); cursor: pointer; transition: all .2s; white-space: normal; box-shadow: inset 0 1px 0 rgba(255,255,255,.62); }
+    .capability-tab:hover { border-color: rgba(31,78,121,.48); color: var(--ink); }
     .capability-tab[aria-selected="true"] { background: linear-gradient(180deg, #0E263D, var(--runway)); border-color: #071827; color: var(--surface); box-shadow: 0 6px 16px rgba(7,24,39,.13), inset 0 1px 0 rgba(255,255,255,.12); }
     .capability-panel { padding-top: 24px; display: grid; grid-template-columns: 0.75fr 1.25fr; gap: 24px; align-items: start; }
     .capability-panel[hidden] { display: none; }
     .capability-panel h3 { font-family: var(--font-display); font-size: 26px; margin-bottom: 10px; }
     .capability-panel p { color: var(--ink-light); line-height: 1.7; }
     .capability-points { list-style: none; display: grid; gap: 10px; }
-    .capability-points li { padding: 14px 16px; border: 1px solid rgba(115,132,153,.28); border-radius: 10px; background: rgba(255,253,248,.66); color: var(--ink-light); line-height: 1.5; box-shadow: inset 3px 0 0 rgba(40,87,184,.42); }
-    .flagship { padding: 88px 0; background: linear-gradient(180deg, rgba(7,24,39,0.045), rgba(244,239,230,0) 42%, rgba(233,224,210,.30)); border-bottom: 1px solid rgba(115,132,153,.16); }
+    .capability-points li { padding: 14px 16px; border: 1px solid rgba(115,132,153,.28); border-radius: 10px; background: rgba(255,255,255,.74); color: var(--ink-light); line-height: 1.5; box-shadow: inset 3px 0 0 rgba(31,78,121,.42); }
+    .flagship { padding: 88px 0; background: linear-gradient(180deg, rgba(7,24,39,0.035), rgba(246,248,251,0) 42%, rgba(231,236,243,.34)); border-bottom: 1px solid rgba(115,132,153,.16); }
     .flagship-card { max-width: 1120px; margin: 32px auto 0; padding: 0 32px; }
     .flagship-proof-label, .flagship-rca-label { font-size: 12px; color: var(--ink-muted); margin-bottom: 12px; font-weight: 700; letter-spacing: 0.02em; }
     .flagship-screenshot { width: 100%; border-radius: 15px; overflow: hidden; background: var(--card); box-shadow: var(--shadow-soft); border: 1px solid var(--hairline); outline: 6px solid rgba(255,253,248,.42); transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s; }
@@ -92,10 +93,10 @@
     .flagship-buttons { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
     .proof-banner { margin-bottom: 24px; padding: 18px 20px; color: var(--ink-light); line-height: 1.6; border-left: 4px solid var(--accent); }
     .proof-banner strong { color: var(--ink); }
-    .architecture-strip { margin-top: 30px; padding: 24px; background: linear-gradient(180deg, rgba(255,253,248,.88), rgba(249,245,237,.74)); border: 1px solid var(--hairline); border-radius: 16px; box-shadow: var(--shadow-tight); }
+    .architecture-strip { margin-top: 30px; padding: 24px; background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(247,250,252,.82)); border: 1px solid var(--hairline); border-radius: 16px; box-shadow: var(--shadow-tight); }
     .architecture-label { font-size: 11px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); }
     .architecture-flow { margin-top: 16px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
-    .architecture-stage { position: relative; min-height: 76px; padding: 16px 14px; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(180deg, #FFFDF8, #F7F1E7); border: 1px solid rgba(115,132,153,.28); border-radius: 12px; font-size: 14px; font-weight: 800; color: var(--ink); box-shadow: inset 0 1px 0 rgba(255,255,255,.72); }
+    .architecture-stage { position: relative; min-height: 76px; padding: 16px 14px; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(180deg, #FFFFFF, #F2F6FA); border: 1px solid rgba(115,132,153,.28); border-radius: 12px; font-size: 14px; font-weight: 800; color: var(--ink); box-shadow: inset 0 1px 0 rgba(255,255,255,.72); }
     .architecture-stage span { display: block; margin-bottom: 6px; font-size: 10px; font-weight: 800; letter-spacing: 0.14em; color: var(--ink-muted); }
     .architecture-stage:not(:last-child)::after { content: ''; position: absolute; top: 50%; right: -10px; width: 10px; height: 1px; background: var(--accent); }
     .architecture-note { margin-top: 14px; font-size: 13px; font-weight: 600; color: var(--ink-muted); }
@@ -108,13 +109,13 @@
     .stat-label { font-size: 12px; color: var(--ink-muted); margin-top: 6px; letter-spacing: 0.02em; line-height: 1.45; }
     .flagship-tags { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 8px; }
     .stack-note { margin-top: 30px; font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-muted); }
-    .tag { font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 100px; background: rgba(233,224,210,.72); color: var(--ink-light); border: 1px solid rgba(200, 208, 218, 0.8); }
+    .tag { font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 100px; background: rgba(231,236,243,.78); color: var(--ink-light); border: 1px solid rgba(200, 208, 218, 0.8); }
     .flagship-value { margin-top: 20px; font-size: 15px; font-weight: 700; color: var(--ink); }
     .flagship-note { margin-top: 20px; font-size: 13px; color: var(--ink-muted); font-style: italic; padding-left: 16px; border-left: 2px solid var(--accent); }
     .flagship-rca { margin-top: 48px; }
     .projects-grid { padding: 80px 0; }
     .grid { margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-    .project-card { background: linear-gradient(180deg, #FFFDF8, #F7F1E8); border-radius: 16px; padding: 32px; border: 1px solid var(--hairline); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s; position: relative; box-shadow: 0 6px 18px rgba(7,24,39,.045); }
+    .project-card { background: linear-gradient(180deg, #FFFFFF, #F4F7FA); border-radius: 16px; padding: 32px; border: 1px solid var(--hairline); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s; position: relative; box-shadow: 0 6px 18px rgba(7,24,39,.045); }
     .project-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(7, 24, 39, 0.08); }
     .project-card .card-accent { width: 34px; height: 3px; border-radius: 2px; background: var(--accent); margin-bottom: 20px; }
     .project-card h3 { font-family: var(--font-display); font-size: 21px; margin-bottom: 8px; }
@@ -137,16 +138,17 @@
     .about-sidebar li { font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 100px; border: 1px solid rgba(247, 244, 238, 0.16); color: rgba(247, 244, 238, 0.72); }
     .lang-list { display: flex; gap: 20px; margin-top: 0; }
     .lang-list li { border: none; padding: 0; font-size: 14px; color: rgba(247, 244, 238, 0.72); }
-    .contact-section { padding: 84px 0 104px; background: linear-gradient(180deg, var(--surface), #F7F2EA); border-top: 1px solid rgba(115,132,153,.16); }
-    .contact-inner { max-width: 620px; margin-top: 24px; padding: 28px; border: 1px solid var(--hairline); border-radius: 16px; background: linear-gradient(180deg, #FFFDF8, #F7F1E8); box-shadow: var(--shadow-tight); }
+    .contact-section { padding: 84px 0 104px; background: linear-gradient(180deg, var(--surface), #FFFFFF); border-top: 1px solid rgba(115,132,153,.16); }
+    .contact-inner { max-width: 680px; margin-top: 24px; padding: 28px; border: 1px solid var(--hairline); border-radius: 16px; background: linear-gradient(180deg, #FFFFFF, #F4F7FA); box-shadow: var(--shadow-tight); }
     .contact-text { margin-top: 16px; font-size: 16px; line-height: 1.7; color: var(--ink-light); }
     .contact-links { margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap; }
     .contact-avail { margin-top: 20px; font-size: 13px; color: var(--ink-muted); }
     footer { padding: 32px; text-align: center; font-size: 13px; color: var(--ink-muted); border-top: 1px solid var(--metal); }
     @media (max-width: 768px) {
-      .hero { grid-template-columns: 1fr; padding: 48px 24px 64px; gap: 32px; text-align: center; }
-      .hero-text h1 { font-size: 36px; max-width: 12ch; margin: 0 auto; }
+      .hero { grid-template-columns: 1fr; padding: 44px 24px 60px; gap: 28px; text-align: center; }
+      .hero-text h1 { font-size: 36px; max-width: 14ch; margin: 0 auto; }
       .hero-text h1 span { font-size: 16px; }
+      .hero-support { margin-left: auto; margin-right: auto; font-size: 15px; }
       .section-title { font-size: 29px; line-height: 1.08; text-wrap: balance; }
       .hero-photo { width: 200px; height: 240px; margin: 0 auto; order: -1; }
       .hero-actions { justify-content: center; }
@@ -191,10 +193,11 @@
     <div class="hero-text">
       <h1>
         Operations Intelligence Architect
-        <span>I turn airport operations pressure into governed decision intelligence: clearer ownership, timing-risk visibility, and action routing before the recovery window closes. Public examples are sanitized.</span>
+        <span>Airport operations practitioner building decision-intelligence systems from operational pressure.</span>
       </h1>
+      <p class="hero-support">20 years in frontline airport and ground operations, combined with SQL, Power BI, and decision-pack architecture for multi-station performance review.</p>
       <div class="hero-actions">
-        <a href="#work" class="btn btn-primary">View decision work</a>
+        <a href="#work" class="btn btn-primary">View decision method</a>
         <a href="#method" class="btn btn-outline">Read the operating method</a>
       </div>
     </div>
@@ -206,7 +209,7 @@
   <section id="method" class="pressure-section">
     <div class="section reveal">
       <div class="section-label">Operating Pressure</div>
-      <div class="section-title">Built from the live operating environment, not from a dashboard brief.</div>
+      <div class="section-title">Built from the live operating environment, not from a reporting brief.</div>
       <div class="pressure-grid">
         <div class="pressure-card">
           <h3>Airport operations compress judgment into minutes.</h3>
@@ -234,7 +237,7 @@
           <button class="capability-tab" type="button" role="tab" aria-selected="false" data-capability-target="decision">Decision Intelligence</button>
           <button class="capability-tab" type="button" role="tab" aria-selected="false" data-capability-target="engineering">Analytics Engineering</button>
           <button class="capability-tab" type="button" role="tab" aria-selected="false" data-capability-target="commercial">Commercial / Finance Logic</button>
-          <button class="capability-tab" type="button" role="tab" aria-selected="false" data-capability-target="vendor">Operational Systems Fit</button>
+          <button class="capability-tab" type="button" role="tab" aria-selected="false" data-capability-target="vendor">Operational Systems Translation</button>
         </div>
         <div class="capability-panel" role="tabpanel" data-capability-panel="airline">
           <div>
@@ -282,8 +285,8 @@
         </div>
         <div class="capability-panel" role="tabpanel" data-capability-panel="vendor" hidden>
           <div>
-            <h3>Operational Systems Fit</h3>
-            <p>For aviation technology and analytics vendors that need product logic grounded in how airport operations actually work.</p>
+            <h3>Operational Systems Translation</h3>
+            <p>For teams shaping aviation tools, analytics, or review flows that need operating logic grounded in how airport operations actually work.</p>
           </div>
           <ul class="capability-points">
             <li>Shapes cockpit flows around operational timing and leadership accountability.</li>
@@ -301,17 +304,17 @@
       <div class="section-title">IntelligenceOps makes the method visible without exposing the operation.</div>
     </div>
     <div class="flagship-card">
-      <div class="proof-banner reveal"><strong>Synthetic proof layer.</strong> No carrier data, no company information, no internal screenshots.</div>
+      <div class="proof-banner reveal">Synthetic public proof. No real airline data, employer information, station values, or internal screenshots.</div>
       <div class="flagship-proof-label reveal">Executive Decision Memo. Decision routes first, supporting evidence beneath, and timing-risk caveats kept visible.</div>
       <div class="flagship-screenshot pdf-proof reveal">
-        <img src="screenshots/intelligenceops-decision-pack-executive-summary.png" alt="IntelligenceOps Synthetic Executive Decision Memo: Executive Summary">
+        <img src="screenshots/intelligenceops-decision-pack-executive-summary.png" alt="IntelligenceOps executive decision memo: executive summary">
       </div>
 
       <div class="flagship-buttons reveal">
         <a href="assets/IntelligenceOps_Synthetic_Executive_Decision_Memo.pdf" target="_blank" rel="noopener" class="btn btn-primary">View executive memo</a>
         <a href="assets/IntelligenceOps_Synthetic_Interactive_Cockpit.html" target="_blank" rel="noopener" class="btn btn-outline">Open interactive cockpit</a>
-        <a href="https://intelligenceops-demo.streamlit.app" target="_blank" rel="noopener" class="btn btn-outline">View synthetic demo</a>
-        <a href="https://github.com/JosephSigma991/intelligenceops-demo" target="_blank" rel="noopener" class="btn btn-outline">View technical repo</a>
+        <a href="https://intelligenceops-demo.streamlit.app" target="_blank" rel="noopener" class="btn btn-outline">Open public walkthrough</a>
+        <a href="https://github.com/JosephSigma991/intelligenceops-demo" target="_blank" rel="noopener" class="btn btn-outline">View method repo</a>
       </div>
 
       <div class="architecture-strip reveal" aria-label="IntelligenceOps system architecture">
@@ -323,13 +326,13 @@
           <div class="architecture-stage"><span>04</span>Action route</div>
           <div class="architecture-stage"><span>05</span>Decision memo</div>
         </div>
-        <p class="architecture-note">How IntelligenceOps turns governed operational evidence into timing risk, ownership, and accountable action. Public examples are sanitized.</p>
+        <p class="architecture-note">How IntelligenceOps turns governed operational evidence into timing risk, ownership, and accountable action.</p>
       </div>
 
       <div class="flagship-meta reveal">
         <div class="flagship-desc">
           <p><strong>Problem:</strong> Airline operations generate decision-relevant evidence continuously. Most of it reaches leaders too late, without clear ownership boundaries, or after the useful recovery window has already started closing.</p>
-          <p><strong>Method:</strong> IntelligenceOps is a public-safe proof layer for an operations intelligence capability. It starts with governed definitions, separates inherited and controllable pressure, frames TAT as timing risk, and turns evidence into action lanes before the review meeting starts.</p>
+          <p><strong>Method:</strong> IntelligenceOps shows how OTP, delay attribution, TAT timing-risk evidence, station ranking, and Ground Ops drivers can be structured into executive-ready decision packs for periodic operations review.</p>
           <p><strong>Result:</strong> A reproducible decision workflow: executives see what changed, what remains caveated, which route can act, and which signals should stay under watch instead of being over-assigned.</p>
         </div>
         <div class="flagship-stats">
@@ -359,14 +362,14 @@
       <div class="flagship-rca reveal">
         <div class="flagship-rca-label">Action Lanes. Decision routing before the review meeting starts</div>
         <div class="flagship-screenshot pdf-proof">
-          <img src="screenshots/intelligenceops-decision-pack-action-lanes.png" alt="IntelligenceOps Synthetic Executive Decision Memo: Action Lanes">
+          <img src="screenshots/intelligenceops-decision-pack-action-lanes.png" alt="IntelligenceOps executive decision memo: action lanes">
         </div>
       </div>
 
       <div class="flagship-rca reveal">
-        <div class="flagship-rca-label">Live Demo. Governed KPI views, TAT timing-risk framing, RCA, cockpit preview, and scenario exploration</div>
+        <div class="flagship-rca-label">Method Preview. Governed KPI views, TAT timing-risk framing, RCA, cockpit preview, and scenario exploration</div>
         <div class="flagship-screenshot">
-          <img src="screenshots/intelligenceops-synthetic-cockpit-preview.png" alt="IntelligenceOps Synthetic Interactive Cockpit preview">
+          <img src="screenshots/intelligenceops-synthetic-cockpit-preview.png" alt="IntelligenceOps interactive cockpit preview">
         </div>
       </div>
 
@@ -377,7 +380,7 @@
 
       <p class="flagship-value reveal">Decision ownership, timing risk, and action routing clarified before the review starts.</p>
 
-      <p class="flagship-note reveal">Built from aviation operations experience. No carrier data, no company information, no internal screenshots.</p>
+      <p class="flagship-note reveal">Built from aviation operations experience to show how decision evidence can be structured before review.</p>
     </div>
   </section>
 
@@ -425,7 +428,7 @@
           <h3>Power BI: Departure Performance Decision Layer</h3>
           <div class="card-sub">Operational decision view</div>
           <div class="flagship-screenshot" style="margin: 20px 0;">
-            <img src="screenshots/pbi-gops-executive-v2.png?v=pbi-date-neutralized" alt="Power BI: Departure Performance Dashboard">
+            <img src="screenshots/pbi-gops-executive-v2.png?v=pbi-date-neutralized" alt="Power BI departure performance decision layer">
           </div>
           <p>Executive view showing how governed KPI logic can be translated into operational decision support. Trend context, delay category Pareto, controllable vs external split, distribution bands, and TAT monitoring sit in one review layer.</p>
           <p class="card-insight">Key insight: The Pareto view turns scattered delay minutes into a visible action sequence.</p>
@@ -453,7 +456,7 @@
       <div class="about-grid reveal">
         <div class="about-text">
           <p>I work in airport operations from Casablanca, with 20 years across ground operations, turnaround coordination, disruption handling, and performance review rhythms.</p>
-          <p>This portfolio shows public-safe proof layers built from aviation operations experience: governed analytical structures, decision views, executive memo logic, and validation checks. The examples are synthetic and sanitized.</p>
+          <p>This portfolio shows proof layers built from aviation operations experience: governed analytical structures, decision views, executive memo logic, and validation checks.</p>
           <p>Most data teams do not feel the pressure of a live turnaround. Most operations teams do not design data contracts or scenario models. I work in the gap between both.</p>
           <p>I welcome selective aviation operations intelligence conversations with serious operations leaders.</p>
         </div>
@@ -472,15 +475,15 @@
   <section id="contact" class="contact-section">
     <div class="section reveal">
       <div class="section-label">Contact</div>
-      <div class="section-title">Selective conversations</div>
+      <div class="section-title">Serious operations conversations</div>
       <div class="contact-inner">
-        <p class="contact-text">I work on governed decision-intelligence systems for airline and airport operations contexts. If the problem involves operational evidence, timing risk, and decision readiness, I am open to a serious conversation.</p>
+        <p class="contact-text">Open to serious conversations around airport operations performance, ground operations intelligence, and decision-support roles.</p>
         <div class="contact-links">
           <a href="https://www.linkedin.com/in/youssef-hamdaoui-71ba00153/" target="_blank" rel="noopener" class="btn btn-primary">LinkedIn</a>
           <a href="https://github.com/JosephSigma991" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
           <a href="mailto:Hamdaoui1948@gmail.com" class="btn btn-outline">Email</a>
         </div>
-        <p class="contact-avail">Selective aviation operations intelligence conversations with serious operations leaders.</p>
+        <p class="contact-avail">Airport operations performance, ground operations intelligence, and decision-support roles.</p>
       </div>
     </div>
   </section>
